@@ -1,0 +1,288 @@
+# SNOfinder - pipeline for identifying cysteine residues close to SNO sites
+# Copyright (C) 2022 Matteo Tiberti, Danish Cancer Society
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import pandas as pd
+import numpy as np
+from get_alphafolddb_data import main as get_af
+import MDAnalysis as mda
+import re
+
+selected_proteins = pd.read_csv('results/selected_proteins.csv')
+ids = selected_proteins[['up_ac', 'up_id']].drop_duplicates().reset_index()
+
+
+#ids = ids[ids['up_id'] == 'SRCA_MOUSE']
+
+conf_base = {"plddt_cutoff" : 70,
+             "dssp_exec" : "/usr/local/dssp-3.0.10/bin/mkdssp"}
+
+seq_distance_co = 8
+pyinteraph_dist_co = 8
+
+rule all:
+    input:
+        "results/cys_database.csv",
+        "results/cys_database_far_seq.csv",
+        "results/cys_database_close_seq.csv"
+
+rule get_af_pdbs:
+    output:
+        "results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.csv",
+        "results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.json",
+        "results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}_dssp.out",
+        "results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.pdb"
+    params:
+        conf_base = conf_base
+    run:
+        conf = params.conf_base
+        conf["uniprot_ids"] = { wildcards.up_ac : {'dir_name' : wildcards.up_id}}
+        get_af(conf, 'results')
+
+rule run_pyinteraph:
+    input:
+        "results/{up_id}/{up_ac}.pdb"
+    output:
+        csv="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}_cmpsn_all.csv",
+    params:
+        distance_co = pyinteraph_dist_co
+    shell:
+        """
+        pdb=$(basename {input[0]})
+        csv=$(basename {output[0]})
+        
+        cd results/{wildcards[up_id]}
+        pyinteraph -s $pdb -t $pdb -r $pdb\
+        --cmpsn --cmpsn-co {params[distance_co]} --cmpsn-correction null\
+        --ff-masses charmm27
+
+        mv cmpsn_all.csv $csv
+        """
+
+rule run_naccess:
+    input:
+        "results/{up_id}/{up_ac}.pdb"
+    output:
+        asa="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.asa",
+        rsa="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.rsa",
+        log="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.log"
+    shell:
+        """
+        pdb=$(basename {input[0]})
+        cd results/{wildcards[up_id]}
+        naccess $pdb
+        """
+
+rule run_propka:
+    input:
+        "results/{up_id}/{up_ac}.pdb"
+    output:
+        out="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.pka",
+        csv="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.pka.csv",
+        log="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}.pka.log"
+    shell:
+        """
+        pdb=$(basename {input[0]})
+        csv=$(basename {output[csv]})
+        log=$(basename {output[log]})
+        cd results/{wildcards[up_id]}
+        propka3 $pdb &> $log
+        egrep '^CYS' {wildcards[up_ac]}.pka | grep -v '                ' > $csv
+        """
+
+rule process_data:
+    input:
+        selected_proteins='results/selected_proteins.csv',
+        rsa='results/{up_id}/{up_ac}.rsa',
+        contacts='results/{up_id}/{up_ac}_cmpsn_all.csv',
+        plddt='results/{up_id}/{up_ac}.csv',
+        pdb='results/{up_id}/{up_ac}.pdb',
+        pka='results/{up_id}/{up_ac}.pka.csv',
+        pka_log='results/{up_id}/{up_ac}.pka.log'
+    output:
+        predicted="results/{up_id}/{up_ac,[A-Z][A-Z0-9]+}_potential_sno.csv"
+    run:
+
+        def calc_sno_cys_d(row, pdb_fname):
+
+            if pd.isna(row.proximal_cys):
+                return pd.NA
+
+            uni = mda.Universe(pdb_fname)
+            
+            r1 = uni.select_atoms(f"resnum {int(row.name):d} and name SG")
+            r2 = uni.select_atoms(f"resnum {int(row.proximal_cys):d} and name SG")
+
+            assert len(r1) == 1 and len(r2) == 1
+
+            return np.linalg.norm(r1.positions[0] - r2.positions[0])
+
+        selected_proteins = pd.read_csv(input.selected_proteins, index_col='residue').fillna(pd.NA)
+        sites = selected_proteins[selected_proteins['up_ac'] == wildcards.up_ac].drop('index', axis=1)
+        
+        plddt = pd.read_csv(input.plddt, usecols=['resnum', 'resname', 'pLDDT', 'secstruc'], index_col='resnum').fillna(pd.NA)
+
+        rsa = pd.read_fwf(input.rsa, 
+            skiprows=4, skipfooter=4, header=None, widths=[4,4,1,4,9,6,7,6,7,6,7,6,7,6],
+            names = ['entry', 'rest', 'chain', 'resn', 'all_abs', 'sas_all_rel', 'sas_sc_abs',
+            'sas_sc_rel', 'sas_mc_abs', 'sas_mc_rel', 'sas_np_abs', 'sas_np_rel', 'sas_ap_abs',
+            'sas_ap_rel'],
+            usecols = ['rest', 'resn', 'sas_sc_rel'],
+            index_col = 'resn').fillna(pd.NA)
+
+        pka = pd.read_fwf(input.pka, header=None, widths=[3, 4, 2, 7, 1, 6, 2, 7, 5, 7, 5, 8, 4, 4, 2, 8, 4, 4, 2],
+            usecols=[1,3], names=['residue', 'pKa'], index_col='residue').fillna(pd.NA)
+        
+        with open(input.pka_log) as fh:
+            log_content = fh.read()
+            if re.search('failed', log_content) is not None or re.search('Missing', log_content) is not None:
+                propka_errors = True
+            else:
+                propka_errors = False
+
+        contacts = pd.read_csv(input.contacts, names=['chain1', 'resn1', 'rest1', 'group1', 'chain2', 'resn2', 'rest2', 'group2', 'pers'] )
+        contacts = contacts[ ['resn1', 'rest1', 'resn2', 'rest2'] ]
+        contacts = contacts[ (contacts['rest1'] == 'CYS') & (contacts['rest2'] == 'CYS')][['resn1', 'resn2'] ]
+        contacts = contacts[ (contacts['resn1'].isin(sites.index)) | (contacts['resn2'].isin(sites.index)) ]
+        ref_sites = []
+        new_sites = []
+        for _, r in contacts.iterrows():
+            if r['resn1'] in sites.index and r['resn2'] in sites.index:
+                ref_sites.extend([ r['resn1'], r['resn2'] ])
+                new_sites.extend([ r['resn2'], r['resn1'] ])
+            elif r['resn1'] in sites.index:
+                ref_sites.append(r['resn1'])
+                new_sites.append(r['resn2'])
+            elif r['resn2'] in sites.index:
+                ref_sites.append(r['resn2'])
+                new_sites.append(r['resn1'])
+
+        for idx, r in sites.iterrows():
+            if idx not in ref_sites:
+                ref_sites.append(idx)
+                new_sites.append(pd.NA)
+
+        found_sites = pd.DataFrame({'ref_site' : ref_sites}, index=new_sites)
+
+        # join pLDDT scores on proximal Cys
+        found_sites = found_sites.join(plddt)
+
+        # check if numbers from pLDDT are all CYS
+        resnames = np.array(list(set(found_sites['resname'].to_list())))
+        
+        assert (len(resnames) == 1 and (resnames[0] == "CYS" or pd.isna(resnames[0]))) or len(resnames) == 0 or set(resnames) == set(['CYS', 'nan'])
+        found_sites = found_sites.drop('resname', axis=1)
+
+        # join SAS from naccess on proximal cys
+        found_sites = found_sites.join(rsa)
+
+        # check if numbers from RSA are all CYS
+        resnames = np.array(list(set(found_sites['rest'].to_list())))
+        assert (len(resnames) == 1 and (resnames[0] == "CYS" or pd.isna(resnames[0]))) or len(resnames) == 0 or set(resnames) == set(['CYS', 'nan'])
+        found_sites = found_sites.drop('rest', axis=1) 
+
+        # join pKa from propka on proxymal_cys. No need to check for CYS
+        # since we already grep them
+        found_sites = found_sites.join(pka)
+
+        # rename columns
+        found_sites = found_sites.rename({'pLDDT' : 'proximal_cys_pLDDT',
+                                          'secstruc' : 'proximal_cys_DSSP_secondary_structure',
+                                          'sas_sc_rel' : 'proximal_cys_sas_sc_rel',
+                                          'pKa' : 'proximal_cys_pKa'}, axis=1)
+
+        # swap index between reference/found CYS
+        found_sites = found_sites.reset_index()
+        found_sites = found_sites.rename(columns={'index' : 'proximal_cys'})
+        found_sites = found_sites.set_index('ref_site')
+
+        # join pLDDT scores on SNO sites
+        found_sites = found_sites.join(plddt)
+
+        # check if numbers from pLDDT are all CYS
+        # we handle this differently because we never actually checked
+        # if the reference site was CYS.
+        pdb_resnames = np.array(found_sites['resname'].to_list())
+
+        # join SAS from naccess on SNO sites
+        found_sites = found_sites.join(rsa)
+
+        # check if numbers from RSA are consistent with PDB
+        resnames = np.array(found_sites['rest'].to_list())
+        assert np.all(pdb_resnames == resnames) or (np.all(pd.isna(pdb_resnames)) and np.all(pd.isna(resnames)))
+        found_sites = found_sites.drop('rest', axis=1)
+
+        # join pKa on SNO sites
+        found_sites = found_sites.join(pka)
+
+        # rename cols
+        found_sites = found_sites.rename({'pLDDT' : 'SNO_site_pLDDT',
+                                          'secstruc' : 'SNO_site_DSSP_secondary_structure',
+                                          'sas_sc_rel' : 'SNO_site_sas_sc_rel',
+                                          'pKa' : 'SNO_site_pKa',
+                                          'resname' : 'SNO_site_residue_type'}, axis=1)
+
+
+        # join sites with original table
+        sites = sites.join(found_sites)
+
+        # calculate distance in PDB between pairs of identified pairs of Cys residue
+        sites['SNO_cys_distance'] = sites.apply(calc_sno_cys_d, pdb_fname=input.pdb, axis=1)
+
+        # add information on whether PropKa had an error
+        sites['propka_errors'] = propka_errors
+
+        # write to csv the whole dataset
+        sites = sites.reset_index().rename(columns={'index'    : 'residue',
+                                                    'secstruc' : 'sno_site_DSSP_secondary_structure'})
+        sites.to_csv(output.predicted, index=False)
+
+rule join_data:
+    input:
+        csvs=expand("results/{up_id}/{up_ac}_potential_sno.csv", zip, up_ac=ids['up_ac'], up_id=ids['up_id'])
+    output:
+        csv="results/cys_database.csv",
+        csv_no_cys="results/cys_database_no_SNO_cys.csv",
+        csv_far="results/cys_database_far_seq.csv",
+        csv_far_accessible_human="results/cys_database_far_seq_acc10_human.csv",
+        csv_close="results/cys_database_close_seq.csv"
+    run:
+        # load data
+        data = [ pd.read_csv(csv) for csv in input.csvs ]
+        df = pd.concat(data, axis='index', ignore_index=True, )
+        df['first_aa'] = df['first_aa'].astype(int)
+        df['last_aa'] = df['last_aa'].astype(int)
+        df['proximal_cys'] = df['proximal_cys'].astype("Int64")
+
+        # filter out those residues that are not cys
+        df_ref_no_cys = df[ df['SNO_site_residue_type'] != 'CYS' ]
+        df_ref_no_cys.to_csv(output.csv_no_cys)
+
+        df = df[ df['SNO_site_residue_type'] == 'CYS' ]
+        df.to_csv(output.csv, index=False)
+        
+        # separate residues close or far in sequence
+        sites_seq_close = df[ np.abs(df['residue'] - df['proximal_cys']) <= seq_distance_co ]
+        sites_seq_close.to_csv(output.csv_close, index=False)
+        
+        sites_seq_far   = df[ np.abs(df['residue'] - df['proximal_cys']) >  seq_distance_co ]
+        sites_seq_far.to_csv(output.csv_far, index=False)
+
+        sites_seq_far_ac_hu = sites_seq_far[ (sites_seq_far['SNO_site_sas_sc_rel'] >= 10.0) & (sites_seq_far['up_id'].apply(lambda r: 'HUMAN' in r))]
+        sites_seq_far_ac_hu.to_csv(output.csv_far_accessible_human, index=False)
+
+
+
+#residue,up_id,up_ac,ptm,pubmed_id,sequence,first_aa,last_aa,fname,version,proximal_cys,proximal_cys_pLDDT,proximal_cys_DSSP_secondary_structure,proximal_cys_sas_sc_rel,SNO_site_pLDDT,SNO_site_DSSP_secondary_structure,SNO_site_sas_sc_rel,sno_cys_distance
