@@ -52,7 +52,8 @@ The pipeline:
      those cases for which the sequence distance between SNO site and proximal cysteine is <= 8
      (results/cys_database_close_seq) or > 8 A (results/cys_database_far_seq.csv). Finally, it filters
      the latter dataset again by keeping those cases for which the protein is human and the
-     solvent accessible surface of the SNO site residue is >= 10%
+     solvent accessible surface of the SNO site residue is >= 10%. It generates relevant plots
+     from the collected data.
 
 # Requirements
 
@@ -66,6 +67,8 @@ parenthesis.
       biopython (1.79)
       snakemake (7.17.1)
       MDAnalysis (1.0.0)
+      matplotlib (3.3.0)
+      matplotlib_venn (0.11.7)
   - PyInteraph2 (1.1)
   - naccess (2.1.1)
   - dssp (3.0.10)
