@@ -19,12 +19,14 @@ import numpy as np
 from get_alphafolddb_data import main as get_af
 import MDAnalysis as mda
 import re
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
+from matplotlib_venn import venn2
+
 
 selected_proteins = pd.read_csv('results/selected_proteins.csv')
 ids = selected_proteins[['up_ac', 'up_id']].drop_duplicates().reset_index()
-
-
-#ids = ids[ids['up_id'] == 'SRCA_MOUSE']
 
 conf_base = {"plddt_cutoff" : 70,
              "dssp_exec" : "/usr/local/dssp-3.0.10/bin/mkdssp"}
@@ -36,7 +38,11 @@ rule all:
     input:
         "results/cys_database.csv",
         "results/cys_database_far_seq.csv",
-        "results/cys_database_close_seq.csv"
+        "results/cys_database_close_seq.csv",
+        "results/sas_pLDDT_barplots.pdf",
+        "results/distributions_pKa.pdf",
+        "results/venn_prox_vic.pdf",
+        "results/pie_multi_single.pdf"
 
 rule get_af_pdbs:
     output:
@@ -283,6 +289,136 @@ rule join_data:
         sites_seq_far_ac_hu = sites_seq_far[ (sites_seq_far['SNO_site_sas_sc_rel'] >= 10.0) & (sites_seq_far['up_id'].apply(lambda r: 'HUMAN' in r))]
         sites_seq_far_ac_hu.to_csv(output.csv_far_accessible_human, index=False)
 
+rule make_figures:
+    input:
+        csv_far="results/cys_database_far_seq.csv",
+        csv_close="results/cys_database_close_seq.csv"
+    output:
+        barplot="results/sas_pLDDT_barplots.pdf",
+        distrib="results/distributions_pKa.pdf",
+        venn="results/venn_prox_vic.pdf",
+        pie="results/pie_multi_single.pdf"
+    run:
+
+        colors = [(230/255, 159/255,   0/255),
+                  ( 86/255, 180/255, 233/255),
+                  (  0/255,  58/255, 115/255),
+                  (213/255,  94/255,   0/255),
+                  (  0/255, 114/255, 178/255)]
+
+        # load and prepare data
+        cm = 1/2.54  # centimeters in inches
+
+        df_close = pd.read_csv(input.csv_close)
+        df_close['distance_class'] = 'vicinal'
+        df_far = pd.read_csv(input.csv_far)
+        df_far['distance_class'] = 'proximal'
+
+        df = pd.concat([df_close, df_far], axis='rows')
+
+        SNO_sas_far =   {'< 10%'            : df_far[df_far['SNO_site_sas_sc_rel'] < 10.0].shape[0],
+                        '[10, 30)' : df_far[(df_far['SNO_site_sas_sc_rel'] >= 10.0) & (df_far['SNO_site_sas_sc_rel'] < 30.0)].shape[0],
+                        '> 30%'          : df_far[df_far['SNO_site_sas_sc_rel'] >= 30.0].shape[0]}
+
+        SNO_sas_close = {'< 10%'            : df_close[df_close['SNO_site_sas_sc_rel'] < 10.0].shape[0],
+                        '[10, 30)' : df_close[(df_close['SNO_site_sas_sc_rel'] >= 10.0) & (df_close['SNO_site_sas_sc_rel'] < 30.0)].shape[0],
+                        '> 30%'           : df_close[df_close['SNO_site_sas_sc_rel'] >= 30.0].shape[0]}
+
+        SNO_pLDDT_far =    {'Very low (< 50)'            : df_far[df_far['SNO_site_pLDDT'] < 50.0].shape[0],
+                            'Low ([50, 70))' : df_far[(df_far['SNO_site_pLDDT'] >= 50.0) & (df_far['SNO_site_pLDDT'] < 70.0)].shape[0],
+                            'Confident ([70, 90))' : df_far[(df_far['SNO_site_pLDDT'] >= 70.0) & (df_far['SNO_site_pLDDT'] < 90.0)].shape[0],
+                            'Very high (>= 90)'           : df_far[df_far['SNO_site_pLDDT'] >= 90.0].shape[0]}
+
+        SNO_pLDDT_close =   {'Very low (< 50)'            : df_close[df_close['SNO_site_pLDDT'] < 50.0].shape[0],
+                            'Low ([50, 70))' : df_close[(df_close['SNO_site_pLDDT'] >= 50.0) & (df_close['SNO_site_pLDDT'] < 70.0)].shape[0],
+                            'Confident ([70, 90))' : df_close[(df_close['SNO_site_pLDDT'] >= 70.0) & (df_close['SNO_site_pLDDT'] < 90.0)].shape[0],
+                            'Very high (>= 90)'           : df_close[df_close['SNO_site_pLDDT'] >= 90.0].shape[0]}
+
+        # set up fonts
+        matplotlib.rcParams['font.sans-serif'] = "Arial"
+        matplotlib.rcParams['font.family'] = "sans-serif"
 
 
-#residue,up_id,up_ac,ptm,pubmed_id,sequence,first_aa,last_aa,fname,version,proximal_cys,proximal_cys_pLDDT,proximal_cys_DSSP_secondary_structure,proximal_cys_sas_sc_rel,SNO_site_pLDDT,SNO_site_DSSP_secondary_structure,SNO_site_sas_sc_rel,sno_cys_distance
+        # plot barplots for SAS and pLDDT
+
+        fig, axes = plt.subplots(1, 2, figsize=(9*cm, 9*cm), sharey=True)
+
+        classes = ['vicinal', 'proximal']
+
+        ax = axes[0]
+
+        xs=(1, 2.5)
+        values = [ (SNO_sas_close[k], SNO_sas_far[k]) for k in SNO_sas_close.keys() ]
+        bottoms = [ (0 ,0) ] + [ np.sum(values[0:i], axis=0).tolist() for i in range(1, len(values)) ]
+        bars = []
+
+        for i, k in enumerate(SNO_sas_close.keys()):
+            ax.bar(xs, values[i], width=0.8, bottom=bottoms[i], color=[colors[i]])
+
+            ax.set_xticks(xs)
+            ax.set_xticklabels(classes)
+        ax.set_ylabel('Number of SNO sites')
+        ax.set_title('rel. SAS (%)')
+        ax.legend(SNO_sas_close.keys(), loc='upper center', bbox_to_anchor=(0.5, -0.1), fontsize=8)
+
+        ax = axes[1]
+
+        xs=(1, 2.5)
+        values = [ (SNO_pLDDT_close[k], SNO_pLDDT_far[k]) for k in SNO_pLDDT_close.keys() ]
+        bottoms = [ (0 ,0) ] + [ np.sum(values[0:i], axis=0).tolist() for i in range(1, len(values)) ]
+
+        for i, k in enumerate(SNO_pLDDT_close.keys()):
+            ax.bar((1, 2.5), values[i], width=0.8, bottom=bottoms[i], color=colors[i])
+
+        ax.set_xticks(xs)
+        ax.set_xticklabels(classes)
+        ax.set_title('AF pLDDT')
+        ax.legend(SNO_pLDDT_close.keys(), loc='upper center', bbox_to_anchor=(0.5, -0.1), fontsize=8)
+
+        fig.tight_layout()
+        fig.savefig(output.barplot)
+
+        # plot pKa distributions
+        df_far_pka = df_far[ df_far['propka_errors'] == False ]
+        df_close_pka = df_close[ df_close['propka_errors'] == False ]
+
+        fig, axes = plt.subplots(2, 1, figsize=(9*cm, 9*cm), sharex=True)
+
+        ax = axes[0]
+
+        ax.hist(df_far_pka['SNO_site_pKa'], bins=200, range=(0, 20), density=True, color='black')
+        ax.set_title('proximal SNO sites')
+        ax.set_xlabel('pKa')
+        ax.set_ylabel('Density')
+        ax.set_ylim((0, 0.4))
+
+        ax = axes[1]
+
+        ax.hist(df_close_pka['SNO_site_pKa'], bins=200, range=(0, 20), density=True, color='black')
+        ax.set_title('vicinal SNO sites')
+        ax.set_xlabel('pKa')
+        ax.set_ylabel('Density')
+        ax.set_ylim((0, 0.4))
+
+        fig.tight_layout()
+
+        fig.savefig(output.distrib)
+
+        # plot Venn diagram
+        plt.clf()
+        venn2([set(df_far.up_id), set(df_close.up_id)], set_labels=['proximal', 'vicinal'], set_colors=(colors[0], colors[1]))
+        plt.savefig(output.venn)
+
+        # plot pie chart
+        df['is_multi'] = df.apply(lambda r: True if df[df['up_id'] == r['up_id']].shape[0] == 1 else False, axis=1)
+        multi_count = df[df['is_multi']].up_id.unique().shape[0]
+        single_count = df[~ df['is_multi']].up_id.unique().shape[0]
+        sizes = (single_count, multi_count)
+        labels = (f"single SNO site protein ({single_count})", f"multiple SNO site protein ({multi_count})")
+
+        fig, ax = plt.subplots(figsize=(9*cm, 9*cm))
+        ax.pie(sizes, labels=labels, autopct='%1.1f%%',
+                shadow=True, startangle=90, colors=colors)
+        ax.axis('equal')
+
+        fig.savefig(output.pie, bbox_inches='tight')
