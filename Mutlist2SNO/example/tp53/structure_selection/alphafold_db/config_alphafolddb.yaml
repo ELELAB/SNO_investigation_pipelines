@@ -1,0 +1,13 @@
+# Path to the DSSP executable
+dssp_exec: "/usr/local/dssp-3.0.10/bin/mkdssp"
+
+# pLDDT score cutoff
+plddt_cutoff: 70
+
+# UniProt IDs of the proteins of interest
+uniprot_ids:
+
+  # TP53
+  P04637:
+    dir_name: "TP53"
+

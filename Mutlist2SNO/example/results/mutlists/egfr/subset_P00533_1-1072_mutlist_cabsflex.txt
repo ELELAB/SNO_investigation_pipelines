@@ -1,0 +1,15 @@
+pdbfile chain resi resn_wt resn_mut
+afEGFR.pdb A 161 SER GLY
+afEGFR.pdb A 189 LYS THR
+afEGFR.pdb A 191 ASP GLU
+afEGFR.pdb A 191 ASP ASN
+afEGFR.pdb A 191 ASP TYR
+afEGFR.pdb A 193 SER GLY
+afEGFR.pdb A 195 PRO LEU
+afEGFR.pdb A 195 PRO SER
+afEGFR.pdb A 198 SER GLY
+afEGFR.pdb A 198 SER ASN
+afEGFR.pdb A 198 SER ARG
+afEGFR.pdb A 204 GLU LYS
+afEGFR.pdb A 205 GLU ASP
+afEGFR.pdb A 206 ASN SER

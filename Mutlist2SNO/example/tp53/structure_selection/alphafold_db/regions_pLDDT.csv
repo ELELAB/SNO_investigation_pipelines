@@ -1,0 +1,2 @@
+uniprot_id,dir_name,regions_pLDDT_greaterequal_70,regions_pLDDT_lower_70
+P04637,TP53,24-25;96-182;187-292;324-355,1-23;26-95;183-186;293-323;356-393

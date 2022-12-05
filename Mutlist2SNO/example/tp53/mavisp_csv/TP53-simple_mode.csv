@@ -1,0 +1,1144 @@
+Mutation,"Stability (FoldX5, kcal/mol)","Stability (Rosetta Flexddg2020, kcal/mol)",Stability classification,"Local Int. (Binding with TP53_2OCJbd, FoldX5, kcal/mol)",Local Int. classification,gnomAD genome allele frequency,gnomAD exome allele frequency,REVEL score,Mutation sources,PMID / DOI,Clinvar Variation ID,ClinVar interpretation,AlphaFold2 model pLDDT score,AlphaFold2 model secondary structure
+W91S,0.18292,2.94558,Uncertain,,,,,0.485,cBioPortal,35659507.0,,,57.48,-
+W91R,0.38095,2.89626,Uncertain,,,,,,Manual annotations from clinvar.csv,,845798,Uncertain significance,57.48,-
+P92T,0.34891,0.79252,Neutral,,,,,0.434,"cBioPortal,COSMIC",35659507.0,,,58.84,-
+P92L,0.36888,0.22177,Neutral,,,,3.9932274862e-06,0.487,"COSMIC,Manual annotations from clinvar.csv",35659507.0,480733,Uncertain significance,58.84,-
+P92S,0.74994,0.5949,Neutral,,,,,0.502,cBioPortal,35659507.0,,,58.84,-
+P92A,0.7046,0.51871,Neutral,,,,,0.509,COSMIC,35659507.0,,,58.84,-
+P92H,0.35837,0.03878,Neutral,,,,,,COSMIC,35659507.0,,,58.84,-
+L93M,0.02457,0.25238,Neutral,,,,,0.369,COSMIC,35659507.0,,,61.16,-
+L93V,0.58786,0.89014,Neutral,,,,,0.523,cBioPortal,,,,61.16,-
+S94T,0.84075,0.1898,Neutral,,,,,0.533,COSMIC,35659507.0,,,64.5,-
+S94P,0.15892,2.57177,Uncertain,,,,,0.528,COSMIC,35659507.0,,,64.5,-
+S94L,2.39711,4.8119,Uncertain,,,,,0.553,"cBioPortal,COSMIC",35659507.0,,,64.5,-
+S95F,-0.00479,0.1102,Neutral,,,,,0.751,"cBioPortal,COSMIC",35659507.0,,,60.79,S
+S96P,0.66873,6.02109,Uncertain,,,,,0.522,COSMIC,,,,87.3,-
+S96C,-0.13646,0.27517,Neutral,,,,,0.497,COSMIC,,,,87.3,-
+S96Y,-1.59365,-0.7898,Neutral,,,,,0.565,"cBioPortal,COSMIC",,,,87.3,-
+S96F,-1.24458,-0.50476,Neutral,,,,,0.401,"cBioPortal,COSMIC",35659507.0,,,87.3,-
+V97F,1.04993,1.52109,Neutral,,,,,0.789,"cBioPortal,Manual annotations from clinvar.csv",35659507.0,458532,Uncertain significance,91.9,-
+V97A,1.25505,2.07993,Uncertain,,,,,0.854,COSMIC,35659507.0,,,91.9,-
+V97D,1.09786,1.97483,Neutral,,,,,0.937,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",35659507.0,182924,Uncertain significance,91.9,-
+V97I,-0.52021,-0.27687,Neutral,,,,0.0,0.593,"COSMIC,Manual annotations from clinvar.csv",35659507.0,1026336,Uncertain significance,91.9,-
+V97L,-0.59058,1.61395,Neutral,,,,,,Manual annotations from clinvar.csv,,182962,Uncertain significance,91.9,-
+P98H,1.49598,1.3568,Neutral,,,,,0.953,cBioPortal,,,,93.67,-
+P98T,1.15357,1.34184,Neutral,,,,,0.957,"COSMIC,Manual annotations from clinvar.csv",,1465351,Uncertain significance,93.67,-
+P98R,2.28701,1.82347,Uncertain,,,,,,Manual annotations from clinvar.csv,,1444043,Uncertain significance,93.67,-
+P98S,3.09634,1.53435,Uncertain,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,822279,Uncertain significance,93.67,-
+P98A,2.43221,0.87619,Uncertain,,,,,,Manual annotations from clinvar.csv,,1039474,Uncertain significance,93.67,-
+P98L,0.62102,-0.18435,Neutral,,,,3.9800361387e-06,0.943,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,528236,Uncertain significance,93.67,-
+P98F,0.50288,1.83299,Neutral,,,,,,COSMIC,,,,93.67,-
+S99C,-0.01687,1.36769,Neutral,,,,,,Manual annotations from clinvar.csv,,566954,Uncertain significance,94.32,-
+S99P,-0.40606,0.19388,Neutral,,,,,0.730,COSMIC,,,,94.32,-
+S99F,-0.32293,0.76054,Neutral,,,,,0.748,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,579376,Uncertain significance,94.32,-
+Q100H,0.33238,-0.3119,Neutral,,,,,0.417,COSMIC,,,,93.13,-
+Q100K,-0.29817,1.23946,Neutral,,,,,0.541,COSMIC,,,,93.13,-
+K101Q,-0.01045,-0.82585,Neutral,,,,,,Manual annotations from clinvar.csv,,649735,Uncertain significance,95.4,-
+K101R,0.13162,-0.01905,Neutral,,,,,0.533,COSMIC,,,,95.4,-
+K101N,0.038,0.39218,Neutral,,,,,0.340,"COSMIC,Manual annotations from clinvar.csv",,237947,Uncertain significance,95.4,-
+K101E,-0.5532,0.04116,Neutral,,,,,,Manual annotations from clinvar.csv,,1059163,Uncertain significance,95.4,-
+T102S,0.54432,0.47075,Neutral,,,,,,Manual annotations from clinvar.csv,,582041,Uncertain significance,97.18,-
+T102I,-0.25163,-0.58299,Neutral,,,,,0.540,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,186132,Uncertain significance,97.18,-
+T102P,-1.27722,-0.28027,Neutral,,,,,0.542,COSMIC,,,,97.18,-
+T102A,0.0915,0.33435,Neutral,,,,,0.540,cBioPortal,,,,97.18,-
+Y103H,0.78602,1.38435,Neutral,,,,,0.870,"cBioPortal,Manual annotations from clinvar.csv",,458533,Uncertain significance,97.88,B
+Y103F,-0.17553,0.33844,Neutral,,,,,0.775,COSMIC,,,,97.88,B
+Y103C,0.6131,2.2534,Uncertain,,,,,0.870,cBioPortal,,,,97.88,B
+Q104L,-0.49611,-0.5,Neutral,,,,,0.520,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,945802,Uncertain significance,97.4,-
+Q104H,0.48156,-0.52347,Neutral,,,,,0.336,"cBioPortal,COSMIC",,,,97.4,-
+G105F,11.3065,5.2966,Destabilizing,,,,,,cBioPortal,,,,96.19,T
+G105D,10.68524,-0.28061,Uncertain,,,,0.0,0.884,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141114,Uncertain significance,96.19,T
+G105S,6.67244,0.95374,Uncertain,,,,,0.883,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428884,Likely pathogenic,96.19,T
+G105V,11.08696,5.64558,Destabilizing,,,,,0.919,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,634708,Likely pathogenic,96.19,T
+G105C,8.40147,4.21054,Destabilizing,,,,,0.942,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,96.19,T
+G105A,4.74204,0.96837,Uncertain,,,,,0.905,"COSMIC,Manual annotations from clinvar.csv",,822977,Uncertain significance,96.19,T
+G105R,9.06758,5.29728,Destabilizing,,,,,0.918,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,406574,Pathogenic/Likely pathogenic,96.19,T
+S106I,0.18132,-0.18571,Neutral,,,,,0.450,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,629791,Uncertain significance,96.67,T
+S106R,-0.03205,-0.23707,Neutral,,,,,0.635,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,492752,Uncertain significance,96.67,T
+Y107S,3.8629,3.56327,Destabilizing,,,,,0.854,"cBioPortal,Manual annotations from clinvar.csv",,142414,Uncertain significance,97.18,T
+Y107C,3.04658,2.62993,Uncertain,,,,,0.883,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142691,Uncertain significance,97.18,T
+Y107Q,2.56914,1.5051,Uncertain,,,,,,COSMIC,,,,97.18,T
+Y107H,2.79494,1.20714,Uncertain,,,0.00041422380831,8.35488362841e-05,0.569,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,140786,Benign,97.18,T
+Y107N,2.34748,2.01088,Uncertain,,,,,,Manual annotations from clinvar.csv,,406572,Uncertain significance,97.18,T
+Y107D,3.15109,2.85476,Uncertain,,,,,0.893,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,641482,Uncertain significance,97.18,T
+G108C,4.15917,2.00034,Uncertain,,,,7.9577918719e-06,0.654,"COSMIC,Manual annotations from clinvar.csv",,1487358,Uncertain significance,96.81,T
+G108D,4.59982,3.06497,Destabilizing,,,,,0.651,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1371608,Uncertain significance,96.81,T
+G108A,3.68635,1.47415,Uncertain,,,,,0.668,cBioPortal,,,,96.81,T
+G108R,3.83527,1.61395,Uncertain,,,,,,"COSMIC,Manual annotations from clinvar.csv",,458535,Uncertain significance,96.81,T
+G108S,4.31114,1.52789,Uncertain,,,,1.19366878079e-05,0.612,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142431,Likely benign,96.81,T
+F109Y,0.78447,0.54558,Neutral,,,,,0.848,"cBioPortal,Manual annotations from clinvar.csv",,1054035,Uncertain significance,98.03,-
+F109C,4.99925,4.64898,Destabilizing,,,,,0.965,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,634784,Likely pathogenic,98.03,-
+F109L,2.34522,2.47449,Uncertain,,,,,0.715,"cBioPortal,COSMIC",,,,98.03,-
+F109I,2.81102,3.70986,Uncertain,,,,,0.837,"cBioPortal,COSMIC",,,,98.03,-
+F109V,3.45501,2.88333,Uncertain,,,,,0.875,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,389644,Likely pathogenic,98.03,-
+F109S,6.06743,5.02177,Destabilizing,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,423970,Uncertain significance,98.03,-
+R110P,5.14219,6.93061,Destabilizing,,,,,0.593,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"641505, 233627","Pathogenic, Pathogenic",97.53,E
+R110S,1.03816,1.01293,Neutral,,,,,0.525,"COSMIC,Manual annotations from clinvar.csv",,140921,Uncertain significance,97.53,E
+R110L,0.75567,0.79252,Neutral,,,,0.0,0.632,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,406597,Pathogenic/Likely pathogenic,97.53,E
+R110C,0.9324,1.20272,Neutral,,,,1.98974881411e-05,0.471,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142206,Uncertain significance,97.53,E
+R110G,1.5052,1.68435,Neutral,,,,,0.577,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,823452,Uncertain significance,97.53,E
+R110H,2.04307,0.21429,Uncertain,,,3.18694626809e-05,4.7754731698e-05,0.592,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127808,Likely benign,97.53,E
+L111V,2.47432,1.70306,Uncertain,,,,,0.456,cBioPortal,,,,97.93,E
+L111M,1.07735,2.25204,Uncertain,,,,,0.517,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,836750,Uncertain significance,97.93,E
+L111Q,4.18527,3.79966,Destabilizing,,,,,0.869,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376632,Uncertain significance,97.93,E
+L111R,5.8654,7.51463,Destabilizing,,,,,0.862,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376631,Likely pathogenic,97.93,E
+L111P,3.83572,4.45544,Destabilizing,,,,,0.864,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376630,Conflicting interpretations of pathogenicity,97.93,E
+G112D,0.47137,-1.1017,Neutral,,,,,,"COSMIC,Manual annotations from clinvar.csv",,1319402,Uncertain significance,96.29,E
+G112C,-0.0524,0.3949,Neutral,,,,,,COSMIC,,,,96.29,E
+G112S,0.54109,0.0585,Neutral,,,,3.9798777382e-06,,"COSMIC,Manual annotations from clinvar.csv",,492575,Uncertain significance,96.29,E
+F113P,6.31033,5.8102,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,97.14,-
+F113C,3.98778,3.67925,Destabilizing,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,634690,Uncertain significance,97.14,-
+F113V,4.35096,3.96633,Destabilizing,,,,,,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141302,Uncertain significance,97.14,-
+F113I,3.88643,4.35578,Destabilizing,,,,,,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1469551,Uncertain significance,97.14,-
+F113L,2.4587,2.4619,Uncertain,,,,,0.783,"cBioPortal,COSMIC",,,,97.14,-
+F113G,5.77346,4.46599,Destabilizing,,,,,,cBioPortal,,,,97.14,-
+F113S,4.38886,3.99524,Destabilizing,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,823709,Uncertain significance,97.14,-
+L114S,0.40896,0.8398,Neutral,,,,,,Manual annotations from clinvar.csv,,458536,Uncertain significance,93.15,-
+L114F,-0.39664,0.40646,Neutral,,,,,,"cBioPortal,COSMIC",,,,93.15,-
+L114V,0.54637,-0.06395,Neutral,,,,,,Manual annotations from clinvar.csv,,1011474,Uncertain significance,93.15,-
+H115N,-0.4101,-0.09116,Neutral,,,,,,Manual annotations from clinvar.csv,,480741,Uncertain significance,88.03,-
+H115Y,-0.2408,-0.97279,Neutral,,,,,0.517,"cBioPortal,COSMIC",,,,88.03,-
+H115R,-0.2739,0.23367,Neutral,,,,,,Manual annotations from clinvar.csv,,182925,Likely benign,88.03,-
+S116F,-1.38973,1.28537,Neutral,,,,,0.728,"cBioPortal,COSMIC",,,,89.09,-
+S116C,-0.53419,-0.11088,Neutral,,,,,0.706,"cBioPortal,COSMIC",,,,89.09,-
+S116A,-0.45035,-0.25408,Neutral,,,,,,Manual annotations from clinvar.csv,,649358,Uncertain significance,89.09,-
+S116P,1.44954,-1.4449,Neutral,,,,,,COSMIC,,,,89.09,-
+G117R,0.42871,0.8915,Neutral,,,,,0.770,"COSMIC,Manual annotations from clinvar.csv",,"1462102, 480758","Uncertain significance, Uncertain significance",89.98,-
+G117E,1.15489,0.37619,Neutral,,,,3.9826357083e-06,0.784,COSMIC,,,,89.98,-
+G117V,1.77863,1.40714,Neutral,,,,,0.832,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,837018,Uncertain significance,89.98,-
+G117A,1.88639,0.19932,Neutral,,,,3.9826357083e-06,0.778,"cBioPortal,Manual annotations from clinvar.csv",,1055289,Uncertain significance,89.98,-
+T118I,0.1738,0.41156,Neutral,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,419837,Uncertain significance,92.31,-
+T118A,0.2555,-1.49864,Neutral,,,,,0.842,COSMIC,,,,92.31,-
+T118R,0.1632,1.00374,Neutral,,,,,0.907,COSMIC,,,,92.31,-
+A119V,0.96462,0.52585,Neutral,,,,,0.906,COSMIC,,,,92.8,-
+A119D,-0.0194,-3.06361,Uncertain,,,,,0.944,"cBioPortal,COSMIC",,,,92.8,-
+A119G,0.45329,0.68946,Neutral,,,,,0.856,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,949408,Uncertain significance,92.8,-
+A119P,-0.41368,2.49116,Uncertain,,,,,,Manual annotations from clinvar.csv,,481073,Uncertain significance,92.8,-
+K120N,0.22014,0.14456,Neutral,,,,,0.862,"cBioPortal,COSMIC",,,,87.74,T
+K120R,0.21832,0.48605,Neutral,,,,,0.861,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1360099,Uncertain significance,87.74,T
+K120T,0.30705,0.27415,Neutral,,,,,0.917,COSMIC,,,,87.74,T
+K120M,-0.33347,0.33707,Neutral,,,,,0.920,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,917693,Uncertain significance,87.74,T
+K120Q,0.01959,0.0915,Neutral,,,,,0.899,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,423255,Uncertain significance,87.74,T
+K120E,-0.23829,-0.21837,Neutral,,,,,0.925,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141098,Conflicting interpretations of pathogenicity,87.74,T
+S121Y,-0.31345,-0.14524,Neutral,,,,,0.921,"cBioPortal,COSMIC",,,,91.82,T
+S121F,-0.36671,0.0949,Neutral,,,,,0.928,COSMIC,,,,91.82,T
+S121T,0.41827,0.15442,Neutral,,,,,,Manual annotations from TP53db_germline.csv,,,,91.82,T
+S121P,0.01388,4.07789,Uncertain,,,,,,Manual annotations from clinvar.csv,,854451,Uncertain significance,91.82,T
+V122M,0.60536,1.67245,Neutral,,,,,0.770,"cBioPortal,Manual annotations from clinvar.csv",,141101,Likely benign,95.69,-
+V122A,0.81787,1.70748,Neutral,,,,,,Manual annotations from clinvar.csv,,1465964,Uncertain significance,95.69,-
+V122L,0.60406,1.69456,Neutral,,,,,0.730,COSMIC,,,,95.69,-
+T123I,-1.06783,0.05986,Neutral,,,,,0.859,"COSMIC,Manual annotations from clinvar.csv",,480737,Uncertain significance,96.78,S
+T123S,-0.66527,0.22109,Neutral,,,,,,Manual annotations from clinvar.csv,,1460570,Uncertain significance,96.78,S
+C124F,-0.57462,-1.61939,Neutral,,,,,0.792,COSMIC,,,,97.3,E
+C124R,0.43577,1.39626,Neutral,,,,,0.883,"cBioPortal,COSMIC",,,,97.3,E
+C124Y,-0.61587,-1.34898,Neutral,,,,,0.713,"cBioPortal,COSMIC",,,,97.3,E
+C124S,0.17678,1.14966,Neutral,,,,,0.668,"COSMIC,Manual annotations from clinvar.csv",,"1021578, 182926","Uncertain significance, Uncertain significance",97.3,E
+C124G,1.59467,2.35204,Uncertain,,,,,0.843,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,230661,Uncertain significance,97.3,E
+C124L,-0.24354,0.12619,Neutral,,,,,,"cBioPortal,COSMIC",,,,97.3,E
+T125P,4.41533,5.42075,Destabilizing,,,,,0.945,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376666,Uncertain significance,97.82,E
+T125R,13.86066,12.1966,Destabilizing,,,,,0.963,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376667,Pathogenic/Likely pathogenic,97.82,E
+T125K,12.21172,8.62449,Destabilizing,,,,,0.963,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,216465,Pathogenic,97.82,E
+T125A,0.84488,1.02551,Neutral,,,,,0.943,"cBioPortal,COSMIC",,,,97.82,E
+T125I,4.84468,3.65442,Destabilizing,,,,,,cBioPortal,,,,97.82,E
+T125M,4.5817,2.92857,Uncertain,,,3.1847133758e-05,,0.925,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,183748,Conflicting interpretations of pathogenicity,97.82,E
+Y126N,3.7426,3.9983,Destabilizing,,,,,0.965,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428871,Uncertain significance,97.98,E
+Y126D,5.3403,5.73367,Destabilizing,,,,,0.979,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,265333,Conflicting interpretations of pathogenicity,97.98,E
+Y126S,4.87757,4.81327,Destabilizing,,,,,0.972,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1054765,Uncertain significance,97.98,E
+Y126H,3.10753,2.61224,Uncertain,,,,,0.961,"cBioPortal,COSMIC",,,,97.98,E
+Y126C,3.9906,3.91973,Destabilizing,,,,,0.981,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,458541,Uncertain significance,97.98,E
+S127P,4.68589,5.49014,Destabilizing,,,,,0.957,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,934410,Pathogenic,97.12,E
+S127Y,5.21305,3.55918,Destabilizing,,,,,0.918,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,656751,Pathogenic,97.12,E
+S127T,2.32405,1.32143,Uncertain,,,,,0.924,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,824232,Uncertain significance,97.12,E
+S127F,1.21787,3.16327,Uncertain,,,,,0.925,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182928,Conflicting interpretations of pathogenicity,97.12,E
+S127C,-0.4813,0.99762,Neutral,,,,,0.916,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,219532,Uncertain significance,97.12,E
+P128S,2.18898,0.7051,Uncertain,,,,,0.516,"cBioPortal,COSMIC",,,,95.58,T
+P128F,1.50722,0.70442,Neutral,,,,,,cBioPortal,,,,95.58,T
+P128A,1.88534,0.61837,Neutral,,,,,0.482,"cBioPortal,COSMIC",,,,95.58,T
+P128L,1.58965,0.47109,Neutral,,,,,0.501,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,824286,Uncertain significance,95.58,T
+P128T,2.16436,0.85374,Uncertain,,,,,,Manual annotations from clinvar.csv,,480743,Uncertain significance,95.58,T
+A129S,0.63603,0.37177,Neutral,,,,,,"cBioPortal,Manual annotations from clinvar.csv",,824314,Conflicting interpretations of pathogenicity,94.67,T
+A129T,-0.36452,0.62313,Neutral,,,,,0.438,"COSMIC,Manual annotations from clinvar.csv",,482217,Conflicting interpretations of pathogenicity,94.67,T
+A129G,0.98517,1.1983,Neutral,,,,,0.407,"COSMIC,Manual annotations from clinvar.csv",,458542,Uncertain significance,94.67,T
+A129V,-0.62635,0.28503,Neutral,,,,,0.468,"COSMIC,Manual annotations from clinvar.csv",,133280,not provided,94.67,T
+A129D,0.64252,0.1,Neutral,,,,,0.553,COSMIC,,,,94.67,T
+L130R,1.17226,3.08163,Uncertain,,,,,0.918,"cBioPortal,COSMIC",,,,95.91,T
+L130H,1.9473,3.09388,Uncertain,,,,,0.924,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,824351,Uncertain significance,95.91,T
+L130V,1.34614,1.82347,Neutral,,,,,0.887,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,458543,Uncertain significance,95.91,T
+L130I,0.76657,1.3915,Neutral,,,,,0.795,"cBioPortal,COSMIC",,,,95.91,T
+L130F,1.06447,3.39762,Uncertain,,,,,0.921,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,216466,Uncertain significance,95.91,T
+L130P,2.73139,5.33333,Uncertain,,,,,0.927,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,428873,Pathogenic,95.91,T
+N131S,2.25286,2.05646,Uncertain,,,,,0.859,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1057941,Uncertain significance,97.14,T
+N131D,0.922,1.44694,Neutral,,,,,0.724,cBioPortal,,,,97.14,T
+N131I,3.44017,5.48469,Destabilizing,,,,,0.939,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,428902,Pathogenic,97.14,T
+N131T,2.8243,2.7415,Uncertain,,,,,0.907,"cBioPortal,COSMIC",,,,97.14,T
+N131H,1.89521,1.63197,Neutral,,,,,0.820,COSMIC,,,,97.14,T
+N131K,1.28355,1.29966,Neutral,,,3.18613394507e-05,1.1969740496e-05,"0.661, 0.662","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,246429,Uncertain significance,97.14,T
+N131Y,1.89041,1.63571,Neutral,,,,,0.879,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141988,Pathogenic,97.14,T
+K132N,3.11745,2.08299,Uncertain,,,,,,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"634773, 376624","Conflicting interpretations of pathogenicity, Likely pathogenic",98.1,E
+K132Q,1.55058,0.73537,Neutral,,,,,0.944,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376628,Uncertain significance,98.1,E
+K132T,0.78647,0.72925,Neutral,,,,,,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376627,Likely pathogenic,98.1,E
+K132I,0.77935,-0.34014,Neutral,,,,,,cBioPortal,,,,98.1,E
+K132W,8.2371,0.77959,Uncertain,,,,,,COSMIC,,,,98.1,E
+K132R,0.5917,0.2881,Neutral,,,,0.0,,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376625,Pathogenic,98.1,E
+K132M,-0.77786,-0.26565,Neutral,,,,,,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376629,Uncertain significance,98.1,E
+K132E,3.60939,2.00918,Uncertain,,,,3.988544899e-06,0.968,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376626,Pathogenic/Likely pathogenic,98.1,E
+M133I,1.40596,0.87789,Neutral,,,,7.9728286001e-06,"0.477, 0.479","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,421437,Uncertain significance,98.31,E
+M133R,2.72127,4.17789,Uncertain,,,,,0.849,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,98.31,E
+M133K,2.01672,3.65782,Uncertain,,,,,0.845,"cBioPortal,COSMIC",,,,98.31,E
+M133L,-0.14833,-0.11973,Neutral,,,,,0.426,COSMIC,,,,98.31,E
+M133V,1.27506,0.35034,Neutral,,,,3.9868275219e-06,0.503,"COSMIC,Manual annotations from clinvar.csv",,528246,Uncertain significance,98.31,E
+M133T,3.20119,2.35102,Uncertain,,,,,0.780,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12357,Pathogenic,98.31,E
+F134S,5.35708,5.33333,Destabilizing,,,,,0.942,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1519634,Uncertain significance,98.5,E
+F134V,2.9139,2.93401,Uncertain,,,,,0.959,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,988615,Conflicting interpretations of pathogenicity,98.5,E
+F134Y,1.51892,0.90952,Neutral,,,,,,"Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1509393,Uncertain significance,98.5,E
+F134C,3.69597,4.07517,Destabilizing,,,,3.9849845781e-06,0.949,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,230477,Likely pathogenic,98.5,E
+F134I,2.33935,2.41463,Uncertain,,,,,0.955,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,480953,Uncertain significance,98.5,E
+F134L,2.30751,1.56156,Uncertain,,,,,"0.872, 0.942","cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"1018290, 871293, 80710","Uncertain significance, Conflicting interpretations of pathogenicity, Uncertain significance",98.5,E
+C135R,12.2978,6.53333,Destabilizing,,,,,0.964,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376560,Pathogenic,98.18,E
+C135W,27.57794,4.36293,Destabilizing,,,,,0.884,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376561,Uncertain significance,98.18,E
+C135Y,10.64326,4.05544,Destabilizing,,,,0.0,0.955,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141762,Conflicting interpretations of pathogenicity,98.18,E
+C135F,9.21435,1.82279,Uncertain,,,,,0.960,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376559,Conflicting interpretations of pathogenicity,98.18,E
+C135S,0.64409,1.2119,Neutral,,,,,"0.954, 0.957","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376562,Uncertain significance,98.18,E
+C135G,2.20546,2.19218,Uncertain,,,,,0.965,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376563,Likely pathogenic,98.18,E
+C135T,-1.07043,0.52313,Neutral,,,,,,COSMIC,,,,98.18,E
+C135X,,,Uncertain,,,,,,COSMIC,,,,,
+Q136P,4.13435,6.42551,Destabilizing,,,,,0.964,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,580807,Uncertain significance,98.01,-
+Q136K,-0.74497,1.32721,Neutral,,,,,0.869,COSMIC,,,,98.01,-
+Q136R,-0.40162,0.46565,Neutral,,,,,0.877,COSMIC,,,,98.01,-
+Q136H,0.66452,1.34252,Neutral,,,,,0.946,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"482213, 186301","Uncertain significance, Uncertain significance",98.01,-
+Q136E,0.22011,1.63741,Neutral,,,,,0.862,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,480751,Uncertain significance,98.01,-
+Q136L,-1.05484,1.27313,Neutral,,,,,0.959,"cBioPortal,COSMIC",,,,98.01,-
+L137Q,1.04974,0.09082,Neutral,,,,,0.951,"cBioPortal,COSMIC",,,,96.93,T
+L137V,1.63022,-0.41905,Neutral,,,,,0.731,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1005829,Uncertain significance,96.93,T
+L137M,0.50434,0.73265,Neutral,,,,,0.637,COSMIC,,,,96.93,T
+L137P,-1.14893,-0.40816,Neutral,,,,,0.950,COSMIC,,,,96.93,T
+A138P,5.45609,7.73469,Destabilizing,,,,,0.949,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12376,Likely pathogenic,95.45,T
+A138S,-0.30959,0.27245,Neutral,,,,,0.911,"COSMIC,Manual annotations from TP53db_germline.csv",,,,95.45,T
+A138G,-1.1969,-0.16361,Neutral,,,,,,Manual annotations from clinvar.csv,,1375764,Uncertain significance,95.45,T
+A138D,0.32154,0.21633,Neutral,,,,,0.901,"COSMIC,Manual annotations from clinvar.csv",,528270,Uncertain significance,95.45,T
+A138T,-0.46513,0.32279,Neutral,,,,,0.910,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1053218,Uncertain significance,95.45,T
+A138V,0.47333,3.83367,Uncertain,,,,0.0,0.870,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,184863,Conflicting interpretations of pathogenicity,95.45,T
+K139E,0.31594,-0.31293,Neutral,,,,,0.844,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,658923,Uncertain significance,96.64,-
+K139N,0.82237,0.37381,Neutral,,,,,0.730,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,584923,Uncertain significance,96.64,-
+K139T,0.69728,-0.0449,Neutral,,,,,0.800,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1338658,Uncertain significance,96.64,-
+K139R,-0.04737,-0.77109,Neutral,,,,,0.760,"COSMIC,Manual annotations from clinvar.csv",,1500748,Uncertain significance,96.64,-
+K139Q,0.30993,-0.50374,Neutral,,,,,0.768,"COSMIC,Manual annotations from clinvar.csv",,1692473,Uncertain significance,96.64,-
+T140N,1.76833,0.19864,Neutral,,,,,0.783,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,185918,Uncertain significance,97.02,-
+T140S,1.11626,1.29048,Neutral,,,,,,Manual annotations from clinvar.csv,,1525853,Uncertain significance,97.02,-
+T140A,1.40265,0.49762,Neutral,,,,,0.806,"cBioPortal,Manual annotations from clinvar.csv",,644101,Uncertain significance,97.02,-
+T140I,1.01066,-0.42857,Neutral,,,,,0.842,"cBioPortal,COSMIC",,,,97.02,-
+C141A,1.00034,0.13912,Neutral,,,,,,COSMIC,,,,97.5,E
+C141R,8.3588,6.74524,Destabilizing,,,,,0.861,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376565,Uncertain significance,97.5,E
+C141S,1.59905,1.56701,Neutral,,,,,"0.790, 0.813","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376567,Likely pathogenic,97.5,E
+C141W,26.56516,3.90986,Destabilizing,,,,,0.808,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376564,Conflicting interpretations of pathogenicity,97.5,E
+C141G,3.0761,5.64456,Destabilizing,,,,,0.859,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376566,Likely pathogenic,97.5,E
+C141F,10.99424,7.87313,Destabilizing,,,,,0.880,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376568,Conflicting interpretations of pathogenicity,97.5,E
+C141Y,12.9355,2.11054,Uncertain,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,140801,Pathogenic,97.5,E
+P142R,1.92975,1.67075,Neutral,,,,,0.907,cBioPortal,,,,97.23,E
+P142H,3.81228,3.55408,Destabilizing,,,,,0.914,COSMIC,,,,97.23,E
+P142F,2.28928,3.08503,Uncertain,,,,,,"cBioPortal,COSMIC",,,,97.23,E
+P142A,1.90591,2.06803,Uncertain,,,,,0.901,COSMIC,,,,97.23,E
+P142L,1.29286,2.19966,Uncertain,,,,3.9800678204e-06,0.879,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,864520,Uncertain significance,97.23,E
+P142S,2.92672,2.56327,Uncertain,,,,,0.887,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,824720,Uncertain significance,97.23,E
+P142T,2.23884,2.12823,Uncertain,,,,,0.891,COSMIC,,,,97.23,E
+V143M,-0.64318,2.14184,Uncertain,,,,,0.659,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142657,Conflicting interpretations of pathogenicity,98.15,E
+V143G,5.19089,5.66667,Destabilizing,,,,,0.692,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,486556,Uncertain significance,98.15,E
+V143E,3.54247,4.54966,Destabilizing,,,,,0.683,"cBioPortal,COSMIC",,,,98.15,E
+V143A,3.67856,3.42211,Destabilizing,,,,,0.574,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,804214,Likely pathogenic,98.15,E
+V143L,-1.0585,0.91395,Neutral,,,,,0.607,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,185729,Uncertain significance,98.15,E
+Q144P,0.72571,2.5585,Uncertain,,,,,0.801,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,186594,Uncertain significance,97.6,E
+Q144K,-1.22399,0.58129,Neutral,,,,,0.763,COSMIC,,,,97.6,E
+Q144L,-1.64714,-0.67109,Neutral,,,,,0.764,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376647,Uncertain significance,97.6,E
+Q144H,0.46041,0.52925,Neutral,,,,,0.708,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376648,Uncertain significance,97.6,E
+Q144R,-0.82807,1.13231,Neutral,,,,,0.751,COSMIC,,,,97.6,E
+L145V,1.63522,0.73605,Neutral,,,,,0.462,COSMIC,,,,97.97,E
+L145Q,3.02432,1.79184,Uncertain,,,,,0.846,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,480760,Conflicting interpretations of pathogenicity,97.97,E
+L145M,-0.52022,0.85544,Neutral,,,,,0.505,COSMIC,,,,97.97,E
+L145R,6.64407,5.87959,Destabilizing,,,,,0.845,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1027110,Uncertain significance,97.97,E
+L145P,6.19688,4.97823,Destabilizing,,,,0.0,0.818,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142050,Conflicting interpretations of pathogenicity,97.97,E
+W146R,1.21102,1.89252,Neutral,,,,,0.464,COSMIC,,,,97.91,E
+W146S,2.23551,3.19558,Uncertain,,,,,0.521,"cBioPortal,COSMIC",,,,97.91,E
+W146G,2.47372,4.04422,Uncertain,,,,,0.536,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,186587,Uncertain significance,97.91,E
+W146C,1.14706,2.63878,Uncertain,,,,,0.629,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,824855,Uncertain significance,97.91,E
+V147A,1.7211,1.21633,Neutral,,,,,0.812,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,842812,Uncertain significance,97.61,-
+V147E,1.60058,2.72449,Uncertain,,,,,,COSMIC,,,,97.61,-
+V147F,2.25609,0.22483,Uncertain,,,,,0.747,COSMIC,,,,97.61,-
+V147D,1.48812,2.20272,Uncertain,,,,,0.896,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1351017,Uncertain significance,97.61,-
+V147G,2.77782,2.6051,Uncertain,,,,,0.895,"cBioPortal,COSMIC",,,,97.61,-
+V147I,-0.12943,-0.10986,Neutral,,,,,0.549,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,528255,Uncertain significance,97.61,-
+D148V,0.53167,1.1085,Neutral,,,,,0.551,COSMIC,,,,96.64,S
+D148H,0.65903,0.81837,Neutral,,,,,0.482,"cBioPortal,COSMIC",,,,96.64,S
+D148E,0.11046,-0.09218,Neutral,,,,,0.289,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1478891,Uncertain significance,96.64,S
+D148A,0.35296,0.95646,Neutral,,,,,,Manual annotations from clinvar.csv,,485032,Uncertain significance,96.64,S
+D148G,0.52389,1.7102,Neutral,,,,,0.467,COSMIC,,,,96.64,S
+D148Y,0.66416,0.14728,Neutral,,,,3.9790859244e-06,0.531,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428863,Uncertain significance,96.64,S
+D148N,-0.94688,0.42177,Neutral,,,,,0.277,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,568069,Uncertain significance,96.64,S
+S149Y,-0.23339,-0.87925,Neutral,,,,,0.448,"cBioPortal,COSMIC",,,,95.78,S
+S149P,1.37208,5.46122,Uncertain,,,,,0.558,COSMIC,,,,95.78,S
+S149F,-0.35851,-0.66701,Neutral,,,,,0.457,"COSMIC,Manual annotations from clinvar.csv",,486559,Uncertain significance,95.78,S
+S149T,0.01936,-0.07551,Neutral,,,,,0.327,COSMIC,,,,95.78,S
+T150I,-1.02151,-0.8119,Neutral,,,,,0.381,"COSMIC,Manual annotations from clinvar.csv",,1350373,Uncertain significance,95.83,-
+T150R,-1.1803,0.37177,Neutral,,,,,0.441,COSMIC,,,,95.83,-
+T150K,-0.60486,0.09354,Neutral,,,,,0.394,COSMIC,,,,95.83,-
+T150A,0.47616,0.6398,Neutral,,,,,0.333,COSMIC,,,,95.83,-
+P151H,8.70669,3.56973,Destabilizing,,,,,0.870,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376639,Uncertain significance,96.75,-
+P151L,2.17286,0.20442,Uncertain,,,,,0.771,"cBioPortal,COSMIC",,,,96.75,-
+P151S,4.05396,1.90102,Uncertain,,,,,0.898,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12370,Pathogenic/Likely pathogenic,96.75,-
+P151T,3.33702,0.55238,Uncertain,,,,,0.911,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12369,Pathogenic/Likely pathogenic,96.75,-
+P151R,9.95465,4.68061,Destabilizing,,,,,0.912,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376640,Pathogenic,96.75,-
+P151X,,,Uncertain,,,,,,COSMIC,,,,,
+P151A,3.17768,0.92109,Uncertain,,,,,0.889,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376641,Pathogenic,96.75,-
+P151F,12.56048,2.21973,Uncertain,,,,,,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,824960,Likely pathogenic,96.75,-
+P152R,1.42753,1.16871,Neutral,,,,,0.853,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,824998,Pathogenic/Likely pathogenic,96.44,-
+P152T,3.24013,1.81429,Uncertain,,,,,0.866,"cBioPortal,COSMIC",,,,96.44,-
+P152A,2.46518,1.47449,Uncertain,,,,,0.803,COSMIC,,,,96.44,-
+P152K,1.58552,1.52449,Neutral,,,,,,"cBioPortal,COSMIC",,,,96.44,-
+P152L,1.31947,0.92891,Neutral,,,,7.9594387004e-06,0.878,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142766,Pathogenic,96.44,-
+P152Q,2.09415,1.62415,Uncertain,,,,,0.843,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1058730,Uncertain significance,96.44,-
+P152S,2.73687,1.91395,Uncertain,,,,3.9791175909e-06,0.863,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,482230,Conflicting interpretations of pathogenicity,96.44,-
+P153T,1.0205,1.2466,Neutral,,,,,0.382,COSMIC,,,,96.11,T
+P153H,1.10498,1.35918,Neutral,,,,,0.391,"cBioPortal,COSMIC",,,,96.11,T
+P153A,0.94448,1.13061,Neutral,,,,,0.369,COSMIC,,,,96.11,T
+P153S,1.10831,1.05918,Neutral,,,,,0.359,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,422563,Uncertain significance,96.11,T
+P153L,1.07881,1.4085,Neutral,,,,,0.370,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,645432,Uncertain significance,96.11,T
+P153F,0.98823,1.52755,Neutral,,,,,,COSMIC,,,,96.11,T
+G154S,4.42105,1.6051,Uncertain,,,0.0001593371574251,3.9800678204e-06,0.638,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,133284,Uncertain significance,96.41,T
+G154V,5.66715,5.38435,Destabilizing,,,,,0.754,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,651769,Uncertain significance,96.41,T
+G154I,6.46721,5.92619,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,96.41,T
+G154A,4.00961,1.7568,Uncertain,,,,,0.728,COSMIC,,,,96.41,T
+G154R,3.25735,1.8017,Uncertain,,,,,,"COSMIC,Manual annotations from clinvar.csv",,482229,Uncertain significance,96.41,T
+G154C,2.90679,2.38435,Uncertain,,,,,0.715,"cBioPortal,COSMIC",,,,96.41,T
+G154D,4.16682,1.03299,Uncertain,,,,7.9595020536e-06,0.721,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,237950,Uncertain significance,96.41,T
+T155L,2.01269,5.41939,Uncertain,,,,,,COSMIC,,,,98.18,-
+T155F,8.15281,7.90578,Destabilizing,,,,,,cBioPortal,,,,98.18,-
+T155I,1.41232,2.90952,Uncertain,,,,,0.597,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1005876,Uncertain significance,98.18,-
+T155P,2.44372,5.53061,Uncertain,,,,,0.581,"cBioPortal,COSMIC",,,,98.18,-
+T155S,1.85333,1.6034,Neutral,,,3.18775900542e-05,,"0.359, 0.424","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,186179,Conflicting interpretations of pathogenicity,98.18,-
+T155N,4.86568,2.90476,Uncertain,,,3.18775900542e-05,,0.548,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,406564,Conflicting interpretations of pathogenicity,98.18,-
+T155A,1.63016,0.49728,Neutral,,,,7.9589319113e-06,0.337,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,458544,Uncertain significance,98.18,-
+R156P,5.02486,5.04932,Destabilizing,,,,,0.609,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,634768,Uncertain significance,98.07,E
+R156S,1.20075,1.47721,Neutral,,,,,0.523,"cBioPortal,COSMIC",,,,98.07,E
+R156C,0.42422,1.20952,Neutral,,,,3.9795926489e-06,0.493,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127810,Conflicting interpretations of pathogenicity,98.07,E
+R156L,-1.15866,0.23776,Neutral,,,,,0.512,"cBioPortal,COSMIC",,,,98.07,E
+R156H,-0.06565,0.2585,Neutral,,,,1.59192575258e-05,0.627,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127811,Uncertain significance,98.07,E
+R156G,1.64932,2.35204,Uncertain,,,,,0.580,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1517870,Uncertain significance,98.07,E
+V157E,4.89001,3.81088,Destabilizing,,,,,,COSMIC,,,,98.41,E
+V157D,3.27291,3.97211,Destabilizing,,,,,0.863,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,482231,Conflicting interpretations of pathogenicity,98.41,E
+V157I,-0.88767,0.07483,Neutral,,,,3.97921259341e-05,0.425,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,185404,Likely benign,98.41,E
+V157F,7.11044,3.47007,Destabilizing,,,,,0.708,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12353,Conflicting interpretations of pathogenicity,98.41,E
+V157L,0.64629,1.77109,Neutral,,,,,0.546,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1515529,Uncertain significance,98.41,E
+V157A,3.7101,3.12789,Destabilizing,,,,,0.848,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428887,Pathogenic/Likely pathogenic,98.41,E
+V157G,5.39919,5.43367,Destabilizing,,,,,0.872,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,915695,Uncertain significance,98.41,E
+R158P,4.38879,2.47143,Uncertain,,,,,0.916,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,246118,Likely pathogenic,98.38,E
+R158F,10.82024,0.47041,Uncertain,,,,,,"cBioPortal,COSMIC",,,,98.38,E
+R158C,3.46246,1.92211,Uncertain,,,,7.9593753482e-06,0.835,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127812,Conflicting interpretations of pathogenicity,98.38,E
+R158I,3.15202,0.17109,Uncertain,,,,,,Manual annotations from clinvar.csv,,958850,Uncertain significance,98.38,E
+R158S,3.30992,2.42041,Uncertain,,,,,0.864,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1067910,Pathogenic,98.38,E
+R158H,7.49214,1.63912,Uncertain,,,,3.9798143815e-06,0.844,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141963,Pathogenic/Likely pathogenic,98.38,E
+R158L,1.54833,0.54422,Neutral,,,,3.9798143815e-06,0.891,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"568285, 528248","Pathogenic/Likely pathogenic, Pathogenic",98.38,E
+R158G,4.22923,3.45816,Destabilizing,,,,,0.862,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,856171,Pathogenic,98.38,E
+A159V,-0.35939,0.35102,Neutral,,,,,0.774,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,458545,Conflicting interpretations of pathogenicity,98.48,E
+A159D,4.55058,2.38061,Uncertain,,,,,0.836,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1026335,Uncertain significance,98.48,E
+A159T,1.08183,0.28605,Neutral,,,,0.0,0.715,"cBioPortal,COSMIC",,,,98.48,E
+A159F,12.02688,2.00272,Uncertain,,,,,,Manual annotations from clinvar.csv,,182961,Uncertain significance,98.48,E
+A159P,2.84746,4.55442,Uncertain,,,,,0.815,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182929,Uncertain significance,98.48,E
+A159S,1.56025,0.98129,Neutral,,,,,0.727,COSMIC,,,,98.48,E
+A159I,-0.05679,0.52211,Neutral,,,,,,cBioPortal,,,,98.48,E
+M160N,2.67903,2.36905,Uncertain,,,,,,cBioPortal,,,,98.0,E
+M160R,1.99709,1.7568,Neutral,,,,,0.865,"cBioPortal,COSMIC",,,,98.0,E
+M160L,-0.05114,0.43435,Neutral,,,,,0.569,COSMIC,,,,98.0,E
+M160V,0.88868,0.00476,Neutral,,,,3.979370941e-06,0.689,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,444396,Conflicting interpretations of pathogenicity,98.0,E
+M160I,0.22395,-0.08299,Neutral,,,,1.19374477737e-05,"0.656, 0.657","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,230758,Likely benign,98.0,E
+M160K,1.31869,2.10544,Uncertain,,,,,0.860,"cBioPortal,COSMIC",,,,98.0,E
+M160T,2.21008,0.95374,Uncertain,,,,,0.669,"cBioPortal,COSMIC",,,,98.0,E
+A161D,2.68196,1.64796,Uncertain,,,,,0.908,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,422295,Conflicting interpretations of pathogenicity,97.91,E
+A161N,1.2089,1.59422,Neutral,,,,,,COSMIC,,,,97.91,E
+A161V,-0.8961,-0.9415,Neutral,,,,,0.803,"cBioPortal,COSMIC",,,,97.91,E
+A161S,1.69958,1.11531,Neutral,,,,,0.752,"cBioPortal,COSMIC",,,,97.91,E
+A161G,2.18044,2.52721,Uncertain,,,,,0.809,COSMIC,,,,97.91,E
+A161T,0.44664,0.86395,Neutral,,,,,0.790,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,161518,Conflicting interpretations of pathogenicity,97.91,E
+A161F,5.94132,3.46973,Destabilizing,,,,,,COSMIC,,,,97.91,E
+A161P,-1.671,1.6602,Neutral,,,,,0.641,"cBioPortal,COSMIC",,,,97.91,E
+I162S,3.06987,3.22585,Destabilizing,,,,,0.865,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,127813,Uncertain significance,97.3,E
+I162M,0.13702,0.6898,Neutral,,,,,0.629,"cBioPortal,COSMIC",,,,97.3,E
+I162N,3.16585,3.31769,Destabilizing,,,,,0.800,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1408611,Uncertain significance,97.3,E
+I162V,0.85119,0.54932,Neutral,,,,,0.498,COSMIC,,,,97.3,E
+I162F,6.3223,0.71497,Uncertain,,,,,0.676,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,948225,Uncertain significance,97.3,E
+Y163D,4.14124,4.52993,Destabilizing,,,,,0.906,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,187052,Conflicting interpretations of pathogenicity,97.85,E
+Y163S,4.49365,4.00918,Destabilizing,,,,,0.901,"cBioPortal,COSMIC",,,,97.85,E
+Y163H,2.35527,2.18776,Uncertain,,,,,0.904,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376680,Uncertain significance,97.85,E
+Y163N,2.73582,3.44116,Uncertain,,,,,0.907,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376679,Uncertain significance,97.85,E
+Y163C,3.22054,3.14286,Destabilizing,,,,,0.872,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127814,Pathogenic,97.85,E
+K164M,0.09675,1.04456,Neutral,,,,,0.925,"cBioPortal,COSMIC",,,,96.96,S
+K164Q,1.05046,0.85102,Neutral,,,,,0.899,COSMIC,,,,96.96,S
+K164T,1.87897,2.40068,Uncertain,,,,,0.927,"cBioPortal,COSMIC",,,,96.96,S
+K164R,0.80901,1.13435,Neutral,,,,,0.906,"cBioPortal,COSMIC",,,,96.96,S
+K164N,2.34421,1.1898,Uncertain,,,,,0.794,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428899,Uncertain significance,96.96,S
+K164E,1.4276,1.82041,Neutral,,,,,0.875,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,246416,Uncertain significance,96.96,S
+Q165E,-0.14645,-0.29592,Neutral,,,,,0.572,COSMIC,,,,94.5,S
+Q165H,-0.01558,0.11735,Neutral,,,,,0.600,"cBioPortal,COSMIC",,,,94.5,S
+Q165L,-1.15967,-0.92993,Neutral,,,,,0.574,COSMIC,,,,94.5,S
+Q165P,-1.12513,2.19082,Uncertain,,,,,0.653,COSMIC,,,,94.5,S
+Q165K,-0.57892,0.29184,Neutral,,,,,0.481,"cBioPortal,Manual annotations from clinvar.csv",,482232,Likely benign,94.5,S
+Q165R,-0.51985,0.33878,Neutral,,,,,0.475,COSMIC,,,,94.5,S
+S166L,-0.57767,-0.75272,Neutral,,,,,0.613,"COSMIC,Manual annotations from clinvar.csv",,528239,Uncertain significance,92.99,G
+S166A,-0.36484,-0.15816,Neutral,,,,,0.487,COSMIC,,,,92.99,G
+S166T,-0.08995,0.33197,Neutral,,,,,0.512,COSMIC,,,,92.99,G
+S166I,-0.39286,-0.36837,Neutral,,,,,,COSMIC,,,,92.99,G
+S166P,-2.00934,-0.9568,Uncertain,,,,,0.707,COSMIC,,,,92.99,G
+S166G,0.03491,0.55986,Neutral,,,,,,COSMIC,,,,92.99,G
+Q167L,-0.04839,-0.44694,Neutral,,,,,0.569,COSMIC,,,,93.51,G
+Q167H,0.18276,0.35034,Neutral,,,,,"0.589, 0.592","cBioPortal,COSMIC",,,,93.51,G
+Q167P,-0.57856,3.09184,Uncertain,,,,,,Manual annotations from clinvar.csv,,490173,Uncertain significance,93.51,G
+Q167E,-0.31186,0.08265,Neutral,,,,,0.467,COSMIC,,,,93.51,G
+Q167K,-0.52478,-0.4034,Neutral,,,,,0.647,"COSMIC,Manual annotations from TP53db_germline.csv",,,,93.51,G
+Q167R,-0.26124,0.1432,Neutral,,,,,0.566,"COSMIC,Manual annotations from clinvar.csv",,653104,Uncertain significance,93.51,G
+H168Q,0.84543,1.32993,Neutral,,,,,0.568,COSMIC,,,,93.35,G
+H168L,-0.09936,1.49014,Neutral,,,,,0.550,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,93.35,G
+H168R,1.13553,1.50034,Neutral,,,,,0.562,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,428866,Conflicting interpretations of pathogenicity,93.35,G
+H168Y,-0.0779,-0.67041,Neutral,,,,,0.501,COSMIC,,,,93.35,G
+H168N,0.20665,1.07619,Neutral,,,,,0.566,COSMIC,,,,93.35,G
+H168P,3.42664,5.88231,Destabilizing,,,,,0.526,"cBioPortal,COSMIC",,,,93.35,G
+H168D,-0.2902,1.37347,Neutral,,,,,0.551,COSMIC,,,,93.35,G
+M169L,0.34033,0.07959,Neutral,,,,,0.562,cBioPortal,,,,93.17,T
+M169V,0.87621,0.60272,Neutral,,,,,0.503,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,844926,Uncertain significance,93.17,T
+M169T,1.30714,1.27891,Neutral,,,,,0.726,"cBioPortal,COSMIC",,,,93.17,T
+M169R,0.82856,0.4449,Neutral,,,,,,Manual annotations from clinvar.csv,,568736,Uncertain significance,93.17,T
+M169I,0.44136,-0.12245,Neutral,,,,,0.597,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,919322,Uncertain significance,93.17,T
+T170P,-1.38791,3.25068,Uncertain,,,,,0.808,COSMIC,,,,93.17,T
+T170A,-0.94309,-0.20374,Neutral,,,,,0.518,"COSMIC,Manual annotations from clinvar.csv",,135949,Uncertain significance,93.17,T
+T170M,-1.43944,-1.04048,Neutral,,,3.186336987e-05,4.7747511161e-05,0.868,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,184014,Likely benign,93.17,T
+T170R,-0.92278,-1.22347,Neutral,,,,,0.867,"COSMIC,Manual annotations from clinvar.csv",,490174,Uncertain significance,93.17,T
+T170S,-1.4026,-0.0568,Neutral,,,,,0.629,COSMIC,,,,93.17,T
+T170K,-1.17096,-0.67993,Neutral,,,,,0.827,cBioPortal,,,,93.17,T
+E171K,1.51121,0.07313,Neutral,,,,,0.873,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141566,Uncertain significance,94.24,S
+E171Q,-0.08925,0.3949,Neutral,,,,,0.849,COSMIC,,,,94.24,S
+E171G,1.95304,1.56327,Neutral,,,,,0.917,"cBioPortal,COSMIC",,,,94.24,S
+E171V,1.12863,0.09456,Neutral,,,,,0.922,COSMIC,,,,94.24,S
+E171D,-0.06342,0.99694,Neutral,,,,,0.597,"cBioPortal,COSMIC",,,,94.24,S
+E171A,0.96443,1.06463,Neutral,,,,,0.896,COSMIC,,,,94.24,S
+V172A,1.46214,0.79116,Neutral,,,,,0.850,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,528245,Uncertain significance,95.19,-
+V172F,3.58964,6.3881,Destabilizing,,,,,0.917,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,428909,Likely pathogenic,95.19,-
+V172D,1.68208,2.88707,Uncertain,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,836761,Uncertain significance,95.19,-
+V172G,2.29448,2.62585,Uncertain,,,,,0.953,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428883,Uncertain significance,95.19,-
+V172I,-0.74887,1.07551,Neutral,,,,,0.645,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,825481,Uncertain significance,95.19,-
+V173W,20.12658,10.17959,Destabilizing,,,,,,COSMIC,,,,96.58,-
+V173A,2.75292,2.50646,Uncertain,,,,,0.758,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376017,Pathogenic/Likely pathogenic,96.58,-
+V173L,1.74998,3.67687,Uncertain,,,,,0.880,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376668,Pathogenic/Likely pathogenic,96.58,-
+V173E,4.36186,5.58231,Destabilizing,,,,,0.749,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376669,Likely pathogenic,96.58,-
+V173G,4.09452,4.93095,Destabilizing,,,,,0.769,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376016,Uncertain significance,96.58,-
+V173Q,3.47539,4.3102,Destabilizing,,,,,,cBioPortal,,,,96.58,-
+V173R,13.29356,6.60578,Destabilizing,,,,,,cBioPortal,,,,96.58,-
+V173M,2.38189,3.85102,Uncertain,,,,,0.892,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,233951,Pathogenic,96.58,-
+R174G,0.33685,1.26973,Neutral,,,,,0.724,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,219487,Uncertain significance,94.61,-
+R174N,-0.08562,1.10102,Neutral,,,,,,cBioPortal,,,,94.61,-
+R174T,-0.95873,0.56837,Neutral,,,,,0.633,cBioPortal,,,,94.61,-
+R174H,0.35132,0.46939,Neutral,,,,,,COSMIC,,,,94.61,-
+R174K,-0.48056,-0.06054,Neutral,,,,,0.381,"COSMIC,Manual annotations from clinvar.csv",,423887,Likely benign,94.61,-
+R174S,-0.46654,0.0602,Neutral,,,,,0.639,"COSMIC,Manual annotations from clinvar.csv",,1058186,Uncertain significance,94.61,-
+R174M,-1.75247,-0.11429,Neutral,,,,,0.628,COSMIC,,,,94.61,-
+R174W,-0.26923,0.01803,Neutral,,,,,0.634,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,964680,Uncertain significance,94.61,-
+R175S,1.88645,2.81395,Uncertain,,,,,0.831,COSMIC,,,,96.38,-
+R175G,1.92643,4.32721,Uncertain,,,,,0.829,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376649,Pathogenic,96.38,-
+R175H,10.02063,2.95034,Uncertain,,,,3.9796876741e-06,0.922,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12374,Pathogenic,96.38,-
+R175C,0.92406,1.32313,Neutral,,,3.18613394507e-05,1.59182438993e-05,0.833,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,245851,Uncertain significance,96.38,-
+R175L,0.25423,1.29354,Neutral,,,,,0.960,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,182963,Pathogenic/Likely pathogenic,96.38,-
+R175P,-0.26498,3.07891,Uncertain,,,,,0.966,COSMIC,,,,96.38,-
+C176F,20.19174,1.81531,Uncertain,,,,3.9795609748e-06,0.951,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376569,Likely pathogenic,96.44,-
+C176Y,24.51268,3.60374,Destabilizing,,,,,0.949,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,186451,Pathogenic,96.44,-
+C176S,5.94103,-0.63095,Uncertain,,,,,"0.945, 0.946","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376570,Conflicting interpretations of pathogenicity,96.44,-
+C176W,23.65274,3.11497,Destabilizing,,,,0.0,0.863,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376572,Conflicting interpretations of pathogenicity,96.44,-
+C176V,13.51166,2.73197,Uncertain,,,,,,cBioPortal,,,,96.44,-
+C176G,7.97102,1.59796,Uncertain,,,,,0.946,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376571,Uncertain significance,96.44,-
+C176L,13.09442,3.03027,Destabilizing,,,,,,cBioPortal,,,,96.44,-
+C176R,12.7444,3.97823,Destabilizing,,,,,0.940,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"634759, 376573","Likely pathogenic, Conflicting interpretations of pathogenicity",96.44,-
+P177H,3.04659,1.33197,Uncertain,,,,,0.844,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,956854,Uncertain significance,95.0,H
+P177L,1.84176,1.42653,Neutral,,,,3.9793076005e-06,0.865,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,406583,Conflicting interpretations of pathogenicity,95.0,H
+P177F,2.58504,0.8051,Uncertain,,,,,,"cBioPortal,COSMIC",,,,95.0,H
+P177R,2.87763,1.38197,Uncertain,,,,0.0,0.893,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,458547,Pathogenic/Likely pathogenic,95.0,H
+P177I,2.21673,1.53129,Uncertain,,,,,,COSMIC,,,,95.0,H
+P177S,2.51011,1.36156,Uncertain,,,,,0.877,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,646495,Uncertain significance,95.0,H
+P177T,2.85708,1.55816,Uncertain,,,,,0.878,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,482220,Uncertain significance,95.0,H
+H178L,-0.86919,-0.37721,Neutral,,,,,0.843,"cBioPortal,COSMIC",,,,94.74,H
+H178P,-0.6059,3.17993,Uncertain,,,,,0.918,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,485030,Conflicting interpretations of pathogenicity,94.74,H
+H178N,0.43281,-0.04728,Neutral,,,,,0.722,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,421546,Uncertain significance,94.74,H
+H178Q,-0.38894,-0.32959,Neutral,,,,,0.814,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"947223, 575702","Uncertain significance, Conflicting interpretations of pathogenicity",94.74,H
+H178Y,-0.88008,-0.20204,Neutral,,,,,0.870,COSMIC,,,,94.74,H
+H178D,-0.55854,-0.00986,Neutral,,,,,0.892,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,482223,Likely pathogenic,94.74,H
+H179N,5.84411,0.5517,Uncertain,,,,3.9792442619e-06,0.902,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376609,Conflicting interpretations of pathogenicity,94.02,H
+H179Y,9.25013,0.43571,Uncertain,,,,,0.948,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127815,Pathogenic/Likely pathogenic,94.02,H
+H179Q,7.42658,-0.39898,Uncertain,,,,0.0,0.790,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"406578, 376607","Pathogenic, Pathogenic/Likely pathogenic",94.02,H
+H179L,6.96512,0.43912,Uncertain,,,,,0.882,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376608,Uncertain significance,94.02,H
+H179R,8.23784,2.75952,Uncertain,,,,3.9786743057e-06,0.935,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376606,Conflicting interpretations of pathogenicity,94.02,H
+H179P,9.17851,9.45476,Destabilizing,,,,,0.911,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376611,Conflicting interpretations of pathogenicity,94.02,H
+H179D,0.39411,-5.77517,Uncertain,,,,,0.916,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376610,Uncertain significance,94.02,H
+E180Q,0.06389,-0.02585,Neutral,,,,,0.659,COSMIC,,,,92.98,H
+E180G,1.6635,1.27211,Neutral,,,,,0.915,COSMIC,,,,92.98,H
+E180K,0.10706,0.15952,Neutral,,,,,0.823,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,245711,Likely pathogenic,92.98,H
+E180D,0.84174,0.69082,Neutral,,,,,0.798,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"1521256, 1509915","Uncertain significance, Uncertain significance",92.98,H
+R181Y,0.19013,0.54932,Neutral,,,,,,COSMIC,,,,91.38,S
+R181S,-0.24036,0.67551,Neutral,,,,,0.778,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,230764,Uncertain significance,91.38,S
+R181H,0.22542,0.54082,Neutral,,,3.1843077315e-05,1.19367827983e-05,0.797,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142320,Pathogenic/Likely pathogenic,91.38,S
+R181P,1.44565,6.48299,Uncertain,,,,,0.894,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,825729,Pathogenic/Likely pathogenic,91.38,S
+R181L,0.00133,0.32823,Neutral,,,,,0.680,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,39420,Uncertain significance,91.38,S
+R181C,-0.02287,1.12483,Neutral,,,,,0.891,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142624,Conflicting interpretations of pathogenicity,91.38,S
+R181G,0.48158,1.20374,Neutral,,,,,0.886,COSMIC,,,,91.38,S
+C182G,-0.18902,0.13095,Neutral,,,,,,Manual annotations from clinvar.csv,,1489700,Uncertain significance,83.44,S
+C182W,-0.4117,0.57177,Neutral,,,,,0.659,"COSMIC,Manual annotations from clinvar.csv",,423137,Uncertain significance,83.44,S
+C182R,-0.49597,-0.94558,Neutral,,,,,0.644,COSMIC,,,,83.44,S
+C182Y,-0.59817,0.01156,Neutral,,,,,0.634,COSMIC,,,,83.44,S
+C182S,-0.34098,-0.73707,Neutral,,,,,"0.438, 0.455",COSMIC,,,,83.44,S
+S183L,1.48097,0.0966,Neutral,,,,,0.556,"COSMIC,Manual annotations from clinvar.csv",,480735,Uncertain significance,68.18,-
+S183P,-0.91196,-0.74966,Neutral,,,,,0.457,COSMIC,,,,68.18,-
+D184Y,0.07421,0.28367,Neutral,,,,,0.715,COSMIC,,,,69.78,-
+D184H,0.54656,-0.12551,Neutral,,,,,0.700,"cBioPortal,COSMIC",,,,69.78,-
+D184G,0.52627,1.45986,Neutral,,,,,,"COSMIC,Manual annotations from clinvar.csv",,406606,Uncertain significance,69.78,-
+D184N,0.52779,-0.03878,Neutral,,,,,0.433,"cBioPortal,COSMIC",,,,69.78,-
+D184E,0.22479,-0.12925,Neutral,,,,,0.558,"cBioPortal,COSMIC",,,,69.78,-
+D184C,1.88562,1.45816,Neutral,,,,,,cBioPortal,,,,69.78,-
+S185C,-0.93577,0.93741,Neutral,,,,,0.425,COSMIC,,,,67.73,-
+S185T,-0.22047,-0.20714,Neutral,,,,,,COSMIC,,,,67.73,-
+S185G,0.39616,2.18061,Uncertain,,,,,0.497,COSMIC,,,,67.73,-
+S185I,-1.27395,0.15816,Neutral,,,,,0.452,COSMIC,,,,67.73,-
+S185R,-0.66566,-0.08367,Neutral,,,,,0.520,COSMIC,,,,67.73,-
+S185N,0.26923,1.32313,Neutral,,,,3.9786743057e-06,0.325,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141359,Likely benign,67.73,-
+D186G,2.10585,3.54796,Uncertain,,,,,0.680,COSMIC,,,,69.29,-
+D186E,0.24547,2.40782,Uncertain,,,,3.9784843566e-06,0.643,"COSMIC,Manual annotations from clinvar.csv",,230006,Likely benign,69.29,-
+D186V,2.1892,1.93605,Uncertain,,,,,0.800,COSMIC,,,,69.29,-
+D186N,0.51676,0.47449,Neutral,,,,7.957728546e-06,0.532,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,406601,Likely benign,69.29,-
+D186H,0.76019,2.13265,Uncertain,,,,,0.692,COSMIC,,,,69.29,-
+D186X,,,Uncertain,,,,,,COSMIC,,,,,
+G187D,1.75642,1.38878,Neutral,,,,,0.625,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,422532,Uncertain significance,75.66,S
+G187C,2.08847,2.51463,Uncertain,,,,,0.705,"cBioPortal,COSMIC",,,,75.66,S
+G187R,1.92398,1.50748,Neutral,,,,,0.700,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,635392,Uncertain significance,75.66,S
+G187A,2.0806,1.86122,Uncertain,,,,,,Manual annotations from clinvar.csv,,1479275,Uncertain significance,75.66,S
+G187V,2.27538,5.41973,Uncertain,,,,,0.666,COSMIC,,,,75.66,S
+G187S,1.77959,0.98776,Neutral,,,,,0.649,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,840399,Uncertain significance,75.66,S
+L188P,2.46639,6.37075,Uncertain,,,,,,Manual annotations from TP53db_germline.csv,,,,81.41,S
+L188V,1.08848,1.6551,Neutral,,,,,0.572,"COSMIC,Manual annotations from clinvar.csv",,933702,Uncertain significance,81.41,S
+L188Q,0.26448,0.99218,Neutral,,,,,0.581,"cBioPortal,COSMIC",,,,81.41,S
+L188M,0.13688,0.71327,Neutral,,,,,0.473,COSMIC,,,,81.41,S
+A189V,-0.68612,2.17483,Uncertain,,,,2.38617924979e-05,0.790,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12382,Conflicting interpretations of pathogenicity,90.73,S
+A189D,1.89617,4.41429,Uncertain,,,,,0.817,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,90.73,S
+A189S,0.25459,1.50238,Neutral,,,,,0.700,"COSMIC,Manual annotations from clinvar.csv",,528262,Uncertain significance,90.73,S
+A189T,0.35151,1.6017,Neutral,,,,,0.728,COSMIC,,,,90.73,S
+A189P,0.39829,5.85748,Uncertain,,,,,0.721,"cBioPortal,COSMIC",,,,90.73,S
+A189G,0.27103,2.21599,Uncertain,,,,,0.754,"COSMIC,Manual annotations from clinvar.csv",,1378428,Uncertain significance,90.73,S
+P190R,2.91379,1.04116,Uncertain,,,,,0.846,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,234061,Uncertain significance,92.74,-
+P190F,2.71204,0.78401,Uncertain,,,,,,COSMIC,,,,92.74,-
+P190H,3.20175,1.34014,Uncertain,,,,,0.731,COSMIC,,,,92.74,-
+P190A,2.88007,1.04694,Uncertain,,,,,0.757,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1021934,Uncertain significance,92.74,-
+P190T,4.20085,1.97721,Uncertain,,,,,0.822,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,233197,Uncertain significance,92.74,-
+P190N,3.05318,1.57721,Uncertain,,,,,,COSMIC,,,,92.74,-
+P190S,3.36488,1.81769,Uncertain,,,,,0.788,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,646725,Uncertain significance,92.74,-
+P190L,2.52032,0.38878,Uncertain,,,,,0.824,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,418517,Likely pathogenic,92.74,-
+P191R,1.12218,0.95306,Neutral,,,,1.19295678315e-05,0.617,"COSMIC,Manual annotations from clinvar.csv",,127816,Likely benign,93.45,T
+P191H,2.72137,1.33571,Uncertain,,,,3.9765226105e-06,0.797,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,853530,Uncertain significance,93.45,T
+P191T,2.96192,0.63605,Uncertain,,,,,0.727,COSMIC,,,,93.45,T
+P191A,1.89183,0.52959,Neutral,,,,,0.598,COSMIC,,,,93.45,T
+P191L,1.70207,0.69558,Neutral,,,,3.9765226105e-06,0.748,"cBioPortal,COSMIC",,,,93.45,T
+P191S,2.58372,0.64354,Uncertain,,,,,0.722,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1024017,Uncertain significance,93.45,T
+Q192H,1.49267,0.13231,Neutral,,,,,"0.534, 0.537","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"988617, 922531","Likely benign, Uncertain significance",93.42,T
+Q192L,0.93186,0.14286,Neutral,,,,,0.718,"cBioPortal,COSMIC",,,,93.42,T
+Q192K,0.41574,-0.01837,Neutral,,,,,0.640,COSMIC,,,,93.42,T
+Q192R,0.97226,0.65068,Neutral,,,,,0.677,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182931,Uncertain significance,93.42,T
+Q192P,-0.43128,3.35374,Uncertain,,,,,,Manual annotations from clinvar.csv,,1036209,Uncertain significance,93.42,T
+H193R,3.85949,2.56395,Uncertain,,,,,0.884,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,184979,Pathogenic/Likely pathogenic,95.71,-
+H193Q,1.19117,0.74116,Neutral,,,,,0.807,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,825975,Likely pathogenic,95.71,-
+H193P,2.5858,7.4068,Uncertain,,,,,0.870,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376612,Pathogenic,95.71,-
+H193D,1.34909,2.27789,Uncertain,,,,,0.922,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376613,Likely pathogenic,95.71,-
+H193L,-1.1384,0.09252,Neutral,,,,,0.864,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,185822,Conflicting interpretations of pathogenicity,95.71,-
+H193N,0.82174,1.81701,Neutral,,,,,0.875,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376614,Likely pathogenic,95.71,-
+H193Y,0.28682,-0.74184,Neutral,,,,,0.887,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,230256,Pathogenic/Likely pathogenic,95.71,-
+L194R,9.90144,5.28401,Destabilizing,,,,3.9763644895e-06,0.933,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376633,Conflicting interpretations of pathogenicity,97.01,S
+L194H,3.13918,2.01871,Uncertain,,,,,0.918,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376634,Conflicting interpretations of pathogenicity,97.01,S
+L194P,1.68505,2.51259,Uncertain,,,,,0.937,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376635,Uncertain significance,97.01,S
+L194F,2.88237,0.52075,Uncertain,,,,,0.851,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127817,Likely pathogenic,97.01,S
+L194V,1.65588,0.94014,Neutral,,,,,0.833,"cBioPortal,COSMIC",,,,97.01,S
+L194I,0.28381,1.49082,Neutral,,,,,0.791,"cBioPortal,COSMIC",,,,97.01,S
+I195S,5.15419,4.23197,Destabilizing,,,,,0.865,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376619,Uncertain significance,97.65,E
+I195M,0.40799,1.06803,Neutral,,,,,0.755,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376620,Uncertain significance,97.65,E
+I195N,3.18616,3.70714,Destabilizing,,,,,0.840,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376618,Uncertain significance,97.65,E
+I195K,4.66906,5.06633,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,97.65,E
+I195F,6.32976,3.03878,Destabilizing,,,,,0.904,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376617,Conflicting interpretations of pathogenicity,97.65,E
+I195L,0.35754,0.72381,Neutral,,,,,0.724,COSMIC,,,,97.65,E
+I195V,0.91577,0.91633,Neutral,,,,,0.725,cBioPortal,,,,97.65,E
+I195T,3.12645,2.53129,Uncertain,,,,0.0,0.851,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,216077,Pathogenic,97.65,E
+R196L,-1.09856,0.4551,Neutral,,,,,0.933,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,100814,Conflicting interpretations of pathogenicity,96.53,E
+R196P,3.30531,4.09592,Destabilizing,,,,,0.941,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,231165,Conflicting interpretations of pathogenicity,96.53,E
+R196G,2.07079,3.32347,Uncertain,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,232344,Uncertain significance,96.53,E
+R196Q,0.57181,0.5949,Neutral,,,,3.9763961127e-06,0.888,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,216467,Uncertain significance,96.53,E
+V197G,5.22898,5.62823,Destabilizing,,,,,0.914,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,826051,Uncertain significance,96.51,E
+V197L,0.67365,2.92109,Uncertain,,,,,0.730,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"480766, 216468","Uncertain significance, Uncertain significance",96.51,E
+V197R,3.13142,4.50612,Destabilizing,,,,,,COSMIC,,,,96.51,E
+V197E,4.62419,4.05476,Destabilizing,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,634757,Uncertain significance,96.51,E
+V197M,0.70599,2.88163,Uncertain,,,,0.0,0.758,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,188060,Uncertain significance,96.51,E
+V197A,3.41203,2.8983,Uncertain,,,,,0.823,COSMIC,,,,96.51,E
+E198G,2.28281,1.41667,Uncertain,,,,,0.915,"cBioPortal,COSMIC",,,,92.67,S
+E198Q,0.97646,-0.32143,Neutral,,,,,0.889,COSMIC,,,,92.67,S
+E198V,2.29634,1.05714,Uncertain,,,,,0.926,COSMIC,,,,92.67,S
+E198D,1.34383,1.00034,Neutral,,,,,0.824,cBioPortal,,,,92.67,S
+E198K,0.76396,0.65442,Neutral,,,,,0.910,"cBioPortal,COSMIC",,,,92.67,S
+G199R,1.22529,1.27857,Neutral,,,,,0.883,"COSMIC,Manual annotations from clinvar.csv",,1015039,Uncertain significance,89.17,S
+G199I,3.97367,4.78605,Destabilizing,,,,,,cBioPortal,,,,89.17,S
+G199A,2.13038,1.03469,Uncertain,,,,,0.888,COSMIC,,,,89.17,S
+G199E,1.97517,1.32925,Neutral,,,,,0.880,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,582257,Uncertain significance,89.17,S
+G199V,4.37332,5.03741,Destabilizing,,,,,0.899,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,451799,Likely pathogenic,89.17,S
+G199T,2.57007,1.15272,Uncertain,,,,,,COSMIC,,,,89.17,S
+N200I,-1.56755,-0.05408,Neutral,,,,,0.792,COSMIC,,,,89.46,-
+N200Y,-0.7438,-0.02517,Neutral,,,,,0.900,"cBioPortal,COSMIC",,,,89.46,-
+N200S,1.20395,1.42823,Neutral,,,,,0.678,"COSMIC,Manual annotations from clinvar.csv",,924379,Uncertain significance,89.46,-
+N200T,0.2007,0.74694,Neutral,,,,,0.768,COSMIC,,,,89.46,-
+N200D,0.27163,0.10748,Neutral,,,,,0.840,"COSMIC,Manual annotations from clinvar.csv",,1061739,Uncertain significance,89.46,-
+L201V,0.5867,0.59932,Neutral,,,,,0.447,COSMIC,,,,90.95,T
+L201S,0.17245,0.20918,Neutral,,,,,0.505,COSMIC,,,,90.95,T
+L201F,0.01504,-0.0949,Neutral,,,,,0.446,COSMIC,,,,90.95,T
+L201P,-0.53182,-0.29932,Neutral,,,,,,COSMIC,,,,90.95,T
+R202P,0.67882,2.38673,Uncertain,,,,,0.528,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,826165,Uncertain significance,94.56,T
+R202L,0.31957,0.10782,Neutral,,,,,0.530,"COSMIC,Manual annotations from clinvar.csv",,182932,Uncertain significance,94.56,T
+R202G,0.78311,1.12313,Neutral,,,,,0.483,"COSMIC,Manual annotations from clinvar.csv",,231661,Conflicting interpretations of pathogenicity,94.56,T
+R202H,0.70134,-0.1568,Neutral,,,,,0.528,"COSMIC,Manual annotations from clinvar.csv",,135358,Conflicting interpretations of pathogenicity,94.56,T
+R202C,0.90922,0.93673,Neutral,,,3.18654005481e-05,2.78352155241e-05,0.498,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127818,Conflicting interpretations of pathogenicity,94.56,T
+R202S,0.71542,0.24354,Neutral,,,,,0.486,COSMIC,,,,94.56,T
+V203L,1.41819,2.5449,Uncertain,,,,,0.506,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"482235, 482218","Uncertain significance, Uncertain significance",95.63,-
+V203M,1.97819,2.2017,Uncertain,,,,,0.519,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182933,Uncertain significance,95.63,-
+V203A,1.35015,1.4949,Neutral,,,,,0.526,COSMIC,,,,95.63,-
+V203E,3.32941,5.10578,Destabilizing,,,,,0.630,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,644883,Uncertain significance,95.63,-
+E204G,1.0355,2.03231,Uncertain,,,3.18796225453e-05,,0.604,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,949463,Uncertain significance,96.0,E
+E204K,-0.30302,0.72755,Neutral,,,,,0.624,COSMIC,,,,96.0,E
+E204V,-0.30921,-0.1949,Neutral,,,,,0.588,COSMIC,,,,96.0,E
+E204A,0.35414,0.9381,Neutral,,,,,0.600,COSMIC,,,,96.0,E
+E204Q,-0.12603,-0.31565,Neutral,,,,,0.458,"cBioPortal,COSMIC",,,,96.0,E
+E204D,0.10316,0.36667,Neutral,,,,,0.494,"cBioPortal,COSMIC",,,,96.0,E
+Y205H,2.27793,3.49626,Uncertain,,,,0.0,0.900,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376685,Conflicting interpretations of pathogenicity,96.57,E
+Y205N,3.51587,5.05136,Destabilizing,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376684,Uncertain significance,96.57,E
+Y205C,3.92213,5.14048,Destabilizing,,,,,0.873,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376681,Pathogenic,96.57,E
+Y205S,5.64124,6.33435,Destabilizing,,,,,0.852,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376683,Likely pathogenic,96.57,E
+Y205D,6.21798,6.51735,Destabilizing,,,,,0.925,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376686,Conflicting interpretations of pathogenicity,96.57,E
+Y205F,-0.05106,0.44048,Neutral,,,,,0.823,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376682,Likely pathogenic,96.57,E
+L206S,1.63601,0.83027,Neutral,,,,,,Manual annotations from clinvar.csv,,439319,Conflicting interpretations of pathogenicity,95.27,E
+L206F,0.69564,0.40442,Neutral,,,,,0.421,COSMIC,,,,95.27,E
+D207H,2.1333,0.70884,Uncertain,,,,,,Manual annotations from clinvar.csv,,919639,Uncertain significance,94.47,E
+D207A,2.1202,1.74558,Uncertain,,,,,0.518,COSMIC,,,,94.47,E
+D207N,1.41493,0.70102,Neutral,,,,,0.406,cBioPortal,,,,94.47,E
+D207G,2.21069,3.23673,Uncertain,,,,,0.616,"COSMIC,Manual annotations from TP53db_germline.csv",,,,94.47,E
+D207E,1.10719,1.13469,Neutral,,,,,0.435,COSMIC,,,,94.47,E
+D207Y,1.43731,0.21054,Neutral,,,,,0.606,COSMIC,,,,94.47,E
+D208I,-0.19547,1.63197,Neutral,,,,,,COSMIC,,,,93.19,-
+D208G,2.24517,3.92823,Uncertain,,,,,0.944,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,584922,Uncertain significance,93.19,-
+D208H,1.00997,0.55034,Neutral,,,,,0.930,"COSMIC,Manual annotations from clinvar.csv",,826261,Uncertain significance,93.19,-
+D208E,-0.06504,2.00272,Uncertain,,,,,0.767,"cBioPortal,COSMIC",,,,93.19,-
+D208V,0.66885,1.67075,Neutral,,,,,0.950,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1036023,Uncertain significance,93.19,-
+D208Y,0.5405,2.23061,Uncertain,,,,,0.943,"COSMIC,Manual annotations from clinvar.csv",,1350980,Uncertain significance,93.19,-
+D208N,0.8419,1.0,Neutral,,,,,0.760,"cBioPortal,COSMIC",,,,93.19,-
+R209I,0.4601,0.10442,Neutral,,,,,0.532,"cBioPortal,COSMIC",,,,90.89,T
+R209G,0.3379,0.28061,Neutral,,,,,0.635,"COSMIC,Manual annotations from clinvar.csv",,627819,Uncertain significance,90.89,T
+R209S,0.25016,-0.48707,Neutral,,,,,0.588,"cBioPortal,COSMIC",,,,90.89,T
+R209T,0.49965,-0.06803,Neutral,,,,,0.503,"cBioPortal,COSMIC",,,,90.89,T
+R209K,0.08447,-0.41088,Neutral,,,,,0.453,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,962629,Conflicting interpretations of pathogenicity,90.89,T
+N210H,-0.04207,-0.33401,Neutral,,,,,0.340,COSMIC,,,,90.66,T
+N210D,-0.20692,-0.05782,Neutral,,,,,0.300,COSMIC,,,,90.66,T
+N210K,-0.49276,-0.15952,Neutral,,,,,0.369,COSMIC,,,,90.66,T
+N210T,-0.56535,-0.62279,Neutral,,,,,0.380,COSMIC,,,,90.66,T
+N210S,-0.79221,-0.22993,Neutral,,,,,0.262,COSMIC,,,,90.66,T
+N210Y,-0.05921,-0.59014,Neutral,,,,,,"Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,406588,Uncertain significance,90.66,T
+T211N,-0.28259,1.91224,Neutral,,,,,0.756,"cBioPortal,COSMIC",,,,92.07,T
+T211A,0.10625,1.43095,Neutral,,,,,0.881,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,406581,Uncertain significance,92.07,T
+T211P,1.42776,8.15306,Uncertain,,,,,0.911,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,528235,Uncertain significance,92.07,T
+T211S,0.06414,1.06429,Neutral,,,,,0.753,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1019369,Uncertain significance,92.07,T
+T211I,1.40399,1.75408,Neutral,,,,,0.944,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1503185,Uncertain significance,92.07,T
+F212I,2.60653,6.53095,Uncertain,,,,,0.478,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,422414,Uncertain significance,93.48,-
+F212C,1.02526,2.38333,Uncertain,,,,,0.647,cBioPortal,,,,93.48,-
+F212S,0.50577,2.50646,Uncertain,,,,,0.554,COSMIC,,,,93.48,-
+F212Y,0.1421,0.18912,Neutral,,,,,0.395,COSMIC,,,,93.48,-
+F212V,2.90545,6.13163,Uncertain,,,,,0.471,"cBioPortal,COSMIC",,,,93.48,-
+F212L,0.04352,0.87619,Neutral,,,,,"0.481, 0.489",COSMIC,,,,93.48,-
+R213G,3.33688,3.08776,Destabilizing,,,,,0.915,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376651,Likely pathogenic,95.39,-
+R213W,5.17438,0.02313,Uncertain,,,,,,"cBioPortal,COSMIC",,,,95.39,-
+R213P,7.97378,7.33469,Destabilizing,,,,,0.951,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,231214,Pathogenic/Likely pathogenic,95.39,-
+R213Q,1.6724,1.25918,Neutral,,,,3.9767440011e-06,0.920,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,135359,Pathogenic,95.39,-
+R213L,0.17316,-1.13027,Neutral,,,,,0.929,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376650,Uncertain significance,95.39,-
+H214Q,-0.69375,0.7568,Neutral,,,,3.18134459529e-05,0.550,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,140943,Conflicting interpretations of pathogenicity,96.54,E
+H214A,0.15337,1.22007,Neutral,,,,,,COSMIC,,,,96.54,E
+H214P,-1.24617,2.4568,Uncertain,,,,0.0,0.932,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,643078,Uncertain significance,96.54,E
+H214Y,-0.67225,-0.71122,Neutral,,,,,0.736,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1053808,Uncertain significance,96.54,E
+H214N,-0.29766,1.10578,Neutral,,,,,,Manual annotations from clinvar.csv,,230254,Uncertain significance,96.54,E
+H214D,1.22183,2.69082,Uncertain,,,,,0.844,"cBioPortal,COSMIC",,,,96.54,E
+H214L,-0.71677,-1.3119,Neutral,,,,,0.869,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376616,Uncertain significance,96.54,E
+H214R,2.79783,1.54116,Uncertain,,,,,0.885,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376615,Likely pathogenic,96.54,E
+S215N,2.24829,0.1534,Uncertain,,,,,0.785,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376662,Conflicting interpretations of pathogenicity,97.45,E
+S215I,0.88411,0.37109,Neutral,,,,,0.913,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376660,Pathogenic,97.45,E
+S215C,0.08776,-0.1932,Neutral,,,,,0.902,"cBioPortal,COSMIC",,,,97.45,E
+S215G,1.99865,1.82517,Neutral,,,,,0.896,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,265337,Conflicting interpretations of pathogenicity,97.45,E
+S215T,0.43477,0.3017,Neutral,,,,,0.852,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142012,Uncertain significance,97.45,E
+S215R,2.3231,1.75136,Uncertain,,,,,"0.812, 0.917","cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"428895, 376661","Uncertain significance, Uncertain significance",97.45,E
+V216M,2.26358,2.29422,Uncertain,,,,,0.956,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,182965,Conflicting interpretations of pathogenicity,97.61,E
+V216E,6.87138,4.80374,Destabilizing,,,,,0.982,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376672,Likely pathogenic,97.61,E
+V216G,4.92566,4.93061,Destabilizing,,,,,0.980,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376671,Uncertain significance,97.61,E
+V216A,3.0873,2.41429,Uncertain,,,,,0.961,COSMIC,,,,97.61,E
+V216L,2.21855,0.79184,Uncertain,,,,,0.948,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"406596, 376670","Conflicting interpretations of pathogenicity, Uncertain significance",97.61,E
+V217G,3.88703,4.68741,Destabilizing,,,,,0.731,"cBioPortal,COSMIC",,,,97.79,E
+V217A,2.51092,2.35034,Uncertain,,,,,0.647,"cBioPortal,COSMIC",,,,97.79,E
+V217M,0.87297,1.42653,Neutral,,,,3.9769970491e-06,0.451,"COSMIC,Manual annotations from clinvar.csv",,183071,Uncertain significance,97.79,E
+V217L,0.72535,0.60408,Neutral,,,,,0.544,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1386154,Uncertain significance,97.79,E
+V217E,3.03404,2.63197,Uncertain,,,,,0.723,"cBioPortal,COSMIC",,,,97.79,E
+V218A,2.93758,2.6415,Uncertain,,,,,0.974,COSMIC,,,,97.71,E
+V218E,2.96931,3.68299,Uncertain,,,,,0.977,"cBioPortal,COSMIC",,,,97.71,E
+V218L,-0.09031,0.78571,Neutral,,,,,0.864,"cBioPortal,COSMIC",,,,97.71,E
+V218M,0.28419,1.5381,Neutral,,,,,0.873,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,237952,Conflicting interpretations of pathogenicity,97.71,E
+V218G,4.2396,4.92415,Destabilizing,,,,,0.972,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,528249,Uncertain significance,97.71,E
+P219R,2.07698,1.38469,Uncertain,,,,,0.966,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,953426,Uncertain significance,97.66,E
+P219T,2.05162,1.41429,Uncertain,,,,,0.962,"cBioPortal,COSMIC",,,,97.66,E
+P219H,2.22423,1.41939,Uncertain,,,,,0.957,"cBioPortal,COSMIC",,,,97.66,E
+P219S,2.22735,1.82925,Uncertain,,,,3.9775665248e-06,0.960,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,245673,Conflicting interpretations of pathogenicity,97.66,E
+P219C,1.91171,1.67109,Neutral,,,,,,COSMIC,,,,97.66,E
+P219L,1.5995,1.00782,Neutral,,,,3.9777563863e-06,0.947,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,826488,Uncertain significance,97.66,E
+Y220L,0.8523,2.33435,Uncertain,,,,,,COSMIC,,,,97.45,-
+Y220H,2.35482,2.2415,Uncertain,,,,3.9777247414e-06,0.909,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376687,Conflicting interpretations of pathogenicity,97.45,-
+Y220C,3.6908,3.19762,Destabilizing,,,,7.9551963342e-06,0.936,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127819,Pathogenic,97.45,-
+Y220X,,,Uncertain,,,,,,COSMIC,,,,,
+Y220S,4.61154,4.21565,Destabilizing,,,,,0.918,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12383,Pathogenic,97.45,-
+Y220D,5.16426,4.20272,Destabilizing,,,,,0.934,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376689,Uncertain significance,97.45,-
+Y220N,4.24461,3.38469,Destabilizing,,,,,0.910,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376688,Conflicting interpretations of pathogenicity,97.45,-
+E221V,-0.15039,-0.19796,Neutral,,,,,0.901,COSMIC,,,,96.01,-
+E221K,-0.50011,-0.36054,Neutral,,,,3.9780095631e-06,0.897,"COSMIC,Manual annotations from clinvar.csv",,184647,Uncertain significance,96.01,-
+E221D,0.41871,0.92517,Neutral,,,,,0.669,COSMIC,,,,96.01,-
+E221G,1.15092,2.00476,Uncertain,,,,,0.826,COSMIC,,,,96.01,-
+E221A,0.54486,0.89898,Neutral,,,,,,Manual annotations from clinvar.csv,,573679,Uncertain significance,96.01,-
+P222L,0.91611,0.51939,Neutral,,,6.37226789014e-05,1.59154570919e-05,0.585,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,161397,Conflicting interpretations of pathogenicity,95.46,-
+P222T,1.6781,0.76497,Neutral,,,,,0.533,COSMIC,,,,95.46,-
+P222A,1.52795,1.29184,Neutral,,,,,0.395,COSMIC,,,,95.46,-
+P222S,1.87344,0.93401,Neutral,,,,,0.344,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,406592,Conflicting interpretations of pathogenicity,95.46,-
+P222Q,1.27729,0.6983,Neutral,,,,,0.626,"COSMIC,Manual annotations from clinvar.csv",,1461784,Uncertain significance,95.46,-
+P223L,2.96525,1.58469,Uncertain,,,,,0.634,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,234214,Uncertain significance,95.62,-
+P223S,2.73132,1.57755,Uncertain,,,,,0.765,"cBioPortal,COSMIC",,,,95.62,-
+P223T,3.76161,1.58571,Uncertain,,,,,0.786,cBioPortal,,,,95.62,-
+P223A,1.58782,1.00272,Neutral,,,,,0.759,COSMIC,,,,95.62,-
+P223R,2.09,0.09218,Uncertain,,,,,0.740,COSMIC,,,,95.62,-
+P223H,2.87678,1.93741,Uncertain,,,,3.9792442619e-06,0.728,COSMIC,,,,95.62,-
+E224G,0.13555,0.51735,Neutral,,,,,0.890,"COSMIC,Manual annotations from clinvar.csv",,826574,Uncertain significance,94.54,-
+E224A,-0.09194,-0.01667,Neutral,,,,,,Manual annotations from clinvar.csv,,428892,Uncertain significance,94.54,-
+E224V,0.35145,0.29422,Neutral,,,,,0.868,"cBioPortal,COSMIC",,,,94.54,-
+E224Q,-0.00016,0.01939,Neutral,,,,,0.533,"cBioPortal,COSMIC",,,,94.54,-
+E224D,0.18907,0.10714,Neutral,,,,3.9807649438e-06,0.697,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"1493447, 635390","Uncertain significance, not provided",94.54,-
+E224K,0.04524,-0.51531,Neutral,,,,,0.701,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,480767,Uncertain significance,94.54,-
+V225G,0.30683,0.43707,Neutral,,,,,0.644,COSMIC,,,,94.69,T
+V225D,0.01805,-0.48639,Neutral,,,,,0.645,"COSMIC,Manual annotations from clinvar.csv",,850916,Uncertain significance,94.69,T
+V225I,0.08646,0.09218,Neutral,,,,,0.388,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,480736,Uncertain significance,94.69,T
+V225A,0.09455,-0.21463,Neutral,,,,,0.449,"cBioPortal,COSMIC",,,,94.69,T
+V225F,0.01022,0.25034,Neutral,,,,,0.704,COSMIC,,,,94.69,T
+G226D,3.97422,0.7068,Uncertain,,,,,0.698,"cBioPortal,COSMIC",,,,93.84,T
+G226A,3.80056,1.63197,Uncertain,,,,,0.767,"COSMIC,Manual annotations from clinvar.csv",,951459,Uncertain significance,93.84,T
+G226V,5.00566,5.49388,Destabilizing,,,,,0.838,"COSMIC,Manual annotations from clinvar.csv",,458556,Uncertain significance,93.84,T
+G226S,3.93968,1.27721,Uncertain,,,,,0.866,"COSMIC,Manual annotations from clinvar.csv",,648028,Uncertain significance,93.84,T
+S227P,3.06059,5.2119,Destabilizing,,,,,0.681,"cBioPortal,COSMIC",,,,94.06,-
+S227Y,0.9228,0.1085,Neutral,,,,,0.772,COSMIC,,,,94.06,-
+S227F,0.93416,0.24558,Neutral,,,,,0.727,"cBioPortal,COSMIC",,,,94.06,-
+S227T,1.60859,0.59966,Neutral,,,,,,Manual annotations from TP53db_germline.csv,,,,94.06,-
+D228N,0.11809,-0.17959,Neutral,,,,,0.546,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1395667,Uncertain significance,93.35,S
+D228A,0.28332,0.29388,Neutral,,,,,0.758,COSMIC,,,,93.35,S
+D228V,0.4127,-0.32381,Neutral,,,,,0.829,COSMIC,,,,93.35,S
+D228H,0.44857,0.13878,Neutral,,,,,0.777,"cBioPortal,COSMIC",,,,93.35,S
+D228G,0.5742,0.76327,Neutral,,,,,0.704,COSMIC,,,,93.35,S
+D228Y,0.40465,0.10408,Neutral,,,,,0.849,"cBioPortal,COSMIC",,,,93.35,S
+D228E,-0.00559,-0.07245,Neutral,,,,,"0.370, 0.371","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"954848, 926556","Uncertain significance, Uncertain significance",93.35,S
+C229S,0.88696,0.85646,Neutral,,,,,"0.535, 0.600","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,582302,Uncertain significance,95.04,S
+C229F,-1.45862,-1.46156,Neutral,,,,,0.401,"cBioPortal,COSMIC",,,,95.04,S
+C229G,0.39895,1.70442,Neutral,,,,,0.738,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,1026715,Uncertain significance,95.04,S
+C229W,-0.91845,-1.02347,Neutral,,,,,0.594,cBioPortal,,,,95.04,S
+C229R,0.45855,0.90782,Neutral,,,,7.9529819706e-06,0.754,"COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,420137,Conflicting interpretations of pathogenicity,95.04,S
+C229Y,-1.05452,-1.43673,Neutral,,,,,0.389,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,419040,Uncertain significance,95.04,S
+T230A,1.05322,0.76973,Neutral,,,,,0.856,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,953956,Uncertain significance,96.63,E
+T230I,-0.08963,0.38844,Neutral,,,,,0.936,"COSMIC,Manual annotations from clinvar.csv",,1366616,Uncertain significance,96.63,E
+T230S,1.39546,1.02857,Neutral,,,,,0.863,COSMIC,,,,96.63,E
+T230N,1.46969,1.2949,Neutral,,,,,0.875,COSMIC,,,,96.63,E
+T230P,1.44769,1.94762,Neutral,,,,,0.920,"cBioPortal,COSMIC",,,,96.63,E
+T231A,0.03851,0.83605,Neutral,,,,,0.905,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,863153,Uncertain significance,96.93,E
+T231S,0.52475,1.24456,Neutral,,,,,0.922,"COSMIC,Manual annotations from clinvar.csv",,921142,Uncertain significance,96.93,E
+T231N,0.26284,0.81599,Neutral,,,,,0.885,"cBioPortal,COSMIC",,,,96.93,E
+T231P,-0.44653,0.36054,Neutral,,,,,0.959,"cBioPortal,COSMIC",,,,96.93,E
+T231I,-1.35682,-1.13844,Neutral,,,,,0.942,"COSMIC,Manual annotations from clinvar.csv",,458557,Uncertain significance,96.93,E
+I232V,1.2914,0.8381,Neutral,,,,,0.419,COSMIC,,,,97.67,E
+I232L,0.30632,0.79762,Neutral,,,,,0.688,"COSMIC,Manual annotations from clinvar.csv",,482214,Uncertain significance,97.67,E
+I232T,3.07647,2.56837,Uncertain,,,,,0.920,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141224,Likely pathogenic,97.67,E
+I232M,0.25975,1.71735,Neutral,,,,,,COSMIC,,,,97.67,E
+I232S,3.46097,4.37687,Destabilizing,,,,,0.935,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,634756,Likely pathogenic,97.67,E
+I232F,0.40592,1.26327,Neutral,,,,,0.840,"cBioPortal,COSMIC",,,,97.67,E
+I232N,2.81966,2.83333,Uncertain,,,,,0.916,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,850008,Pathogenic,97.67,E
+H233P,-0.30861,-0.83027,Neutral,,,,,0.844,COSMIC,,,,97.32,E
+H233L,-1.21061,-1.04932,Neutral,,,,,0.579,COSMIC,,,,97.32,E
+H233Q,0.34141,0.14558,Neutral,,,,,0.669,COSMIC,,,,97.32,E
+H233Y,-1.05244,-0.86735,Neutral,,,,,0.690,"cBioPortal,COSMIC",,,,97.32,E
+H233D,1.17747,0.5915,Neutral,,,,,0.876,"COSMIC,Manual annotations from TP53db_germline.csv",,,,97.32,E
+H233R,-0.58576,-0.14354,Neutral,,,,,0.717,"COSMIC,Manual annotations from clinvar.csv",,246388,Uncertain significance,97.32,E
+Y234H,3.02118,2.77211,Uncertain,,,,,0.890,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376691,Pathogenic,97.96,E
+Y234F,-0.58076,-0.15544,Neutral,,,,,0.686,COSMIC,,,,97.96,E
+Y234S,5.28072,4.97279,Destabilizing,,,,,0.936,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376690,Conflicting interpretations of pathogenicity,97.96,E
+Y234C,3.82286,4.16905,Destabilizing,,,,3.9764593606e-06,0.945,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127820,Pathogenic/Likely pathogenic,97.96,E
+Y234N,3.39002,4.0881,Destabilizing,,,,,0.941,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376692,Conflicting interpretations of pathogenicity,97.96,E
+Y234R,4.30556,3.35408,Destabilizing,,,,,,COSMIC,,,,97.96,E
+Y234D,5.75745,4.9085,Destabilizing,,,,,0.876,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,219759,Conflicting interpretations of pathogenicity,97.96,E
+N235H,2.23125,0.98367,Uncertain,,,,,0.902,COSMIC,,,,96.97,E
+N235D,3.81263,1.74694,Uncertain,,,,,0.912,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,919580,Conflicting interpretations of pathogenicity,96.97,E
+N235M,-0.67399,-1.34966,Neutral,,,,,,COSMIC,,,,96.97,E
+N235I,0.31656,-0.63061,Neutral,,,,3.9763961127e-06,0.886,COSMIC,,,,96.97,E
+N235S,1.51453,0.12143,Neutral,,,0.0003198362438432,0.0001789378250704,0.593,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127821,Benign,96.97,E
+N235T,1.04293,-0.48299,Neutral,,,,,0.872,"cBioPortal,COSMIC",,,,96.97,E
+N235K,-0.33609,-0.63741,Neutral,,,,,0.565,cBioPortal,,,,96.97,E
+N235Y,4.91751,3.09966,Destabilizing,,,,,0.932,"COSMIC,Manual annotations from clinvar.csv",,188206,Uncertain significance,96.97,E
+Y236F,0.73863,0.43741,Neutral,,,,,0.468,"cBioPortal,COSMIC",,,,97.83,E
+Y236N,5.40286,4.5034,Destabilizing,,,,,0.837,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376694,Uncertain significance,97.83,E
+Y236S,7.06097,5.12381,Destabilizing,,,,,0.780,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182966,Conflicting interpretations of pathogenicity,97.83,E
+Y236C,5.33301,4.65136,Destabilizing,,,,,0.811,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376693,Conflicting interpretations of pathogenicity,97.83,E
+Y236D,6.34272,5.4068,Destabilizing,,,,,0.845,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142183,Conflicting interpretations of pathogenicity,97.83,E
+Y236H,4.32553,3.45646,Destabilizing,,,,,0.772,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,216469,Conflicting interpretations of pathogenicity,97.83,E
+Y236L,2.52588,2.63946,Uncertain,,,,,,COSMIC,,,,97.83,E
+M237K,1.71393,1.49388,Neutral,,,,0.0,0.957,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376636,Likely pathogenic,96.66,-
+M237R,1.64734,1.73673,Neutral,,,,,0.948,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,419524,Uncertain significance,96.66,-
+M237V,3.71454,0.17245,Uncertain,,,,,0.937,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,182934,Uncertain significance,96.66,-
+M237T,2.16194,1.51701,Uncertain,,,,,0.948,"COSMIC,Manual annotations from clinvar.csv",,481069,Uncertain significance,96.66,-
+M237L,-0.26039,0.07347,Neutral,,,,,0.941,"cBioPortal,COSMIC",,,,96.66,-
+M237I,1.23103,1.71803,Neutral,,,,3.9763961127e-06,0.923,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"634770, 142714","Likely pathogenic, Pathogenic",96.66,-
+C238G,8.67428,3.69082,Destabilizing,,,,,0.938,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376577,Pathogenic,97.08,S
+C238W,47.44158,8.82415,Destabilizing,,,,,0.896,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,161515,Pathogenic,97.08,S
+C238F,29.83388,3.56224,Destabilizing,,,,,0.958,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376574,Pathogenic,97.08,S
+C238Y,37.29616,3.97925,Destabilizing,,,,7.9531084724e-06,0.957,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,182935,Pathogenic/Likely pathogenic,97.08,S
+C238R,21.1409,7.41667,Destabilizing,,,,,0.954,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376576,Pathogenic,97.08,S
+C238S,5.38406,0.28231,Uncertain,,,,,"0.946, 0.956","cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"485039, 376575","Pathogenic, Pathogenic/Likely pathogenic",97.08,S
+N239D,0.31902,0.26905,Neutral,,,,,0.948,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,234036,Conflicting interpretations of pathogenicity,98.03,-
+N239I,-0.61431,-0.62347,Neutral,,,,,0.943,"cBioPortal,COSMIC",,,,98.03,-
+N239H,-0.55736,-0.19354,Neutral,,,,,0.927,"cBioPortal,COSMIC",,,,98.03,-
+N239S,0.13313,-0.22653,Neutral,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376637,Likely pathogenic,98.03,-
+N239T,0.7619,0.41224,Neutral,,,,,0.935,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376638,Uncertain significance,98.03,-
+N239K,-0.49724,0.0483,Neutral,,,,,0.811,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,385614,Conflicting interpretations of pathogenicity,98.03,-
+N239Y,-1.30756,-2.04558,Uncertain,,,,,0.905,COSMIC,,,,98.03,-
+S240T,-0.52203,-0.21599,Neutral,,,,,0.800,COSMIC,,,,98.05,T
+S240F,1.21335,0.07381,Neutral,,,,,,"cBioPortal,COSMIC",,,,98.05,T
+S240C,-0.49666,-0.55238,Neutral,,,,,0.923,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,98.05,T
+S240P,3.12872,4.99694,Destabilizing,,,,,,COSMIC,,,,98.05,T
+S240I,-2.0881,-1.24014,Uncertain,,,,,0.883,"COSMIC,Manual annotations from clinvar.csv",,1036853,Uncertain significance,98.05,T
+S240R,1.41349,2.6619,Uncertain,,,,,"0.908, 0.939","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"1504304, 826894, 458559","Uncertain significance, Likely pathogenic, Uncertain significance",98.05,T
+S240G,0.78731,1.59864,Neutral,,,,,0.872,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,584921,Likely pathogenic,98.05,T
+S241Y,0.31373,-0.74014,Neutral,,,,,0.960,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376663,Pathogenic,97.54,T
+S241P,-0.10458,3.89252,Uncertain,,,,3.9764593606e-06,0.954,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376664,Uncertain significance,97.54,T
+S241T,0.4949,-0.26429,Neutral,,,,,0.922,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,959232,Uncertain significance,97.54,T
+S241A,-0.11548,-0.0398,Neutral,,,,,0.858,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376665,Uncertain significance,97.54,T
+S241C,-0.15305,0.38061,Neutral,,,,0.0,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,177791,Likely pathogenic,97.54,T
+S241V,-0.0723,-0.18401,Neutral,,,,,,COSMIC,,,,97.54,T
+S241F,0.33698,-0.59014,Neutral,,,,3.9765226105e-06,0.958,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12359,Likely pathogenic,97.54,T
+C242G,0.96515,2.27959,Uncertain,,,,,0.963,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376581,Uncertain significance,97.24,-
+C242F,12.202,-1.44456,Uncertain,,,,,0.977,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376578,Uncertain significance,97.24,-
+C242W,11.3471,-1.56088,Uncertain,,,,,0.940,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376580,Likely pathogenic,97.24,-
+C242R,3.25907,2.60102,Uncertain,,,,,0.966,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,449512,Conflicting interpretations of pathogenicity,97.24,-
+C242Y,14.74352,-0.85646,Uncertain,,,,0.0,0.973,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12354,Pathogenic,97.24,-
+C242S,0.9568,-0.06667,Neutral,,,,,"0.947, 0.960","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"647334, 376579","Uncertain significance, Conflicting interpretations of pathogenicity",97.24,-
+M243L,0.10612,0.16497,Neutral,,,,,0.763,"COSMIC,Manual annotations from clinvar.csv",,186653,Uncertain significance,96.47,T
+M243I,0.18432,0.19388,Neutral,,,,,0.820,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,840505,Uncertain significance,96.47,T
+M243T,0.21945,0.5551,Neutral,,,,,0.879,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182936,Conflicting interpretations of pathogenicity,96.47,T
+M243K,-0.06266,0.41429,Neutral,,,,,0.933,COSMIC,,,,96.47,T
+M243V,0.26054,0.39728,Neutral,,,,,0.705,"COSMIC,Manual annotations from clinvar.csv",,406567,Uncertain significance,96.47,T
+M243R,-0.02673,0.49864,Neutral,,,,,0.890,COSMIC,,,,96.47,T
+G244R,3.04508,1.46395,Uncertain,,,,,0.942,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376602,Likely pathogenic,93.39,T
+G244C,2.64903,1.80578,Uncertain,,,,,0.940,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376599,Conflicting interpretations of pathogenicity,93.39,T
+G244E,2.17717,1.2415,Uncertain,,,,,,COSMIC,,,,93.39,T
+G244D,2.18992,0.76054,Uncertain,,,,,0.953,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,372785,Pathogenic,93.39,T
+G244S,3.12283,1.37415,Uncertain,,,,,0.936,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376600,Pathogenic,93.39,T
+G244F,3.2848,0.7619,Uncertain,,,,,,"cBioPortal,COSMIC",,,,93.39,T
+G244V,5.8614,6.04048,Destabilizing,,,,,0.949,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376601,Likely pathogenic,93.39,T
+G244A,2.60467,1.39796,Uncertain,,,,,0.922,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,458560,Pathogenic,93.39,T
+G245N,15.10278,6.46803,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,94.32,T
+G245V,11.96504,4.11293,Destabilizing,,,,3.9767123723e-06,0.972,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376603,Pathogenic,94.32,T
+G245L,16.27042,10.20306,Destabilizing,,,,,,COSMIC,,,,94.32,T
+G245I,17.5388,1.61259,Uncertain,,,,,,cBioPortal,,,,94.32,T
+G245Y,23.2731,11.24626,Destabilizing,,,,,,cBioPortal,,,,94.32,T
+G245S,5.17626,2.5051,Uncertain,,,3.19284802043e-05,0.0,0.947,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12365,Pathogenic,94.32,T
+G245E,12.93946,8.20374,Destabilizing,,,,,,COSMIC,,,,94.32,T
+G245A,4.43715,3.28878,Destabilizing,,,,,0.946,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,265357,Likely pathogenic,94.32,T
+G245F,19.1992,9.65,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,94.32,T
+G245C,6.78633,5.24422,Destabilizing,,,,,0.970,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12349,Pathogenic,94.32,T
+G245D,13.66246,3.93537,Destabilizing,,,,3.9767123723e-06,0.974,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"861760, 12355","Pathogenic, Pathogenic/Likely pathogenic",94.32,T
+G245H,23.0782,8.72483,Destabilizing,,,,,,COSMIC,,,,94.32,T
+G245R,25.65244,12.45408,Destabilizing,,,,0.0,0.961,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376604,Conflicting interpretations of pathogenicity,94.32,T
+M246I,1.73925,-0.13503,Neutral,,,,,0.838,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"968639, 480961","Uncertain significance, Conflicting interpretations of pathogenicity",96.83,T
+M246T,2.52581,2.28673,Uncertain,,,,,0.956,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,428886,Conflicting interpretations of pathogenicity,96.83,T
+M246L,-0.08436,0.7585,Neutral,,,,,0.865,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"406586, 186737","Uncertain significance, Likely pathogenic",96.83,T
+M246R,4.78124,3.04014,Destabilizing,,,,,0.959,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,127822,Conflicting interpretations of pathogenicity,96.83,T
+M246V,2.23264,0.95476,Uncertain,,,,,0.924,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,100815,Pathogenic,96.83,T
+M246K,2.93376,3.34592,Uncertain,,,,,0.963,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,480764,Likely pathogenic,96.83,T
+N247S,1.09142,2.17007,Uncertain,,,,,0.935,"COSMIC,Manual annotations from clinvar.csv",,406595,Uncertain significance,97.3,T
+N247F,0.04252,0.87891,Neutral,,,,,,COSMIC,,,,97.3,T
+N247D,-0.79677,0.40068,Neutral,,,,,0.940,"cBioPortal,COSMIC",,,,97.3,T
+N247Y,0.47875,0.53163,Neutral,,,,,0.959,COSMIC,,,,97.3,T
+N247T,2.16534,3.07789,Uncertain,,,,,0.950,"cBioPortal,COSMIC",,,,97.3,T
+N247I,1.94084,5.00204,Uncertain,,,,,0.953,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,184882,Conflicting interpretations of pathogenicity,97.3,T
+N247K,0.24968,1.4398,Neutral,,,,,0.889,COSMIC,,,,97.3,T
+R248P,3.30068,6.60612,Destabilizing,,,,,0.965,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,237954,Pathogenic,96.76,T
+R248L,0.04136,-0.2483,Neutral,,,,,0.960,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,230253,Pathogenic,96.76,T
+R248H,0.40949,-0.6949,Neutral,,,,,,"cBioPortal,COSMIC",,,,96.76,T
+R248C,0.18811,0.17381,Neutral,,,,,,COSMIC,,,,96.76,T
+R248Y,0.55976,-0.80238,Neutral,,,,,,COSMIC,,,,96.76,T
+R248Q,0.1001,0.01735,Neutral,,,,1.19296627087e-05,0.934,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12356,Pathogenic,96.76,T
+R248G,-0.91529,-0.61735,Neutral,,,,,0.932,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376652,Conflicting interpretations of pathogenicity,96.76,T
+R248W,0.59659,-0.20204,Neutral,,,,3.9765226105e-06,0.927,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"437017, 12347","Likely pathogenic, Pathogenic",96.76,T
+R249K,1.5872,1.5449,Neutral,,,,,0.893,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142241,Uncertain significance,97.44,-
+R249I,0.53691,-0.53537,Neutral,,,,,,"cBioPortal,COSMIC",,,,97.44,-
+R249V,0.36853,-0.09388,Neutral,,,,,,COSMIC,,,,97.44,-
+R249S,2.54714,1.87177,Uncertain,,,,,0.769,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"406598, 12352","Uncertain significance, Conflicting interpretations of pathogenicity",97.44,-
+R249W,1.06116,1.05884,Neutral,,,,,0.846,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141881,Conflicting interpretations of pathogenicity,97.44,-
+R249M,0.861,0.94898,Neutral,,,,,0.911,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376653,Uncertain significance,97.44,-
+R249T,1.61843,1.26463,Neutral,,,,,0.921,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376015,Pathogenic,97.44,-
+R249G,3.5496,3.45442,Destabilizing,,,,,0.888,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376654,Uncertain significance,97.44,-
+P250L,1.77726,0.93197,Neutral,,,,,0.962,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,420136,Conflicting interpretations of pathogenicity,97.88,-
+P250T,2.82465,1.37551,Uncertain,,,,,0.949,COSMIC,,,,97.88,-
+P250Q,1.85226,1.19864,Neutral,,,,,,COSMIC,,,,97.88,-
+P250F,1.49669,1.46122,Neutral,,,,,,"cBioPortal,COSMIC",,,,97.88,-
+P250N,1.86323,1.37245,Neutral,,,,,,COSMIC,,,,97.88,-
+P250R,1.68653,2.76973,Uncertain,,,,,0.963,"cBioPortal,COSMIC",,,,97.88,-
+P250H,2.51832,1.64524,Uncertain,,,,,0.941,"cBioPortal,COSMIC",,,,97.88,-
+P250S,2.34839,1.45816,Uncertain,,,,,0.939,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1316970,Uncertain significance,97.88,-
+P250A,1.71206,0.81054,Neutral,,,,,0.892,COSMIC,,,,97.88,-
+I251N,4.63239,4.08163,Destabilizing,,,,,0.927,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,528254,Uncertain significance,98.33,E
+I251V,1.25972,0.9432,Neutral,,,,,0.856,"cBioPortal,COSMIC",,,,98.33,E
+I251L,1.88059,1.51497,Neutral,,,,,0.882,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,182937,Pathogenic/Likely pathogenic,98.33,E
+I251S,4.18672,3.9551,Destabilizing,,,,0.0,0.959,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182967,Likely pathogenic,98.33,E
+I251F,7.13311,-0.47857,Uncertain,,,,,0.962,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1518844,Likely pathogenic,98.33,E
+I251M,0.18218,1.94626,Neutral,,,,,0.779,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,485046,Uncertain significance,98.33,E
+I251T,2.42199,2.27313,Uncertain,,,,,0.922,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,439320,Conflicting interpretations of pathogenicity,98.33,E
+L252P,4.92913,5.86735,Destabilizing,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,12350,Conflicting interpretations of pathogenicity,98.19,E
+L252F,2.9698,1.18333,Uncertain,,,,,0.716,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1053765,Uncertain significance,98.19,E
+L252H,4.89464,2.61599,Uncertain,,,,,0.914,COSMIC,,,,98.19,E
+T253D,1.28755,2.61327,Uncertain,,,,,,cBioPortal,,,,98.49,E
+T253P,3.6097,4.69864,Destabilizing,,,,,0.942,"cBioPortal,COSMIC",,,,98.49,E
+T253S,2.16403,2.02721,Uncertain,,,,,"0.851, 0.854","cBioPortal,COSMIC",,,,98.49,E
+T253I,0.00437,-0.53095,Neutral,,,,,0.790,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,837688,Uncertain significance,98.49,E
+T253N,1.82356,0.71837,Neutral,,,,,0.895,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,505571,Uncertain significance,98.49,E
+T253A,2.24265,1.92449,Uncertain,,,,,0.854,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,827132,Uncertain significance,98.49,E
+I254F,4.2517,0.42279,Uncertain,,,,,0.942,"cBioPortal,COSMIC",,,,98.41,E
+I254S,4.70541,3.58946,Destabilizing,,,,0.0,0.953,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,659457,Uncertain significance,98.41,E
+I254M,0.43876,1.14626,Neutral,,,,,0.877,"cBioPortal,COSMIC",,,,98.41,E
+I254N,3.05511,2.74864,Uncertain,,,,,0.962,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,856299,Pathogenic,98.41,E
+I254L,-0.23257,1.02891,Neutral,,,,,0.871,"cBioPortal,COSMIC",,,,98.41,E
+I254V,1.42896,0.38946,Neutral,,,,1.5906090442e-05,0.780,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,406605,Likely benign,98.41,E
+I254T,3.40827,2.2017,Uncertain,,,,,0.954,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,98.41,E
+I254D,4.2965,3.94694,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,98.41,E
+I255T,3.93561,2.96633,Uncertain,,,,,0.948,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376623,Uncertain significance,98.58,E
+I255N,3.43412,3.67959,Destabilizing,,,,,0.928,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,232289,Uncertain significance,98.58,E
+I255S,5.8607,4.65136,Destabilizing,,,,,0.943,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376622,Uncertain significance,98.58,E
+I255F,4.27642,2.03639,Uncertain,,,,,0.785,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376621,Uncertain significance,98.58,E
+I255M,0.06384,0.88469,Neutral,,,,,0.791,COSMIC,,,,98.58,E
+I255V,1.37732,0.82109,Neutral,,,,,0.628,COSMIC,,,,98.58,E
+T256S,1.50921,1.57755,Neutral,,,,,0.846,COSMIC,,,,98.54,E
+T256I,-0.7862,-0.23946,Neutral,,,,,0.932,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,858889,Uncertain significance,98.54,E
+T256K,0.52209,2.03741,Uncertain,,,,,0.936,"cBioPortal,COSMIC",,,,98.54,E
+T256R,0.85453,1.68469,Neutral,,,,,0.935,"cBioPortal,COSMIC",,,,98.54,E
+T256A,1.74132,1.00102,Neutral,,,,,0.909,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,141011,Conflicting interpretations of pathogenicity,98.54,E
+T256P,2.31016,3.37619,Uncertain,,,,,0.945,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,528269,Uncertain significance,98.54,E
+L257P,13.95692,5.97891,Destabilizing,,,,,0.933,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,458562,Uncertain significance,98.43,E
+L257R,8.21354,5.77755,Destabilizing,,,,,0.922,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142134,Conflicting interpretations of pathogenicity,98.43,E
+L257V,1.98389,1.62449,Neutral,,,,,0.896,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,827201,Uncertain significance,98.43,E
+L257Q,4.22719,2.50136,Uncertain,,,,,0.916,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12372,Uncertain significance,98.43,E
+E258V,1.88463,0.85646,Neutral,,,,,0.963,"cBioPortal,COSMIC",,,,98.32,E
+E258D,3.0473,2.41735,Uncertain,,,,,0.897,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1360091,Uncertain significance,98.32,E
+E258L,1.05355,0.4619,Neutral,,,,,,COSMIC,,,,98.32,E
+E258K,2.49324,1.87347,Uncertain,,,,,0.961,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12348,Pathogenic/Likely pathogenic,98.32,E
+E258A,3.22924,1.7881,Uncertain,,,,,0.955,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,458563,Uncertain significance,98.32,E
+E258Q,1.86537,0.49116,Neutral,,,,,0.936,"cBioPortal,COSMIC",,,,98.32,E
+E258G,3.55249,3.57891,Destabilizing,,,,,0.952,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,406590,Conflicting interpretations of pathogenicity,98.32,E
+D259F,2.03773,5.04388,Uncertain,,,,,,cBioPortal,,,,97.12,-
+D259I,3.45525,4.47517,Destabilizing,,,,,,cBioPortal,,,,97.12,-
+D259V,3.60796,4.01565,Destabilizing,,,,,0.742,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,485034,Uncertain significance,97.12,-
+D259Y,2.23444,3.9966,Uncertain,,,,,0.737,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,634680,Uncertain significance,97.12,-
+D259H,4.2477,4.36769,Destabilizing,,,,,0.714,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1349622,Uncertain significance,97.12,-
+D259G,1.42994,3.56837,Uncertain,,,,3.9774716009e-06,0.655,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,188349,Uncertain significance,97.12,-
+D259E,2.81995,3.56633,Uncertain,,,,,0.564,"cBioPortal,COSMIC",,,,97.12,-
+D259A,2.26481,2.80408,Uncertain,,,,,0.691,"cBioPortal,COSMIC",,,,97.12,-
+D259N,1.41764,1.37007,Neutral,,,,,0.532,"cBioPortal,COSMIC",,,,97.12,-
+D259S,2.31753,1.91259,Uncertain,,,,,,COSMIC,,,,97.12,-
+S260T,0.72563,0.72381,Neutral,,,,,0.530,"cBioPortal,COSMIC",,,,96.11,T
+S260F,-0.35817,-0.01973,Neutral,,,,,0.636,"cBioPortal,COSMIC",,,,96.11,T
+S260P,-1.50451,3.22449,Uncertain,,,,,0.659,"cBioPortal,COSMIC",,,,96.11,T
+S260Y,-0.29726,-0.18197,Neutral,,,,3.9771552204e-06,0.668,"COSMIC,Manual annotations from clinvar.csv",,231033,Likely benign,96.11,T
+S260A,-0.38004,-0.10544,Neutral,,,,,0.599,COSMIC,,,,96.11,T
+S260C,0.17099,0.66054,Neutral,,,,,0.660,"cBioPortal,COSMIC",,,,96.11,T
+S261I,1.25136,1.63844,Neutral,,,,,0.532,COSMIC,,,,95.91,T
+S261R,-0.24974,0.53639,Neutral,,,,,"0.390, 0.391, 0.456",COSMIC,,,,95.91,T
+S261T,0.72104,-0.20612,Neutral,,,,,0.504,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,187005,Uncertain significance,95.91,T
+S261N,0.70083,0.14422,Neutral,,,,,0.446,"cBioPortal,COSMIC",,,,95.91,T
+S261C,0.68283,0.97653,Neutral,,,,,0.547,COSMIC,,,,95.91,T
+S261G,0.33326,0.85748,Neutral,,,,,0.529,"COSMIC,Manual annotations from clinvar.csv",,1383522,Uncertain significance,95.91,T
+G262S,2.77225,0.61259,Uncertain,,,3.186336987e-05,8.1725386357e-06,0.876,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141228,Uncertain significance,94.03,-
+G262D,3.90976,1.23197,Uncertain,,,,,0.931,"cBioPortal,COSMIC",,,,94.03,-
+G262H,3.02755,0.06735,Uncertain,,,,,,COSMIC,,,,94.03,-
+G262R,2.52572,0.6119,Uncertain,,,,,0.889,COSMIC,,,,94.03,-
+G262V,4.77969,4.80034,Destabilizing,,,,,0.929,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428889,Uncertain significance,94.03,-
+G262C,3.77265,1.12007,Uncertain,,,,,0.865,cBioPortal,,,,94.03,-
+N263I,0.22337,0.22959,Neutral,,,,,0.318,COSMIC,,,,96.55,-
+N263S,-0.04319,0.40374,Neutral,,,,,,Manual annotations from clinvar.csv,,827313,Likely benign,96.55,-
+N263K,-0.58197,-0.00306,Neutral,,,,,0.213,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,485047,Uncertain significance,96.55,-
+N263D,0.44651,1.21088,Neutral,,,,0.0001136465106462,0.315,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,142916,Conflicting interpretations of pathogenicity,96.55,-
+N263H,-0.27739,0.20986,Neutral,,,,,0.315,"COSMIC,Manual annotations from clinvar.csv",,528251,Uncertain significance,96.55,-
+N263Y,-0.32806,-0.10136,Neutral,,,,,,Manual annotations from clinvar.csv,,1364128,Uncertain significance,96.55,-
+L264V,1.32662,1.16463,Neutral,,,,,0.381,COSMIC,,,,97.67,E
+L264R,1.81292,2.79694,Uncertain,,,,,0.822,"cBioPortal,COSMIC",,,,97.67,E
+L264I,0.57743,0.87415,Neutral,,,,,0.378,"COSMIC,Manual annotations from clinvar.csv",,640121,Uncertain significance,97.67,E
+L264Q,1.75206,1.47347,Neutral,,,,,0.813,COSMIC,,,,97.67,E
+L264P,1.41825,1.98401,Neutral,,,,,0.831,"COSMIC,Manual annotations from clinvar.csv",,480759,Uncertain significance,97.67,E
+L265M,0.24978,1.73095,Neutral,,,,,0.870,COSMIC,,,,98.11,E
+L265R,1.39231,2.76565,Uncertain,,,,,0.965,"cBioPortal,COSMIC",,,,98.11,E
+L265T,3.25283,2.6483,Uncertain,,,,,,cBioPortal,,,,98.11,E
+L265P,5.41896,7.77415,Destabilizing,,,,,0.948,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,245777,Pathogenic/Likely pathogenic,98.11,E
+L265Q,1.31004,2.95306,Uncertain,,,,,0.964,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,953467,Conflicting interpretations of pathogenicity,98.11,E
+G266T,11.322,7.20136,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,97.99,E
+G266R,22.55904,16.5,Destabilizing,,,,,0.963,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"458566, 376605","Pathogenic, Pathogenic",97.99,E
+G266E,15.3311,15.33946,Destabilizing,,,,,0.973,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,161516,Pathogenic/Likely pathogenic,97.99,E
+G266A,2.22463,1.73537,Uncertain,,,,,0.960,"cBioPortal,COSMIC",,,,97.99,E
+G266V,13.71788,9.77517,Destabilizing,,,,0.0,0.974,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,233303,Uncertain significance,97.99,E
+G266K,18.87678,17.7619,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,97.99,E
+G266S,4.27763,3.67075,Destabilizing,,,,,,COSMIC,,,,97.99,E
+R267L,-1.49447,-0.27959,Neutral,,,,,0.911,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,852206,Uncertain significance,98.54,E
+R267Q,0.12121,-0.11088,Neutral,,,,1.2030991835e-05,0.902,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127823,Uncertain significance,98.54,E
+R267W,5.12564,1.74762,Uncertain,,,,0.0,0.917,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141764,Pathogenic/Likely pathogenic,98.54,E
+R267P,4.90939,8.4017,Destabilizing,,,,,0.927,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,428867,Conflicting interpretations of pathogenicity,98.54,E
+R267G,1.97136,2.49456,Uncertain,,,,,0.946,"cBioPortal,COSMIC",,,,98.54,E
+N268Y,1.18455,-0.16259,Neutral,,,,,0.561,"cBioPortal,Manual annotations from clinvar.csv",,827405,Uncertain significance,98.08,E
+N268S,0.67909,0.87109,Neutral,,,,,0.327,COSMIC,,,,98.08,E
+N268K,1.2059,1.3568,Neutral,,,,,0.344,"COSMIC,Manual annotations from clinvar.csv",,1349719,Uncertain significance,98.08,E
+N268F,0.73663,-0.31156,Neutral,,,,,,COSMIC,,,,98.08,E
+N268D,-0.3454,-0.89762,Neutral,,,,,0.221,cBioPortal,,,,98.08,E
+N268I,1.54611,2.49796,Uncertain,,,,,0.511,"cBioPortal,COSMIC",,,,98.08,E
+N268H,0.7775,0.45646,Neutral,,,,,0.404,COSMIC,,,,98.08,E
+S269C,-1.10838,0.50714,Neutral,,,,,0.460,"cBioPortal,COSMIC",,,,98.0,E
+S269I,1.01768,1.47551,Neutral,,,,,0.810,COSMIC,,,,98.0,E
+S269T,1.58972,0.85748,Neutral,,,,,0.603,"cBioPortal,COSMIC",,,,98.0,E
+S269R,-1.21369,1.13129,Neutral,,,,,"0.793, 0.812","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,647256,Uncertain significance,98.0,E
+S269N,0.98013,1.05952,Neutral,,,,,0.729,COSMIC,,,,98.0,E
+S269G,0.24916,0.96259,Neutral,,,,,0.688,COSMIC,,,,98.0,E
+F270V,3.68489,2.81293,Uncertain,,,,,0.926,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376598,Uncertain significance,98.3,E
+F270I,2.69224,2.86497,Uncertain,,,,,0.938,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376596,Uncertain significance,98.3,E
+F270Y,0.82755,-0.29354,Neutral,,,,,0.936,COSMIC,,,,98.3,E
+F270C,5.06435,4.31361,Destabilizing,,,,,0.929,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376597,Likely pathogenic,98.3,E
+F270S,5.60906,5.13707,Destabilizing,,,,,0.945,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376594,Pathogenic/Likely pathogenic,98.3,E
+F270L,3.5274,2.41871,Uncertain,,,,,"0.827, 0.935","cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"1431729, 634778, 376595","Uncertain significance, Uncertain significance, Likely pathogenic",98.3,E
+E271K,0.30134,2.08163,Uncertain,,,,,0.935,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,406566,Conflicting interpretations of pathogenicity,98.38,E
+E271V,-0.7037,0.30306,Neutral,,,,,0.972,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv",,,,98.38,E
+E271G,1.49849,2.62755,Uncertain,,,,,0.967,COSMIC,,,,98.38,E
+E271D,1.16943,0.72007,Neutral,,,,,"0.843, 0.844","COSMIC,Manual annotations from clinvar.csv",,859912,Uncertain significance,98.38,E
+E271L,0.13368,0.96327,Neutral,,,,,,Manual annotations from clinvar.csv,,568838,Uncertain significance,98.38,E
+E271P,0.4056,3.32245,Uncertain,,,,,,COSMIC,,,,98.38,E
+E271Q,0.50551,1.17857,Neutral,,,,,0.924,"cBioPortal,COSMIC",,,,98.38,E
+V272G,5.6112,5.06837,Destabilizing,,,,,0.707,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,233323,Uncertain significance,98.62,E
+V272L,3.30013,1.17483,Uncertain,,,,,0.878,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"574679, 12358","Likely pathogenic, Conflicting interpretations of pathogenicity",98.62,E
+V272K,10.1698,6.03571,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,98.62,E
+V272A,3.60238,2.57857,Uncertain,,,,,0.658,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,565884,Uncertain significance,98.62,E
+V272M,2.52961,1.56327,Uncertain,,,,3.9857787415e-06,0.907,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,185814,Pathogenic,98.62,E
+V272E,7.49332,4.65238,Destabilizing,,,,,0.806,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376673,Uncertain significance,98.62,E
+R273C,1.14497,1.27959,Neutral,,,0.0,1.195933825e-05,0.901,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,43594,Pathogenic/Likely pathogenic,98.43,E
+R273Q,0.11018,0.44388,Neutral,,,,,,COSMIC,,,,98.43,E
+R273L,-0.73658,-0.51054,Neutral,,,,3.9832068001e-06,0.921,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376655,Pathogenic,98.43,E
+R273Y,-1.38273,-0.22279,Neutral,,,,,,"cBioPortal,COSMIC",,,,98.43,E
+R273V,1.17963,0.06497,Neutral,,,,,,cBioPortal,,,,98.43,E
+R273P,5.6269,3.5602,Destabilizing,,,3.1867431485e-05,,0.932,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,231060,Pathogenic,98.43,E
+R273G,2.57054,3.27041,Uncertain,,,,,0.902,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,634682,Pathogenic,98.43,E
+R273H,-0.27834,0.57483,Neutral,,,,1.59328272005e-05,0.868,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12366,Pathogenic,98.43,E
+R273S,1.66603,1.45408,Neutral,,,,0.0,0.906,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376656,Pathogenic,98.43,E
+V274D,4.04508,5.00612,Destabilizing,,,,,0.889,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376675,Uncertain significance,98.6,E
+V274L,3.4734,1.44456,Uncertain,,,,,0.630,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376678,Uncertain significance,98.6,E
+V274G,4.16979,5.25748,Destabilizing,,,,,0.865,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376676,Conflicting interpretations of pathogenicity,98.6,E
+V274C,2.28041,2.0898,Uncertain,,,,,,cBioPortal,,,,98.6,E
+V274E,3.47664,6.13844,Destabilizing,,,,,,Manual annotations from clinvar.csv,,1417760,Uncertain significance,98.6,E
+V274I,-0.83746,-0.32211,Neutral,,,,,0.367,COSMIC,,,,98.6,E
+V274A,2.54178,2.84966,Uncertain,,,,,0.847,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376677,Uncertain significance,98.6,E
+V274F,14.20895,3.8017,Destabilizing,,,,,0.773,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376674,Uncertain significance,98.6,E
+C275F,0.62895,3.60204,Uncertain,,,,,0.981,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376582,Pathogenic,97.98,-
+C275G,1.36569,1.87381,Neutral,,,,,0.957,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1414106,Uncertain significance,97.98,-
+C275R,1.43025,3.4,Uncertain,,,,,0.962,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376584,Likely pathogenic,97.98,-
+C275Y,0.65032,1.4119,Neutral,,,3.186336987e-05,,0.972,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,215997,Pathogenic/Likely pathogenic,97.98,-
+C275S,-0.05456,0.95714,Neutral,,,,,"0.965, 0.982","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"960924, 376583","Uncertain significance, Conflicting interpretations of pathogenicity",97.98,-
+C275W,2.35558,1.62959,Uncertain,,,,,0.922,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,485044,Likely pathogenic,97.98,-
+A276T,0.28298,0.04082,Neutral,,,,,0.928,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,827547,Uncertain significance,97.23,S
+A276D,-0.064,-0.19592,Neutral,,,,,0.951,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,232683,Likely pathogenic,97.23,S
+A276S,0.21822,0.12245,Neutral,,,,,0.850,"cBioPortal,COSMIC",,,,97.23,S
+A276P,-1.12726,-0.07993,Neutral,,,,,0.949,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,428893,Conflicting interpretations of pathogenicity,97.23,S
+A276G,0.4428,1.11395,Neutral,,,,,0.930,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,185319,Pathogenic,97.23,S
+A276F,0.20135,0.31088,Neutral,,,,,,COSMIC,,,,97.23,S
+A276V,0.24902,0.07449,Neutral,,,,,0.934,"cBioPortal,COSMIC",,,,97.23,S
+C277S,0.32342,0.40476,Neutral,,,,,"0.894, 0.936","cBioPortal,COSMIC,Manual annotations from clinvar.csv",,655556,Uncertain significance,96.83,-
+C277F,-0.58063,-1.52619,Neutral,,,,3.9791809254e-06,0.932,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,458567,Uncertain significance,96.83,-
+C277R,0.26083,-0.45816,Neutral,,,,,0.889,"COSMIC,Manual annotations from clinvar.csv",,421804,Conflicting interpretations of pathogenicity,96.83,-
+C277Y,-0.38957,-1.74524,Neutral,,,,0.0,0.940,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,185722,Conflicting interpretations of pathogenicity,96.83,-
+C277W,-0.29378,-0.59082,Neutral,,,,,0.875,"cBioPortal,COSMIC",,,,96.83,-
+C277G,0.83718,4.49626,Uncertain,,,,,0.846,"cBioPortal,COSMIC",,,,96.83,-
+P278H,28.1508,24.99252,Destabilizing,,,,,0.950,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376646,Uncertain significance,97.83,H
+P278T,3.41981,3.18844,Destabilizing,,,,,0.954,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376643,Likely pathogenic; drug response,97.83,H
+P278F,33.46192,19.03027,Destabilizing,,,,,,"cBioPortal,COSMIC",,,,97.83,H
+P278S,2.83418,3.69082,Uncertain,,,,,0.963,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376642,Conflicting interpretations of pathogenicity,97.83,H
+P278A,2.38073,1.18265,Uncertain,,,,,0.958,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376645,Conflicting interpretations of pathogenicity,97.83,H
+P278L,10.67109,6.7415,Destabilizing,,,,,0.940,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,232497,Conflicting interpretations of pathogenicity,97.83,H
+P278V,5.55725,3.87449,Destabilizing,,,,,,cBioPortal,,,,97.83,H
+P278R,16.27614,13.98571,Destabilizing,,,,,0.951,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376644,Uncertain significance,97.83,H
+G279V,12.39092,7.05442,Destabilizing,,,,,0.937,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,1434495,Uncertain significance,97.02,H
+G279E,11.98776,13.87483,Destabilizing,,,,,0.907,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,419454,Pathogenic/Likely pathogenic,97.02,H
+G279W,23.93174,41.1085,Destabilizing,,,,,0.930,"cBioPortal,COSMIC",,,,97.02,H
+G279R,17.16708,30.93061,Destabilizing,,,,,0.896,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,458568,Conflicting interpretations of pathogenicity,97.02,H
+G279D,12.01374,10.57585,Destabilizing,,,,,,cBioPortal,,,,97.02,H
+G279A,3.26999,2.80034,Uncertain,,,,,0.907,"cBioPortal,COSMIC",,,,97.02,H
+R280S,0.56727,1.57823,Neutral,,,,,0.878,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"988616, 634747","Pathogenic, Likely pathogenic",96.53,H
+R280L,-0.15777,0.31769,Neutral,,,,,,Manual annotations from clinvar.csv,,1042468,Uncertain significance,96.53,H
+R280I,-0.15635,0.80476,Neutral,,,,,0.942,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,161517,Uncertain significance,96.53,H
+R280G,0.81638,2.0085,Uncertain,,,,,0.924,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376658,Conflicting interpretations of pathogenicity,96.53,H
+R280K,0.20173,1.11565,Neutral,,,,,0.935,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376657,Conflicting interpretations of pathogenicity,96.53,H
+R280N,0.0819,1.48571,Neutral,,,,,,cBioPortal,,,,96.53,H
+R280T,0.35007,1.56054,Neutral,,,,,0.940,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12368,Likely pathogenic,96.53,H
+D281Y,-0.176,0.82177,Neutral,,,,,0.957,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376585,Pathogenic,97.06,H
+D281G,1.39521,3.69082,Uncertain,,,,,0.974,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141141,Pathogenic,97.06,H
+D281A,0.08332,1.69218,Neutral,,,,,0.977,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376589,Likely pathogenic,97.06,H
+D281H,-0.18853,1.52381,Neutral,,,,,0.961,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376588,Uncertain significance,97.06,H
+D281N,-1.27088,2.14558,Uncertain,,,,3.9771552204e-06,0.943,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376586,Pathogenic,97.06,H
+D281V,-0.31394,1.55816,Neutral,,,,,0.969,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,182968,Pathogenic/Likely pathogenic,97.06,H
+D281E,0.9764,1.02993,Neutral,,,,,0.909,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,"406568, 376587","Conflicting interpretations of pathogenicity, Uncertain significance",97.06,H
+D281R,1.16646,3.24354,Uncertain,,,,,,COSMIC,,,,97.06,H
+D281P,1.94685,10.52653,Uncertain,,,,,,cBioPortal,,,,97.06,H
+R282W,6.32707,2.43027,Uncertain,,,,3.9775665248e-06,0.896,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12364,Pathogenic/Likely pathogenic,97.21,H
+R282G,2.65994,3.34966,Uncertain,,,,,0.863,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,140821,Pathogenic,97.21,H
+R282L,0.22872,0.02755,Neutral,,,,,0.898,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,182938,Uncertain significance,97.21,H
+R282P,9.11021,12.76803,Destabilizing,,,,,0.911,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376659,Pathogenic/Likely pathogenic,97.21,H
+R282H,5.41894,1.7568,Uncertain,,,,,,"cBioPortal,COSMIC",,,,97.21,H
+R282Q,2.38433,1.08197,Uncertain,,,,3.9770286823e-06,0.887,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,237956,Conflicting interpretations of pathogenicity,97.21,H
+R283H,1.2335,0.46361,Neutral,,,,3.9769021523e-05,0.836,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,142324,Conflicting interpretations of pathogenicity,95.97,H
+R283C,1.18039,1.44898,Neutral,,,9.55779278705e-05,7.15876551066e-05,0.740,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,127824,Likely benign,95.97,H
+R283P,2.69342,7.27585,Uncertain,,,,,0.804,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,486555,Uncertain significance,95.97,H
+R283S,0.65375,1.13367,Neutral,,,,3.9770919504e-06,0.687,COSMIC,,,,95.97,H
+R283G,1.38823,1.57721,Neutral,,,,,0.714,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,580186,Uncertain significance,95.97,H
+R283L,0.24033,0.09694,Neutral,,,,,0.685,"cBioPortal,COSMIC",,,,95.97,H
+T284A,-0.7248,-0.0619,Neutral,,,,,0.460,"COSMIC,Manual annotations from clinvar.csv",,964952,Uncertain significance,95.98,H
+T284P,1.99313,6.61327,Uncertain,,,,,0.569,"cBioPortal,COSMIC",,,,95.98,H
+T284I,-1.15177,-0.62347,Neutral,,,,,0.699,"COSMIC,Manual annotations from clinvar.csv",,216471,Likely benign,95.98,H
+T284S,-0.73201,0.37245,Neutral,,,,,0.495,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,458571,Conflicting interpretations of pathogenicity,95.98,H
+E285K,-0.29321,1.95238,Neutral,,,,,0.910,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,420133,Pathogenic/Likely pathogenic,96.28,H
+E285V,0.19113,0.32483,Neutral,,,,0.0,0.936,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,12384,Pathogenic,96.28,H
+E285G,1.1343,1.67721,Neutral,,,,,0.923,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,919894,Uncertain significance,96.28,H
+E285Q,-0.38545,0.29048,Neutral,,,,,0.883,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,954095,Uncertain significance,96.28,H
+E285D,0.78107,0.08571,Neutral,,,,,0.524,cBioPortal,,,,96.28,H
+E285A,-0.00754,0.29898,Neutral,,,,,0.910,COSMIC,,,,96.28,H
+E286Q,0.53966,1.47279,Neutral,,,,,0.905,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376591,Uncertain significance,95.87,H
+E286K,1.51713,2.32041,Uncertain,,,,,0.949,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,183752,Pathogenic,95.87,H
+E286G,3.00501,3.40136,Destabilizing,,,,,0.913,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376590,Uncertain significance,95.87,H
+E286D,1.69984,0.90272,Neutral,,,,,0.765,"cBioPortal,COSMIC",,,,95.87,H
+E286A,2.01326,1.72653,Uncertain,,,,,0.913,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,376593,Likely pathogenic,95.87,H
+E286V,1.59431,1.12245,Neutral,,,,,0.916,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,376592,Likely pathogenic,95.87,H
+E287G,0.63098,0.67823,Neutral,,,,,0.626,COSMIC,,,,95.03,H
+E287K,-0.13757,-0.27789,Neutral,,,,3.9765226105e-06,0.583,"cBioPortal,COSMIC,Manual annotations from TP53db_germline.csv,Manual annotations from clinvar.csv",,141781,Uncertain significance,95.03,H
+E287A,-0.14653,-0.27347,Neutral,,,,,0.562,COSMIC,,,,95.03,H
+E287Q,-0.19172,-0.18129,Neutral,,,,,0.623,"cBioPortal,COSMIC",,,,95.03,H
+E287D,0.33049,0.26633,Neutral,,,,7.9527922254e-06,0.405,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,"925213, 422130","Uncertain significance, Uncertain significance",95.03,H
+E287V,0.58653,-0.06599,Neutral,,,,,0.644,COSMIC,,,,95.03,H
+N288H,0.11343,0.2102,Neutral,,,,,0.554,COSMIC,,,,93.39,H
+N288K,-0.4195,-0.58027,Neutral,,,,,0.679,COSMIC,,,,93.39,H
+N288Y,-0.20406,-0.05102,Neutral,,,,,0.665,COSMIC,,,,93.39,H
+N288S,-0.14012,-0.25374,Neutral,,,,,0.480,COSMIC,,,,93.39,H
+N288D,0.57071,0.61361,Neutral,,,,,0.513,"COSMIC,Manual annotations from clinvar.csv",,1024822,Uncertain significance,93.39,H
+L289P,4.19068,5.55,Destabilizing,,,,,0.518,"COSMIC,Manual annotations from clinvar.csv",,1172923,Likely benign,91.91,H
+L289I,0.62345,-0.07279,Neutral,,,,,,"COSMIC,Manual annotations from clinvar.csv",,1439164,Uncertain significance,91.91,H
+L289V,0.97287,1.09286,Neutral,,,,,0.399,"COSMIC,Manual annotations from clinvar.csv",,496049,Uncertain significance,91.91,H
+L289F,0.25768,1.05544,Neutral,,,,,0.344,"cBioPortal,COSMIC,Manual annotations from clinvar.csv",,822635,Conflicting interpretations of pathogenicity,91.91,H
+L289R,-0.13965,-0.22347,Neutral,,,,,0.426,COSMIC,,,,91.91,H
