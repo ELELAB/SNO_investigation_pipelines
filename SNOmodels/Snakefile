@@ -1,0 +1,377 @@
+# SNOmodels - pipeline for analyzing cysteine residues from structural ensembles
+# Copyright (C) 2022 Matteo Tiberti, Danish Cancer Society
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import pandas as pd
+import MDAnalysis as mda
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
+from MDAnalysis.analysis.dihedrals import Dihedral
+from collections import defaultdict
+import re
+
+cys_residues_csv = '../SNOfinder/results/cys_database_far_seq_acc10_human.csv'
+proteins_csv = 'proteins.csv'
+runs_basedir = '../../../../../raw_data/computational_data/cabsflex_data/sno'
+
+cys_residues = pd.read_csv(cys_residues_csv, usecols=['up_id', 'up_ac', 'residue', 'proximal_cys'], index_col='up_ac')
+proteins = pd.read_csv(proteins_csv, index_col='up_ac')
+proteins = proteins[ ~ pd.isna(proteins['dir_name'])]
+proteins_no_dir = proteins[pd.isna(proteins['dir_name'])]
+if len(proteins_no_dir) > 0:
+    print(f"Ignoring proteins with missing directory name: {proteins_no_dir['hugo']}")
+
+data = proteins.join(cys_residues)
+
+#data = data[data['start'] < data['residue'] < data['end']]
+#data = data[data['start'] < data['proximal_cys'] < data['end']]
+
+rule all:
+    input:
+        expand(["results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/distributions.pdf",
+                "results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/values.pdf",
+                "results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv",],
+                zip,
+                name=data['dir_name'],
+                hugo=data['hugo'],
+                up_ac=data.index,
+                chain=data['chain'],
+                start=data['start'],
+                end=data['end'],
+                restraints_set=data['restraints_set'],
+                mut=data['mutation'],
+                sno=data['residue'],
+                cys=data['proximal_cys']),
+        "results/statistics.csv"
+
+rule calculate_CVs:
+    input:
+        pdb=f"{runs_basedir}" + "/{name}/af{hugo}_{chain}_{start}-{end}_{mut}/af2db/{restraints_set}/theseus/theseus_sup.pdb"
+    output:
+        "results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/cvs.csv"
+    run:
+
+        cvs = {}
+
+        uni = mda.Universe(input.pdb, input.pdb)
+
+        sno_sg = uni.select_atoms(f"resnum {wildcards.sno} and name SG")
+        sno_n  = uni.select_atoms(f"resnum {wildcards.sno} and name N" )
+        sno_ca = uni.select_atoms(f"resnum {wildcards.sno} and name CA")
+        sno_cb = uni.select_atoms(f"resnum {wildcards.sno} and name CB")
+
+        cys_sg = uni.select_atoms(f"resnum {wildcards.cys} and name SG")
+        cys_n  = uni.select_atoms(f"resnum {wildcards.cys} and name N" )
+        cys_ca = uni.select_atoms(f"resnum {wildcards.cys} and name CA")
+        cys_cb = uni.select_atoms(f"resnum {wildcards.cys} and name CB")
+
+        cvs['dih_SNO-n-ca-cb-sg'] =      Dihedral([sno_n  + sno_ca + sno_cb + sno_sg]).run().angles.squeeze()
+        cvs['dih_CYS-n-ca-cb-sg'] =      Dihedral([cys_n  + cys_ca + cys_cb + cys_sg]).run().angles.squeeze()
+        cvs['dih_SNO-cb-sg_CYS-sg-cb'] = Dihedral([sno_cb + sno_sg + cys_sg + cys_cb]).run().angles.squeeze()
+        cvs['d_SNO-sg_CYS-sg'] = [ np.linalg.norm(sno_sg.positions[0] - cys_sg.positions[0]) for t in uni.trajectory ]
+
+        pd.DataFrame(cvs).to_csv(output[0], index_label='model')
+
+rule calculate_pKa:
+    input:
+        pdb=f"{runs_basedir}" + "/{name}/af{hugo}_{chain}_{start}-{end}_{mut}/af2db/{restraints_set}/output_pdbs/model_{i}.pdb"
+    output:
+        pka="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}.pka",
+        log="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}.pka.log",
+        csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}.pka.csv"
+    shell:
+        """
+        pdb_path=$(realpath {input[pdb]})
+        pdb=$(basename {input[pdb]})
+        csv=$(basename {output[csv]})
+        log=$(basename {output[log]})
+        pka=$(basename {output[pka]})
+        cd results/{wildcards.name}_{wildcards.hugo}_{wildcards.up_ac}_{wildcards.chain}_{wildcards.start}-{wildcards.end}_{wildcards.restraints_set}_SNO-{wildcards.sno}_CYS-{wildcards.cys}_{wildcards.mut}
+        propka3 $pdb_path &> $log
+        egrep '^CYS' $pka | grep -v '                ' > $csv
+        """
+
+rule run_naccess:
+    input:
+        pdb=f"{runs_basedir}" + "/{name}/af{hugo}_{chain}_{start}-{end}_{mut}/af2db/{restraints_set}/output_pdbs/model_{i}.pdb"
+    output:
+        rsa="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}/model_{i}.rsa"
+    shell:
+        """
+        pdb_path=$(realpath {input[pdb]})
+        cd results/{wildcards.name}_{wildcards.hugo}_{wildcards.up_ac}_{wildcards.chain}_{wildcards.start}-{wildcards.end}_{wildcards.restraints_set}_SNO-{wildcards.sno}_CYS-{wildcards.cys}_{wildcards.mut}/model_{wildcards.i}
+
+        naccess $pdb_path
+        """
+
+
+rule aggregate_pKa:
+    input:
+        csvs=expand("results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}.pka.csv",
+                    i=np.arange(0, 20),
+                    allow_missing=True),
+        logs=expand("results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}.pka.log",
+                    i=np.arange(0, 20),
+                    allow_missing=True),
+    output:
+        csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/pkas.csv"
+    run:
+        pkas = { 'model' : [],
+                 'pKa_CYS' : [],
+                 'pKa_SNO' : [],
+                 'propka_errors' : [] }
+
+        for i, csv in enumerate(input.csvs):
+            pka = pd.read_fwf(csv, header=None, widths=[3, 4, 2, 7, 1, 6, 2, 7, 5, 7, 5, 8, 4, 4, 2, 8, 4, 4, 2],
+            usecols=[1,3], names=['residue', 'pKa'], index_col='residue').fillna(pd.NA)
+
+            pkas['model'].append(i)
+            pkas['pKa_CYS'].append(pka.loc[int(wildcards.cys)]['pKa'])
+            pkas['pKa_SNO'].append(pka.loc[int(wildcards.sno)]['pKa'])
+            with open(input.logs[i]) as fh:
+                log_content = fh.read()
+                if re.search('failed', log_content) is not None or re.search('Missing', log_content) is not None:
+                    pkas['propka_errors'].append(True)
+                else:
+                    pkas['propka_errors'].append(False)
+        pd.DataFrame(pkas).to_csv(output.csv, index=False)
+
+rule aggregate_rsa:
+    input:
+        rsas=expand("results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/model_{i}/model_{i}.rsa",
+                    i=np.arange(0, 20),
+                    allow_missing=True),
+    output:
+        csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/rsas.csv"
+    run:
+        rsas = { 'model' : [],
+                 'sas_sc_rel_CYS' : [],
+                 'sas_sc_rel_SNO' : [] }
+
+        for i, rsa in enumerate(input.rsas):
+            rsa = pd.read_fwf(rsa, 
+                skiprows=4, skipfooter=4, header=None, widths=[4,4,1,4,9,6,7,6,7,6,7,6,7,6],
+                names = ['entry', 'rest', 'chain', 'resn', 'all_abs', 'sas_all_rel', 'sas_sc_abs',
+                'sas_sc_rel', 'sas_mc_abs', 'sas_mc_rel', 'sas_np_abs', 'sas_np_rel', 'sas_ap_abs',
+                'sas_ap_rel'],
+                usecols = ['resn', 'sas_sc_rel'],
+                index_col = 'resn').fillna(pd.NA)
+
+            rsas['model'].append(i)
+            rsas['sas_sc_rel_CYS'].append(rsa.loc[int(wildcards.cys)]['sas_sc_rel'])
+            rsas['sas_sc_rel_SNO'].append(rsa.loc[int(wildcards.sno)]['sas_sc_rel'])
+
+        pd.DataFrame(rsas).to_csv(output.csv, index=False)
+
+rule make_final_dataset:
+    input:
+        cvs="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/cvs.csv",
+        pkas="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/pkas.csv",
+        rsas="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/rsas.csv",
+    output:
+        final="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv"
+    run:
+        cvs = pd.read_csv(input.cvs, index_col="model")
+        pkas = pd.read_csv(input.pkas, index_col="model")
+        rsas = pd.read_csv(input.rsas, index_col="model")
+        cvs = cvs.join(pkas)
+        cvs = cvs.join(rsas)
+        cvs.to_csv(output.final, index=False)
+
+rule make_distribution_figure:
+    input:
+        csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv"
+    output:
+        dist_pdf="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/distributions.pdf"
+    run:
+        titles = {'dih_SNO-n-ca-cb-sg' : 'SNO CYS X1 Dihedral',
+                  'dih_CYS-n-ca-cb-sg' : 'proximal CYS X1 Dihedral',
+                  'dih_SNO-cb-sg_CYS-sg-cb' : 'S-S Dihedral (SNO CB, SG, CYS SG, CB)',
+                  'd_SNO-sg_CYS-sg' : 'SNO SG - CYS SG distance',
+                  'pKa_SNO' : 'SNO Cys pKa',
+                  'pKa_CYS' : 'proximal Cys pKa',
+                  'sas_sc_rel_SNO' : 'SNO site rel. SAS',
+                  'sas_sc_rel_CYS' : 'proximal CYS rel. SAS' }
+
+        xlimits = {'dih_SNO-n-ca-cb-sg' : (-180, 180),
+                   'dih_CYS-n-ca-cb-sg' : (-180, 180),
+                   'dih_SNO-cb-sg_CYS-sg-cb' : (-180, 180),
+                   'd_SNO-sg_CYS-sg' : (0, 20),
+                   'pKa_SNO' : (0, 20),
+                   'pKa_CYS' : (0, 20),
+                   'sas_sc_rel_SNO' : (0, 150),
+                   'sas_sc_rel_CYS' : (0, 150) }
+
+        xlabels = {'dih_SNO-n-ca-cb-sg' : 'Dihedral (deg)',
+                   'dih_CYS-n-ca-cb-sg' : 'Dihedral (deg)',
+                   'dih_SNO-cb-sg_CYS-sg-cb' : 'Dihedral (deg)',
+                   'd_SNO-sg_CYS-sg' : 'Distance (A)',
+                   'pKa_SNO' : 'pKa',
+                   'pKa_CYS' : 'pKa',
+                   'sas_sc_rel_SNO' : 'Relative SAS (%)',
+                   'sas_sc_rel_CYS' : 'Relative SAS (%)' }
+
+        bins    = {'dih_SNO-n-ca-cb-sg' : 36,
+                   'dih_CYS-n-ca-cb-sg' : 36,
+                   'dih_SNO-cb-sg_CYS-sg-cb' : 36,
+                   'd_SNO-sg_CYS-sg' : 40,
+                   'pKa_SNO' : 40,
+                   'pKa_CYS' : 40,
+                   'sas_sc_rel_SNO' : 50,
+                   'sas_sc_rel_CYS' : 50 }
+
+
+        data = pd.read_csv(input.csv)
+
+        fig, axs = plt.subplots(4, 2, figsize=(9, 8))
+        flat_axs = axs.flat
+
+        i = 0
+        for k,v in titles.items():
+            ax = axs.flat[i]
+
+            ax.hist(data[k], bins=bins[k], range=xlimits[k])
+            ax.set_title(v)
+            ax.set_xlim(xlimits[k])
+            ax.set_ylim((0, 20))
+            ax.set_xlabel(xlabels[k])
+            ax.set_ylabel('Counts')
+
+            i+=1
+
+        fig.tight_layout()
+        fig.savefig(output.dist_pdf)
+
+rule make_values_figure:
+    input:
+        csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv"
+    output:
+        vals_pdf="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/values.pdf"
+        #"results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_distributions.pdf",
+    run:
+
+        xs = np.arange(0, 20)
+
+        titles = {'dih_SNO-n-ca-cb-sg' : 'Dihedral SNO CYS (N, CA, CB, SG)',
+                  'dih_CYS-n-ca-cb-sg' : 'Dihedral proximal CYS (N, CA, CB, SG)',
+                  'dih_SNO-cb-sg_CYS-sg-cb' : 'Dihedral SS (SNO CB, SG, CYS SG, CB)',
+                  'd_SNO-sg_CYS-sg' : 'Distance SNO SG to CYS SG',
+                  'pKa_SNO' : 'pKa S-nitrosylated Cys',
+                  'pKa_CYS' : 'pKa proximal Cys',
+                  'sas_sc_rel_SNO' : 'SNO site rel. SAS',
+                  'sas_sc_rel_CYS' : 'proximal CYS rel. SAS' }
+
+
+        ylimits = {'dih_SNO-n-ca-cb-sg' : (-180, 180),
+                   'dih_CYS-n-ca-cb-sg' : (-180, 180),
+                   'dih_SNO-cb-sg_CYS-sg-cb' : (-180, 180),
+                   'd_SNO-sg_CYS-sg' : (0, 20),
+                   'pKa_SNO' : (0, 20),
+                   'pKa_CYS' : (0, 20),
+                   'sas_sc_rel_SNO' : (0, 150),
+                   'sas_sc_rel_CYS' : (0, 150) }
+
+        ylabels = {'dih_SNO-n-ca-cb-sg' : 'Dihedral (deg)',
+                   'dih_CYS-n-ca-cb-sg' : 'Dihedral (deg)',
+                   'dih_SNO-cb-sg_CYS-sg-cb' : 'Dihedral (deg)',
+                   'd_SNO-sg_CYS-sg' : 'Distance (A)',
+                   'pKa_SNO' : 'pKa',
+                   'pKa_CYS' : 'pKa',
+                   'sas_sc_rel_SNO' : 'Relative SAS (%)',
+                   'sas_sc_rel_CYS' : 'Relative SAS (%)' }
+
+        data = pd.read_csv(input.csv)
+
+        fig, axs = plt.subplots(4, 2, figsize=(10, 10))
+        flat_axs = axs.flat
+
+        i = 0
+        for k,v in titles.items():
+            ax = axs.flat[i]
+
+            ax.scatter(xs, data[k],)
+            ax.set_title(v)
+            ax.set_xlim((-1, 20))
+            ax.set_ylim(ylimits[k])
+            ax.set_xlabel('Models')
+            ax.set_ylabel(ylabels[k])
+            ax.set_xticks(xs)
+
+            i+=1
+
+        fig.tight_layout()
+        fig.savefig(output.vals_pdf)
+
+rule make_statistics:
+    input:
+        csvs=expand("results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv",
+            zip,
+            name=data['dir_name'],
+            hugo=data['hugo'],
+            up_ac=data.index,
+            chain=data['chain'],
+            start=data['start'],
+            end=data['end'],
+            restraints_set=data['restraints_set'],
+            mut=data['mutation'],
+            sno=data['residue'],
+            cys=data['proximal_cys'])
+    output:
+        stats_csv="results/statistics.csv"
+    run:
+
+        dir_regexp = '[a-z0-9_]+_([A-Z0-9]+)_([A-Z0-9]+)_[A-Z]_([0-9]+)-([0-9]+)_([A-Za-z0-9_]+)_SNO-([0-9]+)_CYS-([0-9]+)_([A-Z0-9]+)'
+
+        out_df = []
+
+        for csv in input.csvs:
+            this_df = pd.read_csv(csv)
+            this_out_df = pd.DataFrame()
+            metadata = re.fullmatch(dir_regexp, csv.split('/')[1]).groups()
+
+            this_out_df[['hugo',
+                   'up_id',
+                   'start',
+                   'end',
+                   'restraints',
+                   'SNO_site',
+                   'proximal_Cys',
+                   'mutation']] = [metadata]
+
+            this_out_df['d_SNO-sg_CYS-sg_avg'] = [this_df['d_SNO-sg_CYS-sg'].mean()]
+            this_out_df['d_SNO-sg_CYS-sg_std'] = [this_df['d_SNO-sg_CYS-sg'].std()]
+            this_out_df['pKa_SNO_avg']         = [this_df['pKa_SNO'].mean()]
+            this_out_df['pKa_SNO_std']         = [this_df['pKa_SNO'].std()]
+            this_out_df['pKa_CYS_avg']         = [this_df['pKa_CYS'].mean()]
+            this_out_df['pKa_CYS_std']         = [this_df['pKa_CYS'].std()]
+            this_out_df['propka_errors']       = [np.any(this_df['propka_errors'])]
+            this_out_df['sas_sc_rel_SNO_avg']  = [this_df['sas_sc_rel_SNO'].mean()]
+            this_out_df['sas_sc_rel_SNO_std']  = [this_df['sas_sc_rel_SNO'].std()]
+            this_out_df['sas_sc_rel_CYS_avg']  = [this_df['sas_sc_rel_CYS'].mean()]
+            this_out_df['sas_sc_rel_CYS_std']  = [this_df['sas_sc_rel_CYS'].std()]
+
+            out_df.append(this_out_df)
+
+        pd.concat(out_df, axis='rows').to_csv(output.stats_csv, index=None, float_format='%.3f')
+
+
+
+
+
+
+
+
