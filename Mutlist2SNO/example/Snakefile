@@ -22,8 +22,8 @@ two proximal cysteines and located in the around of 8 A° from them.
 '''
 #Input files parsing: dataframe to create wildcards.
 
-cys_residues_csv = '../../dbPTM/SNOfinder/results/cys_database_far_seq_acc10_human.csv'
-proteins_csv = '../../dbPTM/SNOmodels/proteins.csv'
+cys_residues_csv = '/data/user/shared_projects/trap1_middle_SNO/dbPTM/SNOfinder/results/cys_database_far_seq_acc10_human.csv'
+proteins_csv = '/data/user/shared_projects/trap1_middle_SNO/dbPTM/SNOmodels/proteins.csv'
 cys_residues = pd.read_csv(cys_residues_csv, usecols=['up_id', 'up_ac', 'residue', 'proximal_cys'], index_col='up_ac')
 proteins = pd.read_csv(proteins_csv, index_col='up_ac')
 proteins = proteins[ ~ pd.isna(proteins['dir_name'])]
