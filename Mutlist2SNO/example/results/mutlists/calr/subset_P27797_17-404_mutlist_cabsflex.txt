@@ -1,0 +1,6 @@
+pdbfile chain resi resn_wt resn_mut
+afCALR.pdb A 103 ILE THR
+afCALR.pdb A 135 ASP GLY
+afCALR.pdb A 135 ASP HIS
+afCALR.pdb A 135 ASP ASN
+afCALR.pdb A 321 VAL ALA

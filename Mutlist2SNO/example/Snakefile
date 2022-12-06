@@ -1,0 +1,221 @@
+import pandas as pd
+import re
+import os
+
+'''
+Inputs:
+-cys_database_far_seq_acc10_human.csv: csv file containing for each protein information about the residue around proximal cysteines.
+-proteins.csv: csv file containing information about the proteins which residues and cysteine parameters are collected in the input file above.
+-pdb file: file for the pynteraph run.
+-mutlist.txt: file containing all the mutations retrieved from several databases for the protein of interest (format: [A-Z][0-9][A-Z]).
+-mutlist_cabsflex.txt: file containing the same mutations mentioned above written in the format supported by cabsflex.
+-mavisp_csv: csv file containing the classification of mutations based on Rosetta and Mutatex predictions (Neutral, Uncertain, Destabilzing).
+
+Output:
+-subset_mutlist.txt file containing Neutral or Uncertain mutations on residues in the around of 8 A° from a CYS that make contacts with it.
+-subset_mutlist_cabsflex.txt is the same of subset_mutlist.txt but in the format supported by cabsflex.
+
+Description
+the pipeline returns for a given protein those mutations that have no impact on protein Stability that occur on residues making contacts with 
+two proximal cysteines and located in the around of 8 A° from them.
+
+'''
+#Input files parsing: dataframe to create wildcards.
+
+cys_residues_csv = '/data/user/shared_projects/trap1_middle_SNO/dbPTM/SNOfinder/results/cys_database_far_seq_acc10_human.csv'
+proteins_csv = '/data/user/shared_projects/trap1_middle_SNO/dbPTM/SNOmodels/proteins.csv'
+cys_residues = pd.read_csv(cys_residues_csv, usecols=['up_id', 'up_ac', 'residue', 'proximal_cys'], index_col='up_ac')
+proteins = pd.read_csv(proteins_csv, index_col='up_ac')
+proteins = proteins[ ~ pd.isna(proteins['dir_name'])]
+proteins_no_dir = proteins[pd.isna(proteins['dir_name'])]
+if len(proteins_no_dir) > 0:
+    print(f"Ignoring proteins with missing directory name: {proteins_no_dir['hugo']}")
+directories=os.listdir(".")
+for i in range(len(directories)):
+    directories[i]=directories[i].upper()
+data = proteins.join(cys_residues)
+data=data[data.hugo.isin(directories)]
+data=data.astype({"start":str,"end":str})
+data["range"]=data[['start', 'end']].agg('-'.join, axis=1)
+data=data.reset_index(level=0)
+data.to_csv('starting_dataset.csv', index='up_ac')
+
+
+#function in order to extract the mutation in the following format [A-Z][0-9][A-Z] from the three letters or cabsflex annotations.
+
+d = {'Cys': 'C', 'Asp': 'D', 'Ser': 'S', 'Gln': 'Q', 'Lys': 'K',
+     'Ile': 'I', 'Pro': 'P', 'Thr': 'T', 'Phe': 'F', 'Asn': 'N',
+     'Gly': 'G', 'His': 'H', 'Leu': 'L', 'Arg': 'R', 'Trp': 'W',
+     'Ala': 'A', 'Val':'V', 'Glu': 'E', 'Tyr': 'Y', 'Met': 'M'}
+
+def mutations_convert(string,dic):
+    match = re.search("([A-Z][A-Z][A-Z])([0-9]+)([A-Z][A-Z][A-Z])", string) # this matches strings like p.Ala128Ile and creates one group for each part of the string we need
+    match1= re.search("([A-Z][A-Z][A-Z])([0-9]+)", string)
+    if match is not None and len(match.groups()) == 3:
+        if match.group(3) in str(d.keys()).upper():
+            substring_list=list(match.groups())
+            return f"{dic[substring_list[0].capitalize()]}{substring_list[1].capitalize()}{dic[substring_list[2].capitalize()]}"
+    else:
+        if match1 is not None and len(match1.groups()) == 2:
+            if match1.group(1) in str(d.keys()).upper():
+                substring_list=list(match1.groups())
+                return f"{dic[substring_list[0].capitalize()]}{substring_list[1].capitalize()}"
+
+
+
+#parameters for the pynteraph run:
+pyinteraph_dist_co = 8
+
+
+rule all:
+    input:
+        expand("results/mutlists/{gene}/subset_{up_ac}_{range}_mutlist.txt", zip, gene=data['hugo'].str.lower(),up_ac=data["up_ac"],range=data["range"]),
+        expand("results/mutlists/{gene}/subset_{up_ac}_{range}_mutlist_cabsflex.txt", zip, gene=data['hugo'].str.lower(),up_ac=data["up_ac"],range=data["range"])
+       
+#running pyinteraph on the pdb file to detect the contacts.
+
+rule pyinteraph:
+    input:
+        "{gene}/structure_selection/alphafold_db/{gene}/{up_ac}_{range}.pdb",
+    output:
+        csv="results/pynteraph/{gene}/{up_ac}_{range}_cmpsn_all.csv",
+    params:
+        distance_co = pyinteraph_dist_co
+    shell:
+        """
+        pdb={input[0]}
+        csv=$(basename {output[0]})
+        
+        #cd results/pynteraph/{wildcards[gene]}
+        pyinteraph -s $pdb -t $pdb -r $pdb\
+        --cmpsn --cmpsn-co {params[distance_co]} --cmpsn-correction null\
+        --ff-masses charmm27
+
+        mv cmpsn_all.csv $csv
+        mv {wildcards.up_ac}_{wildcards.range}_cmpsn_all.csv results/pynteraph/{wildcards.gene}/
+        cd ../../../
+        """
+#parse the pyinteraph output in order to retrieve only the lines in which a proximal CYS establishes a contact with a residue
+
+rule parse_pyinteraph_data:
+    input:
+        "results/pynteraph/{gene}/{up_ac}_{range}_cmpsn_all.csv",
+    output:
+        "results/pynteraph/{gene}/{up_ac}_{range}_cmpsn_all_parsed.csv",
+    run:
+
+        contacts = pd.read_csv(str(input), names=['chain1', 'resn1', 'rest1', 'group1', 'chain2', 'resn2', 'rest2', 'group2', 'pers'] )
+        contacts = contacts[ ['resn1', 'rest1', 'resn2', 'rest2'] ]
+        #retrieve only those contacts between one of the CYS contained in the input file (proximal cysteine) and a residue
+        proxi_list=list(data.loc[data['hugo'] == str(wildcards.gene).upper()]['proximal_cys'])
+        sno_list=list(data.loc[data['hugo'] == str(wildcards.gene).upper()]['residue'])
+        contacts_proxi = contacts[(contacts['resn1'].isin(proxi_list)) | (contacts['resn2'].isin(proxi_list))]
+        #retrieve only those contacts between one of the CYS contained in the input file (SNO cysteine) and a residue
+        contacts_sno= contacts[(contacts['resn1'].isin(sno_list)) | (contacts['resn2'].isin(sno_list))]
+        contacts=pd.concat([contacts_proxi, contacts_sno])
+        #filter in order to discard CYS-CYS contacts
+        contacts.to_csv(str(output[0]), sep=",", index=False)
+
+
+
+#the parsed pyinteraph output is used to filter the lists of mutations in order to retrieve only those residues making contacts with proximal CYS.
+#the mutations on these residues are further filtered keeping only the Neutral or the Uncertain ones.
+
+rule stability_filter:
+    input:
+        "{gene}/mavisp_csv/",
+        "{gene}/cancermuts/mutlist.txt",
+        "{gene}/cancermuts/mutlist_cabsflex.txt",
+        "results/pynteraph/{gene}/{up_ac}_{range}_cmpsn_all_parsed.csv",
+        #"results/pynteraph/{gene}/{up_ac}_{range}_cys-{sno_cys}_cmpsn_all_parsed.csv"
+        
+    output:
+        "results/mutlists/{gene}/subset_{up_ac}_{range}_mutlist.txt",
+        "results/mutlists/{gene}/subset_{up_ac}_{range}_mutlist_cabsflex.txt",
+
+    run:
+        mutlist=[]
+        cabsflex_list=[]
+        pyinteraph=[]
+        proxi_list=list(data.loc[data['hugo'] == str(wildcards.gene).upper()]['proximal_cys'])
+        sno_list=list(data.loc[data['hugo'] == str(wildcards.gene).upper()]['residue'])
+
+
+        file=os.listdir(input[0])
+
+        #list of residues from pyinteraph output to use as filter 
+        df_py=pd.read_csv(str(input[3]))
+        df_py=df_py.astype(str)
+        df_py["position1"]=df_py["rest1"]+df_py["resn1"]
+        df_py["position2"]=df_py["rest2"]+df_py["resn2"]
+        position1=df_py["position1"].to_list()
+        position2=df_py["position2"].to_list()
+        residues_list=position2+position1
+
+        for i in residues_list:
+            pyinteraph.append(mutations_convert(str(i),d))
+        
+
+        #list of mutations from the mutlist.txt file containing only the resiudes interacting with proximal Cysteines 
+        with open(str(input[1]),"r") as f:
+            for lines in f:
+                line=lines.strip("\n")
+                if line[:-1] in pyinteraph:
+                    mutlist.append(line)
+
+        #list of Neutral or Uncertain mutation from the mavisp.csv file 
+        df=pd.read_csv(f"{input[0]}/{file[0]}", sep=",")
+        stability_filter=df.loc[(df["Stability classification"]=="Neutral") |  (df["Stability classification"]=="Uncertain")]
+        
+        #list of Neutral or Uncertain mutations on residues interacting with proximal cysteines
+        final_mutlist=list(set(stability_filter["Mutation"].to_list()).intersection(mutlist))
+        
+        
+        with open(str(output[0]),"a") as subset_mutlist:
+            for mutation in final_mutlist:
+                match=re.search("[0-9]+",mutation)
+                if int(match.group()) not in proxi_list and int(match.group()) not in sno_list:
+                    subset_mutlist.write(mutation+"\n")
+        subset_mutlist.close()
+
+        # filtering the mutlist_cabsflex.txt file.
+        with open(str(input[2]),"r") as f:
+            for lines in f:
+                row=lines.strip("\n")
+                line=row.split(" ")
+                pdb_format="af"+str(wildcards.gene).upper()+".pdb"
+                row=row.replace(line[0],pdb_format)
+                print(row)
+                line_to_check=mutations_convert(line[3]+line[2]+line[4],d)
+                #keep only the residues interacting with proximal cysteines
+                if line_to_check in stability_filter["Mutation"].to_list() and line_to_check[:-1] in pyinteraph:
+                    match=re.search("[0-9]+",line_to_check)
+                    if int(match.group()) not in proxi_list and int(match.group()) not in sno_list:
+                        cabsflex_list.append(row)
+        
+        #list of Neutral or Uncertain mutations on residues interacting with proximal cysteines
+        
+        with open(str(output[1]),"a") as subset_mutlist:
+            subset_mutlist.write("pdbfile chain resi resn_wt resn_mut"+"\n")
+            for mutation in cabsflex_list:
+                subset_mutlist.write(mutation+"\n")
+        subset_mutlist.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

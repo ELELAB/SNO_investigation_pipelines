@@ -1,0 +1,7 @@
+pdbfile chain resi resn_wt resn_mut
+afCBFB.pdb A 21 LEU VAL
+afCBFB.pdb A 23 ARG HIS
+afCBFB.pdb A 59 ALA SER
+afCBFB.pdb A 110 TRP LEU
+afCBFB.pdb A 111 LYS GLU
+afCBFB.pdb A 122 MET ILE
