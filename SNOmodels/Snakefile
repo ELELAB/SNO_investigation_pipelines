@@ -1,19 +1,3 @@
-# SNOmodels - pipeline for analyzing cysteine residues from structural ensembles
-# Copyright (C) 2022 Matteo Tiberti, Danish Cancer Society
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 import pandas as pd
 import MDAnalysis as mda
 import numpy as np
@@ -24,9 +8,43 @@ from MDAnalysis.analysis.dihedrals import Dihedral
 from collections import defaultdict
 import re
 
-cys_residues_csv = '../SNOfinder/results/cys_database_far_seq_acc10_human.csv'
+#functions for the variants classificstion based on pKa changes of the SNO site and distance changes between SNO and proxymal cysteine upon mutation:
+
+
+#assignment_based_on_pKa function takes:
+#as input a value of pKa of a SNO site upon mutation and a list of parameters from the WT condition containing the pKa value of the SNO site.
+#substracts the WT SNO site pKa value from the mutant's one.
+#return Stabilizing if the calculated difference is lower than -1, Destabilizing if the differences is higher than 1, Neutral if none of the previous cases happens.
+
+def assignment_based_on_pKa(pKa_SNO_avg,par_WT_list):
+    pKa_diff=pKa_SNO_avg-par_WT_list[1]
+    if pKa_diff>=1:
+        return "Destabilizing"
+    if pKa_diff<=-1:
+        return "Stabilizing"
+    else:
+        return "Neutral"
+
+#assignment_based_on_distance_and_pKa function takes:
+#as input a value of pKa of a SNO site upon mutation and a list of parameter from the WT condition containing the pKa value of the SNO site as long as the distance
+#between the SNO cysteine and the proximal cysteine in the WT and mutant form.
+#substracts the WT SNO site pKa value from the mutant's one.
+#substracts the WT distance between the two cysteines from the distance calculated for the mutants
+#return Stabilizing if the calculated difference is lower than -1, Destabilizing if the differences is higher than 1, Neutral if none of the previous cases happens.
+
+def assignment_based_on_distance_and_pKa(d_SNO_sg_CYS_sg_avg,pKa_SNO_avg,par_WT_list):
+    distance_diff=d_SNO_sg_CYS_sg_avg-par_WT_list[0]
+    pKa_diff=pKa_SNO_avg-par_WT_list[1]
+    if distance_diff>=1 and pKa_diff>=1:
+        return "Destabilizing"
+    if distance_diff<=-1 and pKa_diff<=-1:
+        return "Stabilizing"
+    else:
+        return "Neutral"
+
+cys_residues_csv = '/data/user/shared_projects/trap1_middle_SNO/dbPTM/SNOfinder/results/cys_database_far_seq_acc10_human.csv'
 proteins_csv = 'proteins.csv'
-runs_basedir = '../../../../../raw_data/computational_data/cabsflex_data/sno'
+runs_basedir = '/data/raw_data/computational_data/cabsflex_data/sno'
 
 cys_residues = pd.read_csv(cys_residues_csv, usecols=['up_id', 'up_ac', 'residue', 'proximal_cys'], index_col='up_ac')
 proteins = pd.read_csv(proteins_csv, index_col='up_ac')
@@ -56,7 +74,8 @@ rule all:
                 mut=data['mutation'],
                 sno=data['residue'],
                 cys=data['proximal_cys']),
-        "results/statistics.csv"
+        "results/statistics.csv",
+        expand("results/mutations_classification/{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_mutation_classification.csv", zip, hugo=data['hugo'], up_ac=data.index, chain=data['chain'], start=data['start'], end=data['end'], restraints_set=data['restraints_set'])
 
 rule calculate_CVs:
     input:
@@ -367,6 +386,34 @@ rule make_statistics:
             out_df.append(this_out_df)
 
         pd.concat(out_df, axis='rows').to_csv(output.stats_csv, index=None, float_format='%.3f')
+
+rule mutation_classification:
+    input:
+        "results/statistics.csv"
+    output:
+        "results/mutations_classification/{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_mutation_classification.csv"
+    run:
+        df=pd.read_csv(str(input))
+        columns=list(df.columns)
+        columns.append('Evaluation')
+
+        gene_list=list(set(df["hugo"].to_list()))
+        for i in gene_list:
+            df_i=df.loc[df["hugo"]==wildcards.hugo]
+            proxi_list=df_i.loc[df_i["mutation"]=="WT","proximal_Cys"].to_list()
+            output_df=pd.DataFrame(columns=columns)
+            for prox in proxi_list:
+                df_prox_cys=df_i.loc[df_i["proximal_Cys"]==prox]
+                subset_df_prox_cys=df_prox_cys[["d_SNO-sg_CYS-sg_avg","pKa_SNO_avg","mutation","proximal_Cys"]]
+                par_WT_list=subset_df_prox_cys.loc[(subset_df_prox_cys["proximal_Cys"]==prox)&(subset_df_prox_cys["mutation"]=="WT")].values.flatten().tolist()
+                df_prox_cys['pKa_classification'] = df_i.apply(lambda x: assignment_based_on_pKa(x["pKa_SNO_avg"],par_WT_list), axis=1)
+                df_prox_cys['distance_pKa_classification'] = df_i.apply(lambda x: assignment_based_on_distance_and_pKa(x["d_SNO-sg_CYS-sg_avg"],x["pKa_SNO_avg"],par_WT_list), axis=1)
+                output_df=pd.concat([output_df,df_prox_cys])
+                output_df=pd.concat([output_df,df_prox_cys])
+                output_df=output_df.sort_index(ascending=True)
+            output_df.to_csv(str(output),sep=",",index=False) 
+
+
 
 
 
