@@ -144,9 +144,10 @@ def assignment_based_on_distance_and_pKa(row,
                 else:
                     return "Neutral"
 
-cys_residues_csv = '/data/user/shared_projects/trap1_middle_SNO/dbPTM/SNOfinder/results/cys_database_far_seq_acc10_human.csv'
+
+cys_residues_csv = '../SNOfinder/results/cys_database_far_seq_acc10_human.csv'
 proteins_csv = 'proteins.csv'
-runs_basedir = '/data/raw_data/computational_data/cabsflex_data/sno'
+runs_basedir = '../../../../../raw_data/computational_data/cabsflex_data/sno'
 
 cys_residues = pd.read_csv(cys_residues_csv, usecols=['up_id', 'up_ac', 'residue', 'proximal_cys'], index_col='up_ac')
 proteins = pd.read_csv(proteins_csv, index_col='up_ac')
