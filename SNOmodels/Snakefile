@@ -34,7 +34,7 @@ def assignment_based_on_pKa(row,
                             pKa_diff_cutoff_dest,
                             pKa_diff_cutoff_stab):
 
-    ''''
+    '''
     Input:
     row: row of the statistics dataframe
     par_WT_dict: dictionary in whcich the key is the gene and
