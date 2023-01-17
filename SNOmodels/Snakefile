@@ -158,9 +158,6 @@ if len(proteins_no_dir) > 0:
 
 data = proteins.join(cys_residues)
 
-#data = data[data['start'] < data['residue'] < data['end']]
-#data = data[data['start'] < data['proximal_cys'] < data['end']]
-
 rule all:
     input:
         expand(["results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/distributions.pdf",
@@ -178,7 +175,6 @@ rule all:
                 sno=data['residue'],
                 cys=data['proximal_cys']),
         "results/statistics.csv",
-        #expand("results/mutations_classification/{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_mutation_classification.csv", zip, hugo=data['hugo'], up_ac=data.index, chain=data['chain'], start=data['start'], end=data['end'], restraints_set=data['restraints_set'])
 
 rule calculate_CVs:
     input:
@@ -383,7 +379,6 @@ rule make_values_figure:
         csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv"
     output:
         vals_pdf="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/values.pdf"
-        #"results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_distributions.pdf",
     run:
 
         xs = np.arange(0, 20)
