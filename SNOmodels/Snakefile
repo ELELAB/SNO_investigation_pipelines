@@ -24,10 +24,10 @@ from collections import defaultdict
 import re
 
 
-pKa_diff_cutoff_dest=1
-pKa_diff_cutoff_stab=-1
-distance_diff_cutoff_dest=1
-distance_diff_cutoff_stab=-1
+pKa_diff_cutoff_dest=1.0
+pKa_diff_cutoff_stab=-1.0
+distance_diff_cutoff_dest=1.0
+distance_diff_cutoff_stab=-1.0
 
 def assignment_based_on_pKa(row,
                             par_WT_dict,
