@@ -34,10 +34,18 @@ def assignment_based_on_pKa(row,
                             pKa_diff_cutoff_dest,
                             pKa_diff_cutoff_stab):
 
-    '''
-    Input:
-    row: row of the statistics dataframe
-    par_WT_dict: dictionary in whcich the key is the gene and
+    '''Classifiy the mutations in Stabilizing, Destabilizing or Neutral.
+    The function substracts for each gene and for each proximal
+    cys and SNO site pair the WT SNO site pKa value from the mutant's one.
+    It returns a classification of the mutation depending on the cut off values
+    set above
+
+    Parameters
+    ----------
+    row: pandas object 
+                row of the statistics dataframe
+    par_WT_dict: dictionary 
+                the key is the gene and
                 the values are lists (as many as couple of proximal cys and
                 SNO site for a given gene) of four elements describing
                 some parameters in the WT state:
@@ -46,23 +54,23 @@ def assignment_based_on_pKa(row,
                 2)"pKa_SNO_avg": pKa value
                 3)"proximal_Cys" position of proximal cys
                 4)"SNO_site" position of SNO site
-    pKa_diff_cutoff_dest: cutoff value based on pKa to decide if
-                        the mutation is Destabilizing
-    pKa_diff_cutoff_stab: cutoff value based on pKa to decide if
-                        the mutation is Stabilizing
+    pKa_diff_cutoff_dest: int
+                cutoff value based on pKa to decide if
+                the mutation is Destabilizing
+    pKa_diff_cutoff_stab: int
+                cutoff value based on pKa to decide if
+                the mutation is Stabilizing
 
-    The function substracts for each gene and for each proximal
-    cys and SNO site pair the WT SNO site pKa value from the mutant's one.
-
-    Returns:
-    None
-    if there is no mutation (wild-type)
-    Stabilizing
-    if the calculated difference is lower than pKa_diff_cutoff_stab,
-    Destabilizing
-    if the differences is higher than pKa_diff_cutoff_dest,
-    Neutral
-    if none of the previous cases happens.
+    Returns
+    -------
+    "None"
+                if there is no mutation (i.e wild-type case)
+    "Stabilizing"
+                if the calculated difference is lower than pKa_diff_cutoff_stab,
+    "Destabilizing"
+                if the differences is higher than pKa_diff_cutoff_dest,
+    "Neutral"
+                if it's neither stabilizing nor destabilizing.
 
     '''
 
@@ -86,11 +94,17 @@ def assignment_based_on_distance_and_pKa(row,
                                          distance_diff_cutoff_dest,
                                          distance_diff_cutoff_stab):
 
-    '''
-    assignment_based_on_distance_and_pKa function takes:
-    Input:
-    row: row of the statistics dataframe
-    par_WT_dict: dictionary in whcich the key is the gene and
+    '''Classify the mutation in Stabilizing Destabilizing and Neutral
+    The function substracts for each gene and for each proximal
+    cys and SNO site pair the WT SNO site pKa value from the mutant's one
+    and the corresponding distance value.
+
+    Parameters
+    ----------
+    row: pandas object:
+                row of the statistics dataframe
+    par_WT_dict: dictionary 
+                the key is the gene and
                 the values are lists (as many as couple of proximal cys and
                 SNO site for a given gene) of four elements describing
                 some parameters in the WT state:
@@ -99,34 +113,35 @@ def assignment_based_on_distance_and_pKa(row,
                 2)"pKa_SNO_avg": pKa value
                 3)"proximal_Cys" position of proximal cys
                 4)"SNO_site" position of SNO site
-    pKa_diff_cutoff_dest: cutoff value based on pKa of SNO_site upon
-                        mutation to decide if the mutation is
-                        Destabilizing
-    pKa_diff_cutoff_stab: cutoff value based on pKa of SNO_site upon
-                        mutation to decide if the mutation is
-                        Stabilizing
-    distance_diff_cutoff_dest: cutoff value based on distance between
-                            SNO_site and proximal cys to decide if
-                            the mutation is Destabilizing.
-    distance_diff_cutoff_stab: cutoff value based on distance between
-                            SNO_site and proximal cys to decide if
-                            the mutation is Stabilizing
+    pKa_diff_cutoff_dest: int
+                cutoff value based on pKa of SNO_site upon
+                mutation to decide if the mutation is
+                Destabilizing
+    pKa_diff_cutoff_stab: int
+                cutoff value based on pKa of SNO_site upon
+                mutation to decide if the mutation is
+                Stabilizing
+    distance_diff_cutoff_dest: int 
+                cutoff value based on distance between
+                SNO_site and proximal cys to decide if
+                the mutation is Destabilizing.
+    distance_diff_cutoff_stab: int 
+                cutoff value based on distance between
+                SNO_site and proximal cys to decide if
+                the mutation is Stabilizing
 
-    The function substracts for each gene and for each proximal
-    cys and SNO site pair the WT SNO site pKa value from the mutant's one
-    and the corresponding distance value.
-
-    Returns:
-    None
-    if there is no mutation (i.e. wild-type case)
-    Stabilizing
-    if the calculated difference is lower than pKa_diff_cutoff_stab
-    and same for the distance cut-off
+    Returns
+    -------
+    "None"
+                if there is no mutation (i.e. wild-type case)
+    "Stabilizing"
+                if the calculated differences are lower than the corresponding "pKa_diff_cutoff_stab" 
+                and "distance_diff_cutoff_stab"cut-off" cut-off values 
     Destabilizing
-    if the differences is higher than pKa_diff_cutoff_dest
-    and same for the distance cut-off
-    Neutral
-    if none of the previous cases happens.
+                if the differences is higher than the corresponding "pKa_diff_cutoff_dest" 
+                and "distance_diff_cutoff_dest"
+    "Neutral"
+                if it's neither stabilizing nor destabilizing.
     '''
 
 

@@ -18,7 +18,7 @@ cysteine residues, the pipeline calcualates:
 Results are written as csv files and plot, indipendently for every protein.
 Finally a comprehensive statistics file is written in the results folder.
 
-The pipeline is designed to work con CABSflex ensembles derived from either
+The pipeline is designed to work with CABSflex ensembles derived from either
 wild-type or mutated structures (see more details below) that were originally
 downloaded from the AlphaFold Protein Structure Database.
 
@@ -85,8 +85,28 @@ each folder contains:
     of the aforamentioned data
 
 finally, a `results/statistics.csv` file contains mean and standard deviation
-for all the calculated parameters for every case
+for all the calculated parameters for every case. The file contains also a 
+classification of the mutations in "Neutral", "Destabilizing" or "Stabilizing". In
+particular, one column "pKa_classification" reports the classification
+depending on pKa changes of the SNO site upon mutation, while a second column, 
+"distance_pKa_classification", classifies the mutation depending on both distance betweeen 
+proximal cysteine and SNO site and its pKa changes upon mutation. The classification
+is performed comparing the changes of pKa or pKa and distances with a cut-off value set 
+by default to 1 for the destabilizing mutations and -1 for the stabilizing ones. Neutral
+is assigned if the differences calculated are between the cut off values.
+(For exampele, if the differences in pKa between the mutant and the WT is higher than 1 the
+mutation will be classified as Destabilizing in the "pKa_classification" column. 
+The mutation will be classified as destabilizing in distance_pKa_classification column 
+only if also the difference in distance between SNO_site and proximal cysteine of WT 
+and the mutant is higher than 1. The same goes for the Stabilizing classification). The cut-off
+values are customizable by the user in the Snakefile:
 
+pKa_diff_cutoff_dest=1
+pKa_diff_cutoff_stab=-1
+distance_diff_cutoff_dest=1
+distance_diff_cutoff_stab=-1
+
+ 
 ## Performing the analysis
 
 1. Activate the appropriate Python environment if needed
