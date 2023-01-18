@@ -54,10 +54,10 @@ def assignment_based_on_pKa(row,
                 2)"pKa_SNO_avg": pKa value
                 3)"proximal_Cys" position of proximal cys
                 4)"SNO_site" position of SNO site
-    pKa_diff_cutoff_dest: int
+    pKa_diff_cutoff_dest: float
                 cutoff value based on pKa to decide if
                 the mutation is Destabilizing
-    pKa_diff_cutoff_stab: int
+    pKa_diff_cutoff_stab: float
                 cutoff value based on pKa to decide if
                 the mutation is Stabilizing
 
@@ -113,19 +113,19 @@ def assignment_based_on_distance_and_pKa(row,
                 2)"pKa_SNO_avg": pKa value
                 3)"proximal_Cys" position of proximal cys
                 4)"SNO_site" position of SNO site
-    pKa_diff_cutoff_dest: int
+    pKa_diff_cutoff_dest: float
                 cutoff value based on pKa of SNO_site upon
                 mutation to decide if the mutation is
                 Destabilizing
-    pKa_diff_cutoff_stab: int
+    pKa_diff_cutoff_stab: float
                 cutoff value based on pKa of SNO_site upon
                 mutation to decide if the mutation is
                 Stabilizing
-    distance_diff_cutoff_dest: int 
+    distance_diff_cutoff_dest: float 
                 cutoff value based on distance between
                 SNO_site and proximal cys to decide if
                 the mutation is Destabilizing.
-    distance_diff_cutoff_stab: int 
+    distance_diff_cutoff_stab: float 
                 cutoff value based on distance between
                 SNO_site and proximal cys to decide if
                 the mutation is Stabilizing
