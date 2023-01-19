@@ -87,25 +87,41 @@ each folder contains:
 finally, a `results/statistics.csv` file contains mean and standard deviation
 for all the calculated parameters for every case. The file contains also a 
 classification of the mutations in "Neutral", "Destabilizing" or "Stabilizing". In
-particular, one column "pKa_classification" reports the classification
+particular, one column `pKa_classification` reports the classification
 depending on pKa changes of the SNO site upon mutation, while a second column, 
-"distance_pKa_classification", classifies the mutation depending on both distance betweeen 
+`distance_pKa_classification`, classifies the mutation depending on both distance betweeen 
 proximal cysteine and SNO site and its pKa changes upon mutation. The classification
-is performed comparing the changes of pKa or pKa and distances with a cut-off value set 
-by default to 1 for the destabilizing mutations and -1 for the stabilizing ones. Neutral
-is assigned if the differences calculated are between the cut off values.
-(For exampele, if the differences in pKa between the mutant and the WT is higher than 1 the
+is performed comparing changes of average pKa or average pKa and average distances
+with decided cut-offs (in A for distance).
+In particular, the following assignment rules are used for `pKa_classification`::
+
+```
+[av. mut. pKa] - [av. wt pKa] > 1 -> Destabilizing
+[av. mut. pKa] - [av. wt pKa] < 1 -> Stabilizing
+otherwise                         -> Neutral
+```
+
+while for `distance_pKa_classification`:
+
+```
+[av. mut. pKa] - [av. wt pKa] > 1 and  [av. mut. pKa] - [av. wt pKa] > 1 -> Destabilizing
+[av. mut. pKa] - [av. wt pKa] < 1 and  [av. mut. pKa] - [av. wt pKa] < 1 -> Stabilizing
+otherwise                                                                -> Neutral
+```
+
+For exampele, if the differences in average pKa between the mutant and the WT is higher than 1 the
 mutation will be classified as Destabilizing in the "pKa_classification" column. 
 The mutation will be classified as destabilizing in distance_pKa_classification column 
-only if also the difference in distance between SNO_site and proximal cysteine of WT 
-and the mutant is higher than 1. The same goes for the Stabilizing classification). The cut-off
-values are customizable by the user in the Snakefile:
+only if both the difference in average pKa and the difference in average distance between
+SNO_site and proximal cysteine of WT and mutant is higher than 1. 
+The cut-off values are customizable by the user in the Snakefile:
 
+```
 pKa_diff_cutoff_dest=1
 pKa_diff_cutoff_stab=-1
 distance_diff_cutoff_dest=1
 distance_diff_cutoff_stab=-1
-
+```
  
 ## Performing the analysis
 
