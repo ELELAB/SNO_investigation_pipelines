@@ -1,18 +1,17 @@
-# SNOmodels - pipeline for analyzing cysteine residues from structural ensembles
-# Copyright (C) 2022 Matteo Tiberti, Danish Cancer Society
+# SNOmodels - pipeline for analyzing cysteine residues from structural
+# ensembles
+# Copyright (C) 2022 Matteo Tiberti, Matteo Arnaudi, Danish Cancer Society,
+# Technical University of Denmark.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import pandas as pd
 import MDAnalysis as mda
@@ -24,9 +23,146 @@ from MDAnalysis.analysis.dihedrals import Dihedral
 from collections import defaultdict
 import re
 
+
+pKa_diff_cutoff_dest=1.0
+pKa_diff_cutoff_stab=-1.0
+distance_diff_cutoff_dest=1.0
+distance_diff_cutoff_stab=-1.0
+
+def assignment_based_on_pKa(row,
+                            par_WT_dict,
+                            pKa_diff_cutoff_dest,
+                            pKa_diff_cutoff_stab):
+
+    '''Classifiy the mutations in Stabilizing, Destabilizing or Neutral.
+    The function substracts for each gene and for each proximal
+    cys and SNO site pair the WT SNO site pKa value from the mutant's one.
+    It returns a classification of the mutation depending on the cut off values
+    set above
+
+    Parameters
+    ----------
+    row: pandas object 
+                row of the statistics dataframe
+    par_WT_dict: dictionary 
+                the key is the gene and
+                the values are lists (as many as couple of proximal cys and
+                SNO site for a given gene) of four elements describing
+                some parameters in the WT state:
+                1)"d_SNO-sg_CYS-sg_avg": distance between SNO_site and
+                proximal cys
+                2)"pKa_SNO_avg": pKa value
+                3)"proximal_Cys" position of proximal cys
+                4)"SNO_site" position of SNO site
+    pKa_diff_cutoff_dest: float
+                cutoff value based on pKa to decide if
+                the mutation is Destabilizing
+    pKa_diff_cutoff_stab: float
+                cutoff value based on pKa to decide if
+                the mutation is Stabilizing
+
+    Returns
+    -------
+    "None"
+                if there is no mutation (i.e wild-type case)
+    "Stabilizing"
+                if the calculated difference is lower than pKa_diff_cutoff_stab,
+    "Destabilizing"
+                if the differences is higher than pKa_diff_cutoff_dest,
+    "Neutral"
+                if it's neither stabilizing nor destabilizing.
+
+    '''
+
+    for gene, WT_par in par_WT_dict.items():
+        for par in WT_par:
+            if par[2] == row["proximal_Cys"] and par[3] == row["SNO_site"] and gene == row["hugo"]:
+                if row['mutation'] == 'WT':
+                    return None
+                pKa_diff = row['pKa_SNO_avg'] - par[1]
+                if pKa_diff >= pKa_diff_cutoff_dest:
+                    return "Destabilizing"
+                if pKa_diff <= pKa_diff_cutoff_stab:
+                    return "Stabilizing"
+                else:
+                    return "Neutral"
+
+def assignment_based_on_distance_and_pKa(row,
+                                         par_WT_dict,
+                                         pKa_diff_cutoff_dest,
+                                         pKa_diff_cutoff_stab,
+                                         distance_diff_cutoff_dest,
+                                         distance_diff_cutoff_stab):
+
+    '''Classify the mutation in Stabilizing Destabilizing and Neutral
+    The function substracts for each gene and for each proximal
+    cys and SNO site pair the WT SNO site pKa value from the mutant's one
+    and the corresponding distance value.
+
+    Parameters
+    ----------
+    row: pandas object:
+                row of the statistics dataframe
+    par_WT_dict: dictionary 
+                the key is the gene and
+                the values are lists (as many as couple of proximal cys and
+                SNO site for a given gene) of four elements describing
+                some parameters in the WT state:
+                1)"d_SNO-sg_CYS-sg_avg": distance between SNO_site and
+                proximal cys
+                2)"pKa_SNO_avg": pKa value
+                3)"proximal_Cys" position of proximal cys
+                4)"SNO_site" position of SNO site
+    pKa_diff_cutoff_dest: float
+                cutoff value based on pKa of SNO_site upon
+                mutation to decide if the mutation is
+                Destabilizing
+    pKa_diff_cutoff_stab: float
+                cutoff value based on pKa of SNO_site upon
+                mutation to decide if the mutation is
+                Stabilizing
+    distance_diff_cutoff_dest: float 
+                cutoff value based on distance between
+                SNO_site and proximal cys to decide if
+                the mutation is Destabilizing.
+    distance_diff_cutoff_stab: float 
+                cutoff value based on distance between
+                SNO_site and proximal cys to decide if
+                the mutation is Stabilizing
+
+    Returns
+    -------
+    "None"
+                if there is no mutation (i.e. wild-type case)
+    "Stabilizing"
+                if the calculated differences are lower than the corresponding "pKa_diff_cutoff_stab" 
+                and "distance_diff_cutoff_stab"cut-off" cut-off values 
+    Destabilizing
+                if the differences is higher than the corresponding "pKa_diff_cutoff_dest" 
+                and "distance_diff_cutoff_dest"
+    "Neutral"
+                if it's neither stabilizing nor destabilizing.
+    '''
+
+
+    for gene,WT_par in par_WT_dict.items():
+        for par in WT_par:
+            if par[2] == row["proximal_Cys"] and par[3] == row["SNO_site"] and row['hugo'] == gene:
+                if row['mutation'] == 'WT':
+                    return None
+                distance_diff = row["d_SNO-sg_CYS-sg_avg"] - par[0]
+                pKa_diff = row["pKa_SNO_avg"] - par[1]
+                if distance_diff >= pKa_diff_cutoff_dest and pKa_diff >= distance_diff_cutoff_dest:
+                    return "Destabilizing"
+                if distance_diff <= pKa_diff_cutoff_stab and pKa_diff <= distance_diff_cutoff_stab:
+                    return "Stabilizing"
+                else:
+                    return "Neutral"
+
+
 cys_residues_csv = '../SNOfinder/results/cys_database_far_seq_acc10_human.csv'
 proteins_csv = 'proteins.csv'
-runs_basedir = '../../../../../raw_data/computational_data/cabsflex_data/sno'
+runs_basedir = 'sno'
 
 cys_residues = pd.read_csv(cys_residues_csv, usecols=['up_id', 'up_ac', 'residue', 'proximal_cys'], index_col='up_ac')
 proteins = pd.read_csv(proteins_csv, index_col='up_ac')
@@ -36,9 +172,6 @@ if len(proteins_no_dir) > 0:
     print(f"Ignoring proteins with missing directory name: {proteins_no_dir['hugo']}")
 
 data = proteins.join(cys_residues)
-
-#data = data[data['start'] < data['residue'] < data['end']]
-#data = data[data['start'] < data['proximal_cys'] < data['end']]
 
 rule all:
     input:
@@ -56,7 +189,7 @@ rule all:
                 mut=data['mutation'],
                 sno=data['residue'],
                 cys=data['proximal_cys']),
-        "results/statistics.csv"
+        "results/statistics.csv",
 
 rule calculate_CVs:
     input:
@@ -261,7 +394,6 @@ rule make_values_figure:
         csv="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/data.csv"
     output:
         vals_pdf="results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end,[0-9]+}_{restraints_set}_SNO-{sno}_CYS-{cys}_{mut}/values.pdf"
-        #"results/{name}_{hugo}_{up_ac}_{chain}_{start}-{end}_distributions.pdf",
     run:
 
         xs = np.arange(0, 20)
@@ -366,12 +498,48 @@ rule make_statistics:
 
             out_df.append(this_out_df)
 
-        pd.concat(out_df, axis='rows').to_csv(output.stats_csv, index=None, float_format='%.3f')
+        statistics = pd.concat(out_df, axis='rows')
+        gene_list = list(set(statistics["hugo"].to_list()))
 
+        # dictionary with the information about pka and distances of SNO site and proximal cys for the WT form:
+        # key: hugo name; values: lists of parameters for each pair of proximal cys and SNO_site 
+        par_WT_dict={}
 
+        for hugo in gene_list:
+            tot_par_WT_list = []
+            df_i = statistics.loc[ statistics["hugo"] == hugo ]
+            # create lists of proximal cys position and SNO site position for each gene
+            proxi_list = df_i.loc[df_i["mutation"] == "WT", "proximal_Cys"].to_list()
+            sno_list   = df_i.loc[df_i["mutation"] == "WT", "SNO_site"].to_list()
+            # since there might be for different protein the same positon both for SNO site or proximal cys
+            # we have to work with position in the list and not with dictionary (same position would be deleated)
+            for prox in range(len(proxi_list)):
+                # for each gene get a df containing information for a pair of proximal cys and SNO site
+                df_prox_cys = df_i.loc[(df_i["proximal_Cys"] == proxi_list[prox]) & (df_i["SNO_site"] == sno_list[prox])]
+                # subset of column in order to convert in list subsequently
+                subset_df_prox_cys = df_prox_cys[["d_SNO-sg_CYS-sg_avg", "pKa_SNO_avg", "mutation", "proximal_Cys", "SNO_site"]]
+                # list containing information about pka, distances and positions of SNO site and proximal cys for the WT form
+                par_WT_list = (subset_df_prox_cys.loc[(subset_df_prox_cys["proximal_Cys"] == proxi_list[prox]) &\
+                                                      (subset_df_prox_cys["SNO_site"] == sno_list[prox]) &\
+                                                      (subset_df_prox_cys["mutation"] == "WT")].values.flatten().tolist())
+                par_WT_list.remove(par_WT_list[2])
+                tot_par_WT_list.append(par_WT_list)
 
+            par_WT_dict[hugo] = tot_par_WT_list
 
+        statistics['pKa_classification'] = statistics.apply(assignment_based_on_pKa,
+                                                            par_WT_dict=par_WT_dict,
+                                                            pKa_diff_cutoff_dest=pKa_diff_cutoff_dest,
+                                                            pKa_diff_cutoff_stab=pKa_diff_cutoff_stab,
+                                                            axis=1)
 
+        statistics['distance_pKa_classification'] = statistics.apply(assignment_based_on_distance_and_pKa,
+                                                                    par_WT_dict=par_WT_dict,
+                                                                    pKa_diff_cutoff_dest=pKa_diff_cutoff_dest,
+                                                                    pKa_diff_cutoff_stab=pKa_diff_cutoff_stab,
+                                                                    distance_diff_cutoff_dest=distance_diff_cutoff_dest,
+                                                                    distance_diff_cutoff_stab=distance_diff_cutoff_stab,
+                                                                    axis=1)
 
-
+        statistics.to_csv(output.stats_csv, index=None, float_format='%.3f')
 

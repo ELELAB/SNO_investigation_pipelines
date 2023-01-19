@@ -18,7 +18,7 @@ cysteine residues, the pipeline calcualates:
 Results are written as csv files and plot, indipendently for every protein.
 Finally a comprehensive statistics file is written in the results folder.
 
-The pipeline is designed to work con CABSflex ensembles derived from either
+The pipeline is designed to work with CABSflex ensembles derived from either
 wild-type or mutated structures (see more details below) that were originally
 downloaded from the AlphaFold Protein Structure Database.
 
@@ -85,8 +85,44 @@ each folder contains:
     of the aforamentioned data
 
 finally, a `results/statistics.csv` file contains mean and standard deviation
-for all the calculated parameters for every case
+for all the calculated parameters for every case. The file contains also a 
+classification of the mutations in "Neutral", "Destabilizing" or "Stabilizing". In
+particular, one column `pKa_classification` reports the classification
+depending on pKa changes of the SNO site upon mutation, while a second column, 
+`distance_pKa_classification`, classifies the mutation depending on both distance betweeen 
+proximal cysteine and SNO site and its pKa changes upon mutation. The classification
+is performed comparing changes of average pKa or average pKa and average distances
+with decided cut-offs (in A for distance).
+In particular, the following assignment rules are used for `pKa_classification`::
 
+```
+[av. mut. pKa] - [av. wt pKa] > 1 -> Destabilizing
+[av. mut. pKa] - [av. wt pKa] < 1 -> Stabilizing
+otherwise                         -> Neutral
+```
+
+while for `distance_pKa_classification`:
+
+```
+[av. mut. pKa] - [av. wt pKa] > 1 and  [av. mut. pKa] - [av. wt pKa] > 1 -> Destabilizing
+[av. mut. pKa] - [av. wt pKa] < 1 and  [av. mut. pKa] - [av. wt pKa] < 1 -> Stabilizing
+otherwise                                                                -> Neutral
+```
+
+For exampele, if the differences in average pKa between the mutant and the WT is higher than 1 the
+mutation will be classified as Destabilizing in the "pKa_classification" column. 
+The mutation will be classified as destabilizing in distance_pKa_classification column 
+only if both the difference in average pKa and the difference in average distance between
+SNO_site and proximal cysteine of WT and mutant is higher than 1. 
+The cut-off values are customizable by the user in the Snakefile:
+
+```
+pKa_diff_cutoff_dest=1
+pKa_diff_cutoff_stab=-1
+distance_diff_cutoff_dest=1
+distance_diff_cutoff_stab=-1
+```
+ 
 ## Performing the analysis
 
 1. Activate the appropriate Python environment if needed
